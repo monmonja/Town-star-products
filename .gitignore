@@ -1,0 +1,11 @@
+
+# Libraries
+node_modules/
+package-lock.json
+
+# Publishing output
+dist/
+
+# local ide settings
+.vscode/settings.json
+.idea

@@ -1,0 +1,13 @@
+{
+  "name": "Town-Star-Products",
+  "version": "0.0.1",
+  "description": "Town Star Products",
+  "main": "src/index.ts",
+  "author": "Almond Joseph Mendoza",
+  "license": "MIT",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.8.3"
+  }
+}
