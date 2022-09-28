@@ -1,0 +1,255 @@
+.html2canvas-container {
+  width: 8000px !important;
+  height: 3000px !important;
+} /* https://coolors.co/74b3ce-508991-172a3a-004346-09bc8a */
+body {
+  background: #74B3CE;
+  overflow: hidden;
+}
+
+html, body, #main-layout {
+  height: 100%;
+  margin: 0;
+}
+
+*:focus-visible {
+  outline: unset;
+}
+
+#main-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+header {
+  padding: 16px;
+  background: #508991;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+header .header-row label {
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 6px;
+  color: #ddd;
+}
+
+#screenshot {
+  flex: 1;
+  overflow: auto;
+  background: white;
+}
+
+.footer {
+  padding: 10px;
+  font-size: 0.9rem;
+  position: fixed;
+  background: #508991;
+  color: white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#output-wrapper {
+  display: flex;
+  visibility: hidden;
+  padding-bottom: 40px;
+}
+
+#tree-output-wrapper {
+  border-right: 1px solid #004346;
+  padding: 20px;
+}
+
+#building-output-wrapper {
+  padding: 20px;
+  display: none;
+}
+
+#share-row {
+  display: none;
+  border-radius: 4px;
+  background: white;
+  color: #508991;
+  padding: 0 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin-left: auto;
+}
+#share-row.show {
+  display: flex;
+  align-items: center;
+}
+
+:is(#tree-output-wrapper, #building-output-wrapper) strong {
+  font-size: 1.4rem;
+}
+
+#product-selector {
+  font-size: 1.4rem;
+  background: transparent;
+  padding: 12px;
+  color: white;
+  border: 0;
+}
+#product-selector option {
+  background: #508991;
+}
+
+#tree-output > .tree-item > .product-card {
+  background: #004346;
+  color: white;
+  font-size: 1.4rem;
+}
+
+#tree-output.alt {
+  display: inline;
+}
+#tree-output.alt > .tree-item > .product-card {
+  background: #172A3A;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .product-card {
+  background: #213d54;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
+  background: #2b4f6d;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
+  background: #356287;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
+  background: #4074a0;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
+  background: #4c86b8;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
+  background: #6598c2;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
+  background: #7fa9cc;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
+  background: #98bad6;
+  color: #172A3A;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
+  background: #b2cbe0;
+  color: #172A3A;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
+  background: #cbdceb;
+  color: #172A3A;
+}
+#tree-output.alt .tree-item {
+  display: inline;
+}
+#tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item .tree-children {
+  display: flex;
+}
+#tree-output.alt .product-card {
+  text-align: left;
+}
+#tree-output.alt .tree-children {
+  display: inline-block;
+  justify-content: flex-start;
+  padding-left: 6px;
+  margin-left: 12px;
+  border-left: 1px solid #333;
+}
+#tree-output.alt .tree-item.has-children {
+  border: 0;
+}
+
+#tree-output.alt2 {
+  display: inline;
+}
+#tree-output.alt2 .tree-item {
+  display: inline;
+}
+#tree-output.alt2 > .tree-item > .tree-children {
+  flex-direction: column;
+}
+
+.building-generated-from {
+  font-size: 12px;
+  color: yellow;
+  padding: 2px 4px;
+}
+
+.tree-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+}
+
+.tree-item.has-children {
+  border: 1px solid #CCC;
+}
+
+.tree-children {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+}
+.tree-children .tree-children {
+  flex-direction: row;
+}
+
+.product-card {
+  border-radius: 4px;
+  padding: 8px;
+  margin: 6px 4px;
+  background: #508991;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.product-quantity {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding: 0 4px 0;
+}
+
+.product-name {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+}
+
+.product-build-materials {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  padding-left: 8px;
+}
+
+.buildings-item {
+  font-size: 1.1rem;
+  border: 1px solid transparent;
+  margin-bottom: 4px;
+  padding: 4px;
+}
+
+.buildings-item.selected {
+  border: 1px solid #508991;
+}

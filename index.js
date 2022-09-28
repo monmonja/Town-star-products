@@ -23,6 +23,7 @@ class TreeGenerator {
       ...product.buildings ?? [],
       ...product.storages ?? [],
       ...product.workers ?? [],
+      ...product.generatedFrom ?? [],
     ];
 
     this.buildingsToBuild = [
@@ -32,12 +33,10 @@ class TreeGenerator {
       ]),
     ];
 
-    productsBuilding.forEach((buildingKey) => {
-      const building = products[buildingKey];
-
+    productsBuilding.forEach((building) => {
+      // const building = products[buildingKey];
       if (Object.prototype.hasOwnProperty.call(building, 'build-materials')) {
         building['build-materials'].forEach((material) => {
-          console.log(material, 'material')
           this.buildBuildingsToBuild(products[material.key]);
         });
       }
@@ -45,7 +44,7 @@ class TreeGenerator {
   }
 
   buildTree(product) {
-    this.buildBuildingsToBuild(product);
+    // this.buildBuildingsToBuild(product);
 
     if (!Object.prototype.hasOwnProperty.call(product, 'children')) {
       product.children = [];
@@ -84,8 +83,11 @@ class TreeGenerator {
     if (quantity > 0) {
       card.appendChild(createDiv(quantity, 'product-quantity'));
     }
-    console.log(item)
+
     card.appendChild(createDiv(item.name, 'product-name'));
+    if (item.generatedFrom && item.generatedFrom[0]) {
+      card.appendChild(createDiv(item.generatedFrom[0].name, 'building-generated-from'));
+    }
     this.drawBuildMaterials(item, card);
 
     card.addEventListener('mouseover', () => {
@@ -165,52 +167,19 @@ class TreeGenerator {
   }
 }
 
-class ProductSelector {
-  constructor(elId) {
-    this.productSelector = document.getElementById(elId);
-  }
+document.getElementById('share-row').addEventListener('click', () => {
+  let screenshot = document.getElementById('screenshot');
+  const options = {
+    backgroundColor: '#74B3CE',
+  };
 
-  populate() {
-    let options = Object.keys(products).map((key) => {
-      const product = products[key];
-      let option = document.createElement('option');
-      option.value = key;
-      option.appendChild(document.createTextNode(product.name));
-      return option;
-    });
-
-    let fragment = document.createDocumentFragment();
-    options.forEach((option) => fragment.appendChild(option));
-    this.productSelector.appendChild(fragment);
-  }
-
-  addEvent() {
-    this.productSelector.addEventListener('change', (event) => {
-      let treeGenerator = new TreeGenerator('tree-output', 'buildings-output', event.target.value);
-      treeGenerator.generate(event.target.value);
-    });
-
-    this.productSelector.value = this.productSelector.querySelectorAll('option')[1].getAttribute('value');
-    this.productSelector.dispatchEvent(new Event('change'));
-  }
-}
-
-
-let productSelector = new ProductSelector('product-selector');
-productSelector.populate();
-productSelector.addEvent();
-
-/* to screenshot
-let screenshot = document.getElementById('screenshot');
-const options = {
-  backgroundColor: '#74B3CE',
-};
-document.styleSheets[1].cssRules[0].style.width = (document.getElementById('tree-output-wrapper').getBoundingClientRect().width + 80) + 'px';
-html2canvas(document.getElementById('screenshot'), options).then(function(canvas) {
-  var imgageData = canvas.toDataURL("image/png");
-  var a = document.createElement("a");
-  a.href = imgageData; //Image Base64 Goes here
-  a.download = "Image.png"; //File name Here
-  a.click(); //Downloaded file
+  document.styleSheets[1].cssRules[0].style.width = (document.getElementById('tree-output-wrapper').getBoundingClientRect().width + 80) + 'px';
+  document.styleSheets[1].cssRules[0].style.height = (document.getElementById('tree-output-wrapper').getBoundingClientRect().height + 120) + 'px';
+  html2canvas(screenshot, options).then(function(canvas) {
+    var imgageData = canvas.toDataURL("image/png");
+    var a = document.createElement("a");
+    a.href = imgageData; //Image Base64 Goes here
+    a.download = "Image.png"; //File name Here
+    a.click(); //Downloaded file
+  });
 });
- */

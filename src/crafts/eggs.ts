@@ -3,7 +3,7 @@ import { createRequirement } from "../craft-requirement";
 import Feed from "./feed";
 import Wood from "./wood";
 import Water from "./water";
-import ChickenCoop from "../crops/chicken-coop";
+import ChickenCoop from "../buildings/chicken-coop";
 import Storehouse from "../buildings/storehouse";
 
 export default class Eggs extends Craft {

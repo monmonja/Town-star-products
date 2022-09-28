@@ -8,35 +8,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="dist/css/index.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body>
+  <div id="main-layout">
+    <header>
+      <select id="product-selector">
+        <option value="">Select a product</option>
+      </select>
+      <div class="header-row">
+        <label>Current Meta</label>
+        <div>
+          <a class="product-quick-access" href="javascript:void(0)" data-product-key="PartyBox">Party Box</a>
+        </div>
+      </div>
+      <div class="header-row">
+        <label>Most Used</label>
+        <div>
+          <a class="product-quick-access" href="javascript:void(0)" data-product-key="Gasoline">Gasoline</a>
+        </div>
+      </div>
+      <div id="share-row">
+        Share Tree
+      </div>
+    </header>
+    <div id="screenshot">
+      <div id="output-wrapper">
+        <div id="tree-output-wrapper">
+          <div id="tree-output" class="alt"></div>
+        </div>
 
-<!-- Add your site or application content here -->
-<select id="product-selector">
-  <option value="">Select a product</option>
-</select>
-<div id="screenshot">
-  <div id="output-wrapper">
-    <div id="tree-output-wrapper">
-      <div id="tree-output"></div>
+        <div id="building-output-wrapper">
+          <strong>Requires</strong>
+          <div id="buildings-output"></div>
+        </div>
+
+      </div>
+      <div class="footer">
+        If you find this useful, support it via <strong>monmonja.eth</strong>
+      </div>
     </div>
-
-    <div id="building-output-wrapper">
-      <strong>Requires</strong>
-      <div id="buildings-output"></div>
-    </div>
-
   </div>
-  <div class="footer">
-    If you find this useful, support it via monmonja.eth or 0x9CB820df4a665e1D113270262986dCC3bF6426f5
-  </div>
-</div>
-<script src="dist/index.js"></script>
-<!--<script src="products.js"></script>-->
-<script src="index.js"></script>
+  <script src="dist/index.js"></script>
+  <!--<script src="products.js"></script>-->
+  <script src="index.js"></script>
 
 </body>
 

@@ -1,0 +1,63 @@
+/* https://coolors.co/74b3ce-508991-172a3a-004346-09bc8a */
+body {
+  background: #74B3CE;
+  overflow: hidden;
+}
+
+html, body, #main-layout {
+  height: 100%;
+  margin: 0;
+}
+
+*:focus-visible{
+  outline: unset;
+}
+
+#main-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+header {
+  padding: 16px;
+  background: #508991;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  column-gap: 40px;
+
+
+  .header-row {
+    label {
+      font-size: 0.8rem;
+      display: block;
+      margin-bottom: 6px;
+      color: #ddd;
+    }
+  }
+}
+
+#screenshot {
+  flex: 1;
+  overflow: auto;
+  background: white;
+}
+
+.footer {
+  padding: 10px;
+  font-size: 0.9rem;
+  position: fixed;
+  background: #508991;
+  color: white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
