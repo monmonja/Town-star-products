@@ -86,7 +86,7 @@ class TreeGenerator {
 
     card.appendChild(createDiv(item.name, 'product-name'));
     if (item.generatedFrom && item.generatedFrom[0]) {
-      card.appendChild(createDiv(item.generatedFrom[0].name, 'building-generated-from'));
+      card.appendChild(createDiv((new item.generatedFrom[0]()).name, 'building-generated-from'));
     }
     this.drawBuildMaterials(item, card);
 

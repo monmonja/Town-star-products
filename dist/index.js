@@ -3383,6 +3383,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wood__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./wood */ "./src/crafts/wood.ts");
 /* harmony import */ var _water__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./water */ "./src/crafts/water.ts");
 /* harmony import */ var _buildings_silo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/silo */ "./src/buildings/silo.ts");
+/* harmony import */ var _crops_cabernet_vines__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crops/cabernet-vines */ "./src/crops/cabernet-vines.ts");
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
     _extendStatics = Object.setPrototypeOf || {
@@ -3417,6 +3418,7 @@ var __extends = undefined && undefined.__extends || function () {
 
 
 
+
 var CabernetGrapes =
 /** @class */
 function (_super) {
@@ -3433,6 +3435,7 @@ function (_super) {
       craft: _wood__WEBPACK_IMPORTED_MODULE_2__["default"],
       quantity: 1
     })];
+    _this.generatedFrom = [_crops_cabernet_vines__WEBPACK_IMPORTED_MODULE_5__["default"]];
     _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
     return _this;
   }
