@@ -11,6 +11,7 @@ export default class GlassFactory extends Item implements Buildable {
   name = "Glass Factory";
   price = 100_000;
   isNFT = false;
+  icon = "buildings/icon_glassFactory.png";
 
   buildRequirements = [
     createRequirement({ craft: Iron, quantity: 2 }),

@@ -14,6 +14,7 @@ export default class Cakery extends Item implements Buildable, Producer {
   name = "Cakery";
   price = 1_000_000;
   isNFT = false;
+  icon = "buildings/icon_cakery.png";
 
   buildRequirements = [
     createRequirement({ craft: Lumber, quantity: 10 }),

@@ -10,6 +10,7 @@ export default class OilPump extends Item implements Buildable, Producer {
   name = "Oil Pump";
   price = 1_250;
   isNFT = false;
+  icon = "buildings/icon_oilPump.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 3 }),

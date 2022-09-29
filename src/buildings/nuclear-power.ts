@@ -12,6 +12,7 @@ export default class NuclearPower extends Item implements Buildable, Producer {
   name = "Nuclear Power";
   price = 10_000_000;
   isNFT = false;
+  icon = "buildings/icon_nuclearPower.png";
 
   buildRequirements = [
     createRequirement({ craft: Steel, quantity: 5 }),

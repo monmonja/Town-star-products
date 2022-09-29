@@ -6,6 +6,7 @@ export default class WoodShed extends Item implements Buildable {
   name = "Wood Shed";
   price = 5_000;
   isNFT = false;
+  icon = "buildings/icon_woodShed.png";
 
   requirements = [
     Road,

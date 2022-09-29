@@ -15,6 +15,7 @@ export default class FabricPlant extends Item implements Buildable, Producer {
   name = "Fabric Plant";
   price = 500_000;
   isNFT = false;
+  icon = "buildings/icon_fabricPlant.png";
 
   buildRequirements = [
     createRequirement({ craft: Lumber, quantity: 10 }),

@@ -37,5 +37,12 @@ export default class ProductSelector {
         this.productSelector.dispatchEvent(new Event('change'));
       });
     });
+
+    if (window.location.hash) {
+      setTimeout(() => {
+        this.productSelector.value = window.location.hash.substring(1);
+        this.productSelector.dispatchEvent(new Event('change'));
+      }, 100);
+    }
   }
 }

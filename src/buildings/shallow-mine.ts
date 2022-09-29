@@ -15,6 +15,7 @@ export default class ShallowMine extends Item implements Buildable, Producer {
   name = "Shallow Mine";
   price = 30_000;
   isNFT = false;
+  icon = "buildings/icon_shallowMine.png";
 
   buildRequirements = [
     createRequirement({ craft: Lumber, quantity: 5 }),

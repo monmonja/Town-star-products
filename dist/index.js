@@ -72,6 +72,7 @@ function (_super) {
     _this.name = "Bakery";
     _this.price = 400000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_bakery.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__["default"],
       quantity: 10
@@ -158,6 +159,7 @@ function (_super) {
     _this.name = "Beehive";
     _this.price = 25000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_beehive.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_5__.createRequirement)({
       craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_6__["default"],
       quantity: 3
@@ -242,6 +244,7 @@ function (_super) {
     _this.name = "Boxing Facility";
     _this.price = 300000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_boxing_Facility.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__["default"],
       quantity: 10
@@ -332,6 +335,7 @@ function (_super) {
     _this.name = "Cakery";
     _this.price = 1000000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_cakery.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__["default"],
       quantity: 10
@@ -416,6 +420,7 @@ function (_super) {
     _this.name = "Candy Shop";
     _this.price = 150000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_candyShop.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 10
@@ -490,6 +495,7 @@ function (_super) {
     _this.name = "Chicken Coop";
     _this.price = 15000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_chickenCoop.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
       quantity: 3
@@ -569,6 +575,7 @@ function (_super) {
     _this.name = "Chocolate Shop";
     _this.price = 300000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_chocolateShop.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 20
@@ -655,6 +662,7 @@ function (_super) {
     _this.name = "Fabric Plant";
     _this.price = 500000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_fabricPlant.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__["default"],
       quantity: 10
@@ -735,6 +743,7 @@ function (_super) {
     _this.name = "Feed Mill";
     _this.price = 5000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_feedMill.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _crafts_wheat__WEBPACK_IMPORTED_MODULE_3__["default"],
       quantity: 2
@@ -802,6 +811,7 @@ function (_super) {
     _this.name = "Fuel Storage";
     _this.price = 15000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_fuelStorage.png";
     return _this;
   }
 
@@ -876,6 +886,7 @@ function (_super) {
     _this.name = "Glass Factory";
     _this.price = 100000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_glassFactory.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _crafts_iron__WEBPACK_IMPORTED_MODULE_6__["default"],
       quantity: 2
@@ -968,6 +979,7 @@ function (_super) {
     _this.name = "Iron Mine";
     _this.price = 30000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_mine.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__["default"],
       quantity: 5
@@ -1054,6 +1066,7 @@ function (_super) {
     _this.name = "Lumber Mill";
     _this.price = 50000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_lumberMill.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 5
@@ -1128,6 +1141,7 @@ function (_super) {
     _this.name = "Lumber Yard";
     _this.price = 20000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_LumberYard.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 5
@@ -1201,6 +1215,7 @@ function (_super) {
     _this.name = "Milk Barn";
     _this.price = 30000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_milkBarn.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_3__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
       quantity: 10
@@ -1280,6 +1295,7 @@ function (_super) {
     _this.name = "Nuclear Power";
     _this.price = 10000000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_nuclearPower.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_steel__WEBPACK_IMPORTED_MODULE_5__["default"],
       quantity: 5
@@ -1362,6 +1378,7 @@ function (_super) {
     _this.name = "Oil Pump";
     _this.price = 1250;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_oilPump.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 3
@@ -1436,6 +1453,7 @@ function (_super) {
     _this.name = "Pantry";
     _this.price = 20000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_pantry.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 5
@@ -1515,6 +1533,7 @@ function (_super) {
     _this.name = "Pottery Shop";
     _this.price = 120000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_potteryShop.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__["default"],
       quantity: 5
@@ -1601,6 +1620,7 @@ function (_super) {
     _this.name = "Power Plant";
     _this.price = 250000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_powerPlant.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__["default"],
       quantity: 10
@@ -1687,6 +1707,7 @@ function (_super) {
     _this.name = "Refinery";
     _this.price = 15000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_refinery.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 10
@@ -1763,6 +1784,7 @@ function (_super) {
     _this.name = "Sand Mine";
     _this.price = 45000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_sandMine.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 3
@@ -1849,6 +1871,7 @@ function (_super) {
     _this.name = "Shallow Mine";
     _this.price = 30000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_shallowMine.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__["default"],
       quantity: 5
@@ -1929,6 +1952,7 @@ function (_super) {
     _this.name = "Sheep Pen";
     _this.price = 20000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_sheepPen.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
       quantity: 3
@@ -2002,6 +2026,7 @@ function (_super) {
     _this.name = "Silo";
     _this.price = 10000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_silo.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 5
@@ -2085,6 +2110,7 @@ function (_super) {
     _this.name = "Steel Mill";
     _this.price = 1500000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_steelMill.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_iron__WEBPACK_IMPORTED_MODULE_3__["default"],
       quantity: 2
@@ -2165,6 +2191,7 @@ function (_super) {
     _this.name = "Silo";
     _this.price = 15000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_storehouse.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 5
@@ -2236,6 +2263,7 @@ function (_super) {
     _this.name = "Trough";
     _this.price = 5000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_trough.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
       quantity: 1
@@ -2308,6 +2336,7 @@ function (_super) {
     _this.name = "Warehouse";
     _this.price = 15000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_warehouse.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 3
@@ -2385,6 +2414,7 @@ function (_super) {
     _this.name = "Water Facility";
     _this.price = 10000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_waterFacility.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 2
@@ -2464,6 +2494,7 @@ function (_super) {
     _this.name = "Water Pump";
     _this.price = 30000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_waterPump.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 3
@@ -2541,6 +2572,7 @@ function (_super) {
     _this.name = "Well";
     _this.price = 1250;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_well.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
       quantity: 1
@@ -2608,6 +2640,7 @@ function (_super) {
     _this.name = "Wind Mill";
     _this.price = 7500;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_windmill.png";
     return _this;
   }
 
@@ -2676,6 +2709,7 @@ function (_super) {
     _this.name = "Wind Pump";
     _this.price = 12500;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_windPump.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
       quantity: 3
@@ -2751,6 +2785,7 @@ function (_super) {
     _this.name = "Wind Turbine";
     _this.price = 2500;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_windTurbine.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
       craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
       quantity: 1
@@ -2837,6 +2872,7 @@ function (_super) {
     _this.name = "Winery";
     _this.price = 1000000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_winery.png";
     _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
       craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_3__["default"],
       quantity: 5
@@ -2913,6 +2949,7 @@ function (_super) {
     _this.name = "Wood Shed";
     _this.price = 5000;
     _this.isNFT = false;
+    _this.icon = "buildings/icon_woodShed.png";
     _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_1__["default"]];
     return _this;
   }
@@ -10187,6 +10224,14 @@ function () {
         _this.productSelector.dispatchEvent(new Event('change'));
       });
     });
+
+    if (window.location.hash) {
+      setTimeout(function () {
+        _this.productSelector.value = window.location.hash.substring(1);
+
+        _this.productSelector.dispatchEvent(new Event('change'));
+      }, 100);
+    }
   };
 
   return ProductSelector;

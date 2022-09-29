@@ -7,6 +7,7 @@ export default class Trough extends Item implements Buildable {
   name = "Trough";
   price = 5_000;
   isNFT = false;
+  icon = "buildings/icon_trough.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 1 }),

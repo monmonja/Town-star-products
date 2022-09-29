@@ -9,6 +9,7 @@ export default class WaterPump extends Item implements Buildable {
   name = "Water Pump";
   price = 30_000;
   isNFT = false;
+  icon = "buildings/icon_waterPump.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 3 }),

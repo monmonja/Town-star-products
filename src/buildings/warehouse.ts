@@ -8,6 +8,7 @@ export default class Warehouse extends Item implements Buildable {
   name = "Warehouse";
   price = 15_000;
   isNFT = false;
+  icon = "buildings/icon_warehouse.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 3 }),

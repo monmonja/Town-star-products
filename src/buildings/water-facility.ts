@@ -11,6 +11,7 @@ export default class WaterFacility extends Item implements Buildable, Producer {
   name = "Water Facility";
   price = 10_000;
   isNFT = false;
+  icon = "buildings/icon_waterFacility.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 2 }),

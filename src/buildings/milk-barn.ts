@@ -9,6 +9,7 @@ export default class MilkBarn extends Item implements Buildable, Producer {
   name = "Milk Barn";
   price = 30_000;
   isNFT = false;
+  icon = "buildings/icon_milkBarn.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 10 }),

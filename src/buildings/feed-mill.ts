@@ -8,6 +8,7 @@ export default class FeedMill extends Item implements Buildable {
   name = "Feed Mill";
   price = 5_000;
   isNFT = false;
+  icon = "buildings/icon_feedMill.png";
 
   buildRequirements = [
     createRequirement({ craft: Wheat, quantity: 2 }),

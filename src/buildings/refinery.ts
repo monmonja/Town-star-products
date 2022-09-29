@@ -12,6 +12,7 @@ export default class Refinery extends Item implements Buildable, Producer {
   name = "Refinery";
   price = 15_000;
   isNFT = false;
+  icon = "buildings/icon_refinery.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 10 }),

@@ -10,6 +10,7 @@ export default class SandMine extends Item implements Buildable, Producer {
   name = "Sand Mine";
   price = 45_000;
   isNFT = false;
+  icon = "buildings/icon_sandMine.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 3 }),

@@ -15,6 +15,7 @@ export default class Winery extends Item implements Buildable, Producer {
   name = "Winery";
   price = 1_000_000;
   isNFT = false;
+  icon = "buildings/icon_winery.png";
 
   buildRequirements = [
     createRequirement({ craft: Lumber, quantity: 5 }),

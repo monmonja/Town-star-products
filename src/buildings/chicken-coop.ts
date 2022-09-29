@@ -9,6 +9,7 @@ export default class ChickenCoop extends Item implements Buildable, Producer {
   name = "Chicken Coop";
   price = 15_000;
   isNFT = false;
+  icon = "buildings/icon_chickenCoop.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 3 }),

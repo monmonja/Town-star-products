@@ -8,6 +8,7 @@ export default class Silo extends Item implements Buildable {
   name = "Silo";
   price = 10_000;
   isNFT = false;
+  icon = "buildings/icon_silo.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 5 }),

@@ -9,6 +9,7 @@ export default class Well extends Item implements Buildable, Producer {
   name = "Well";
   price = 1_250;
   isNFT = false;
+  icon = "buildings/icon_well.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 1 }),

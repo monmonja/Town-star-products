@@ -14,6 +14,7 @@ export default class SteelMill extends Item implements Buildable, Producer {
   name = "Steel Mill";
   price = 1_500_000;
   isNFT = false;
+  icon = "buildings/icon_steelMill.png";
 
   buildRequirements = [
     createRequirement({ craft: Iron, quantity: 2 }),

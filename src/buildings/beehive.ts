@@ -12,7 +12,7 @@ export default class Beehive extends Item implements Buildable, Producer {
   name = "Beehive";
   price = 25_000;
   isNFT = false;
-
+  icon = "buildings/icon_beehive.png";
 
   buildRequirements = [
     createRequirement({ craft: Lumber, quantity: 3 }),

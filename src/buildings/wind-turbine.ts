@@ -10,6 +10,7 @@ export default class WindTurbine extends Item implements Buildable, Producer {
   name = "Wind Turbine";
   price = 2_500;
   isNFT = false;
+  icon = "buildings/icon_windTurbine.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 1 }),

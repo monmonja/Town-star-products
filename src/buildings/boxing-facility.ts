@@ -13,6 +13,7 @@ export default class BoxingFacility extends Item implements Buildable, Producer 
   name = "Boxing Facility";
   price = 300_000;
   isNFT = false;
+  icon = "buildings/icon_boxing_Facility.png";
 
   buildRequirements = [
     createRequirement({ craft: Lumber, quantity: 10 }),

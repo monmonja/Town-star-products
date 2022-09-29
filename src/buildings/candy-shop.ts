@@ -11,6 +11,7 @@ export default class CandyShop extends Item implements Buildable, Producer {
   name = "Candy Shop";
   price = 150_000;
   isNFT = false;
+  icon = "buildings/icon_candyShop.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 10 }),

@@ -12,6 +12,7 @@ export default class PotteryShop extends Item implements Buildable, Producer {
   name = "Pottery Shop";
   price = 120_000;
   isNFT = false;
+  icon = "buildings/icon_potteryShop.png";
 
   buildRequirements = [
     createRequirement({ craft: Lumber, quantity: 5 }),

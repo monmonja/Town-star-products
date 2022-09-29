@@ -12,6 +12,7 @@ export default class PowerPlant extends Item implements Buildable, Producer {
   name = "Power Plant";
   price = 250_000;
   isNFT = false;
+  icon = "buildings/icon_powerPlant.png";
 
   buildRequirements = [
     createRequirement({ craft: Lumber, quantity: 10 }),

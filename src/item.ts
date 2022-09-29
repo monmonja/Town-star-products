@@ -1,4 +1,5 @@
 export default abstract class Item {
   abstract name: string;
-  description?: string
+  description?: string;
+  icon?: string;
 }

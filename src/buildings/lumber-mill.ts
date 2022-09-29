@@ -12,6 +12,7 @@ export default class LumberMill extends Item implements Buildable, Producer {
   name = "Lumber Mill";
   price = 50_000;
   isNFT = false;
+  icon = "buildings/icon_lumberMill.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 5 }),

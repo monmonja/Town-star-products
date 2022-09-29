@@ -8,6 +8,7 @@ export default class LumberYard extends Item implements Buildable {
   name = "Lumber Yard";
   price = 20_000;
   isNFT = false;
+  icon = "buildings/icon_LumberYard.png";
 
   buildRequirements = [
     createRequirement({ craft: Wood, quantity: 5 }),

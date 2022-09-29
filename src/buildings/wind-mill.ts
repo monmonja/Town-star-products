@@ -5,4 +5,5 @@ export default class WindMill extends Item implements Buildable {
   name = "Wind Mill";
   price = 7_500;
   isNFT = false;
+  icon = "buildings/icon_windmill.png";
 }
