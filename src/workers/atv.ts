@@ -5,13 +5,13 @@ import Item from "../item";
 import Lumber from "../crafts/lumber";
 import Energy from "../crafts/energy";
 import Road from "../terrains/road";
-import RangeHouse from "./range-house";
+import RanchHouse from "./ranch-house";
 
 export default class ATV extends Item implements Buildable {
   name = "ATV";
   price = 75_000;
   isNFT = false;
-  isImprovementOf = RangeHouse;
+  isImprovementOf = RanchHouse;
 
   buildRequirements = [
     createRequirement({ craft: Lumber, quantity: 5 }),

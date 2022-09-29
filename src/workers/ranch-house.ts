@@ -4,8 +4,8 @@ import Road from "../terrains/road";
 import { createRequirement } from "../craft-requirement";
 import Wood from "../crafts/wood";
 
-export default class RangeHouse extends Item implements Buildable {
-  name = "Range House"
+export default class RanchHouse extends Item implements Buildable {
+  name = "Ranch House"
   isNFT = false;
   price = 1_250;
 

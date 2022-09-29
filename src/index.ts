@@ -135,7 +135,7 @@ import FarmHouse from "./workers/farm-house";
 import FarmTractor from "./workers/farm-tractor";
 import Forklift from "./workers/forklift";
 import LumberjackHouse from "./workers/lumberjack-house";
-import RangeHouse from "./workers/range-house";
+import RanchHouse from "./workers/ranch-house";
 import TheLoggerHouse from "./workers/the-logger-house";
 import WorkerHouse from "./workers/worker-house";
 import ProductSelector from "./ui/product-selection";
@@ -283,7 +283,7 @@ window.products = {
   [FarmTractor.name]: new FarmTractor(),
   [Forklift.name]: new Forklift(),
   [LumberjackHouse.name]: new LumberjackHouse(),
-  [RangeHouse.name]: new RangeHouse(),
+  [RanchHouse.name]: new RanchHouse(),
   [TheLoggerHouse.name]: new TheLoggerHouse(),
   [WorkerHouse.name]: new WorkerHouse(),
 }
