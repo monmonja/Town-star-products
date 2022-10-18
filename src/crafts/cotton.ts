@@ -5,7 +5,7 @@ import Water from "./water";
 import Silo from "../buildings/silo";
 
 export default class Cotton extends Craft {
-  name = "Cotton Yarn";
+  name = "Cotton";
 
   requires = [
     createRequirement({ craft: Water, quantity: 4 }),

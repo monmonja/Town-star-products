@@ -96,6 +96,7 @@ import FoodParcel from "./crafts/food-parcel";
 import Gasoline from "./crafts/gasoline";
 import Honey from "./crafts/honey";
 import Honeycomb from "./crafts/honeycomb";
+import JackOLantern from "./crafts/jack-o-lantern";
 import Jam from "./crafts/jam";
 import JetFuel from "./crafts/jet-fuel";
 import Nectar from "./crafts/nectar";
@@ -178,6 +179,7 @@ window.products = {
   [Honey.name]: new Honey(),
   [Honeycomb.name]: new Honeycomb(),
   [Iron.name]: new Iron(),
+  [JackOLantern.name]: new JackOLantern(),
   [Jam.name]: new Jam(),
   [JetFuel.name]: new JetFuel(),
   [Limestone.name]: new Limestone(),
