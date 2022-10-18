@@ -163,7 +163,6 @@ header .header-row label {
   text-align: left;
 }
 #tree-output.alt .tree-children {
-  display: inline-block;
   justify-content: flex-start;
   padding-left: 6px;
   margin-left: 12px;
