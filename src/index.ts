@@ -141,6 +141,7 @@ import TheLoggerHouse from "./workers/the-logger-house";
 import WorkerHouse from "./workers/worker-house";
 import ProductSelector from "./ui/product-selection";
 import Petroleum from "./crafts/petroleum";
+import StackedBox from "./crafts/stacked-box";
 
 window.products = {
 
@@ -198,6 +199,7 @@ window.products = {
   [Salt.name]: new Salt(),
   [Sangria.name]: new Sangria(),
   [Silica.name]: new Silica(),
+  [StackedBox.name]: new StackedBox(),
   [Steel.name]: new Steel(),
   [Strawberries.name]: new Strawberries(),
   [Sugar.name]: new Sugar(),

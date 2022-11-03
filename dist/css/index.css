@@ -45,6 +45,8 @@ header .header-row label {
 }
 
 #screenshot {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   overflow: auto;
   background: white;
@@ -53,13 +55,8 @@ header .header-row label {
 .footer {
   padding: 10px;
   font-size: 0.9rem;
-  position: fixed;
   background: #508991;
   color: white;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
 }
 
 #output-wrapper {
@@ -163,6 +160,7 @@ header .header-row label {
   text-align: left;
 }
 #tree-output.alt .tree-children {
+  display: inline-block;
   justify-content: flex-start;
   padding-left: 6px;
   margin-left: 12px;
