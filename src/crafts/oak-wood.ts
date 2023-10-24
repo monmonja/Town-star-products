@@ -8,7 +8,7 @@ export default class OakWood extends Craft {
   name = "Oak Wood";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 5 }),
+    createRequirement({ craft: Water, quantity: 5, drawInline: true }),
   ];
 
   generatedFrom = [

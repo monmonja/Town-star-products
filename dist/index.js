@@ -3308,7 +3308,8 @@ function (_super) {
     _this.generatedFrom = [_crops_salt_field__WEBPACK_IMPORTED_MODULE_2__["default"]];
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_3__["default"],
-      quantity: 3
+      quantity: 3,
+      drawInline: true
     })];
     _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
     return _this;
@@ -6558,7 +6559,8 @@ function (_super) {
     _this.name = "Oak Wood";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_2__["default"],
-      quantity: 5
+      quantity: 5,
+      drawInline: true
     })];
     _this.generatedFrom = [_crops_oak_tree_farm__WEBPACK_IMPORTED_MODULE_3__["default"]];
     _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
@@ -6716,7 +6718,8 @@ function (_super) {
     _this.name = "Peppermint";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_2__["default"],
-      quantity: 3
+      quantity: 3,
+      drawInline: true
     })];
     _this.generatedFrom = [_crops_peppermint_field__WEBPACK_IMPORTED_MODULE_3__["default"]];
     _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
@@ -7601,7 +7604,8 @@ function (_super) {
     _this.name = "Strawberries";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_2__["default"],
-      quantity: 2
+      quantity: 2,
+      drawInline: true
     })];
     _this.generatedFrom = [_crops_strawberry_farm__WEBPACK_IMPORTED_MODULE_3__["default"]];
     _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
@@ -7754,7 +7758,8 @@ function (_super) {
     _this.name = "Sugarcane";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_2__["default"],
-      quantity: 4
+      quantity: 4,
+      drawInline: true
     })];
     _this.generatedFrom = [_crops_sugercane_field__WEBPACK_IMPORTED_MODULE_3__["default"]];
     _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
@@ -8136,7 +8141,8 @@ function (_super) {
     _this.name = "Wheat";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_2__["default"],
-      quantity: 3
+      quantity: 3,
+      drawInline: true
     })];
     _this.generatedFrom = [_crops_wheat_field__WEBPACK_IMPORTED_MODULE_3__["default"]];
     _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
@@ -8298,7 +8304,8 @@ function (_super) {
       craft: _water__WEBPACK_IMPORTED_MODULE_5__["default"],
       quantity: 5,
       required: false,
-      building: _crops_tree_farm__WEBPACK_IMPORTED_MODULE_1__["default"]
+      building: _crops_tree_farm__WEBPACK_IMPORTED_MODULE_1__["default"],
+      drawInline: true
     })];
     _this.generatedFrom = [_crops_tree_farm__WEBPACK_IMPORTED_MODULE_1__["default"]];
     _this.storage = [_buildings_wood_shed__WEBPACK_IMPORTED_MODULE_2__["default"], _buildings_lumber_yard__WEBPACK_IMPORTED_MODULE_3__["default"]];

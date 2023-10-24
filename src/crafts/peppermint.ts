@@ -8,7 +8,7 @@ export default class Peppermint extends Craft {
   name = "Peppermint";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 3 })
+    createRequirement({ craft: Water, quantity: 3, drawInline: true })
   ];
 
   generatedFrom = [

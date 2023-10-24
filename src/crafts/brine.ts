@@ -12,7 +12,7 @@ export default class Brine extends Craft {
   ];
 
   requires = [
-    createRequirement({ craft: Water, quantity: 3 }),
+    createRequirement({ craft: Water, quantity: 3, drawInline: true }),
   ];
 
   storage = [

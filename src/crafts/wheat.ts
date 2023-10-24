@@ -8,7 +8,7 @@ export default class Wheat extends Craft {
   name = "Wheat";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 3 }),
+    createRequirement({ craft: Water, quantity: 3, drawInline: true }),
   ];
 
   generatedFrom = [

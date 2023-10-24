@@ -8,7 +8,7 @@ export default class Sugarcane extends Craft {
   name = "Sugarcane";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 4 }),
+    createRequirement({ craft: Water, quantity: 4, drawInline: true }),
   ];
 
   generatedFrom = [

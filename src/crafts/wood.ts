@@ -9,7 +9,7 @@ export default class Wood extends Craft {
   name = "Wood";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 5, required: false, building: TreeFarm }),
+    createRequirement({ craft: Water, quantity: 5, required: false, building: TreeFarm, drawInline: true }),
   ];
 
   generatedFrom = [

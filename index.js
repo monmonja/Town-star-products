@@ -102,7 +102,7 @@ class TreeGenerator {
     }
     if (item.requires) {
       let requiresEl = document.createElement('div');
-      requiresEl.classList = 'building-value';
+      requiresEl.classList = 'building-value building-inline-requirement';
       let hasInlineRequire = false;
       item.requires.forEach((item) => {
         if (typeof item.required === 'undefined' || item.required === true) {
@@ -142,16 +142,30 @@ class TreeGenerator {
       Array.from(document.querySelectorAll('.buildings-item'))
         .forEach((buildingEl) => buildingEl.classList.remove('selected'));
     });
+    card.addEventListener('click', () => {
+      let treeChildren = card.parentNode.querySelector('.tree-children');
+      if (treeChildren.style.overflow !== 'auto') {
+        treeChildren.style.overflow = 'auto';
+        treeChildren.style.height = 'auto';
+        treeChildren.style.width = 'auto';
+      } else {
+        treeChildren.style.overflow = 'hidden';
+        treeChildren.style.height = '0';
+        treeChildren.style.width = '0';
+      }
+
+    });
 
     return card;
   }
 
-  drawTreeLayout(product, quantity, parentDiv) {
+  drawTreeLayout(product, quantity, parentDiv, level = 0) {
     let productKey = Object.keys(product)[0];
     let div = document.createElement('div');
+    let card = this.drawTreeCard(product, quantity);
 
     div.className = 'tree-item';
-    div.appendChild(this.drawTreeCard(product, quantity));
+    div.appendChild(card);
 
     if (product[productKey].requires) {
       let hasChildren = false;
@@ -164,7 +178,7 @@ class TreeGenerator {
           hasChildren = true;
           if (!item.drawInline) {
             hasItemAdded = true;
-            this.drawTreeLayout(item.product, item.quantity, childDiv);
+            this.drawTreeLayout(item.product, item.quantity, childDiv, level + 1);
           }
         }
       });
@@ -174,6 +188,12 @@ class TreeGenerator {
       }
 
       if (hasItemAdded) {
+        if (level > 1) {
+          let collapse = document.createElement('div');
+          collapse.className = 'collapse';
+          collapse.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-collapse</title><path d="M19.5,3.09L15,7.59V4H13V11H20V9H16.41L20.91,4.5L19.5,3.09M4,13V15H7.59L3.09,19.5L4.5,20.91L9,16.41V20H11V13H4Z" /></svg>';
+          card.appendChild(collapse);
+        }
         div.appendChild(childDiv);
       }
     }

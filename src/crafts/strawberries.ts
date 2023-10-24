@@ -8,7 +8,7 @@ export default class Strawberries extends Craft {
   name = "Strawberries";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 2 })
+    createRequirement({ craft: Water, quantity: 2, drawInline: true })
   ];
 
   generatedFrom = [
