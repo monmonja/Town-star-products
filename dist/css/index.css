@@ -106,8 +106,8 @@ header .header-row label {
 }
 
 #tree-output > .tree-item > .product-card {
-  background: #004346;
-  color: white;
+  border: 1px solid #004346;
+  color: #004346;
   font-size: 1.4rem;
 }
 
@@ -115,39 +115,50 @@ header .header-row label {
   display: inline;
 }
 #tree-output.alt > .tree-item > .product-card {
-  background: #172A3A;
+  border: 1px solid #172A3A;
+  color: #172A3A;
 }
 #tree-output.alt > .tree-item > .tree-children > .tree-item > .product-card {
-  background: #213d54;
+  border: 1px solid #213d54;
+  color: #213d54;
 }
 #tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
-  background: #2b4f6d;
+  border: 1px solid #2b4f6d;
+  color: #2b4f6d;
 }
 #tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
-  background: #356287;
+  border: 1px solid #356287;
+  color: #356287;
 }
 #tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
-  background: #4074a0;
+  border: 1px solid #4074a0;
+  color: #4074a0;
 }
 #tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
-  background: #4c86b8;
+  border: 1px solid #4c86b8;
+  color: #4c86b8;
 }
 #tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
-  background: #6598c2;
+  border: 1px solid #6598c2;
+  color: #6598c2;
 }
 #tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
-  background: #7fa9cc;
+  border: 1px solid #7fa9cc;
+  color: #7fa9cc;
 }
 #tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
-  background: #98bad6;
+  border: 1px solid #98bad6;
+  color: #98bad6;
   color: #172A3A;
 }
 #tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
-  background: #b2cbe0;
+  border: 1px solid #b2cbe0;
+  color: #b2cbe0;
   color: #172A3A;
 }
 #tree-output.alt > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .tree-children > .tree-item > .product-card {
-  background: #cbdceb;
+  border: 1px solid #cbdceb;
+  color: #cbdceb;
   color: #172A3A;
 }
 #tree-output.alt .tree-item {
@@ -182,8 +193,17 @@ header .header-row label {
 
 .building-generated-from {
   font-size: 12px;
-  color: yellow;
+  color: #333;
   padding: 2px 4px;
+}
+.building-generated-from .building-label {
+  display: inline-block;
+  color: #999;
+  padding-right: 4px;
+}
+.building-generated-from .building-value {
+  display: inline-block;
+  font-weight: bold;
 }
 
 .tree-item {
@@ -211,10 +231,8 @@ header .header-row label {
 }
 
 .product-card {
-  border-radius: 4px;
-  padding: 8px;
-  margin: 6px 4px;
-  background: #508991;
+  padding: 4px 12px;
+  margin: 2px 4px;
   color: white;
   cursor: pointer;
   white-space: nowrap;

@@ -51,14 +51,15 @@
 }
 
 #tree-output > .tree-item > .product-card {
-  background: #004346;
-  color: white;
+  border: 1px solid #004346;
+  color: #004346;
   font-size: 1.4rem;
 }
 
 @mixin tree-color($val, $background) {
   > .tree-item > .product-card {
-    background: $background;
+    border: 1px solid $background;
+    color: $background;
 
     @if $val < 3 {
       color: #172A3A;
@@ -115,8 +116,19 @@
 
 .building-generated-from {
   font-size: 12px;
-  color: yellow;
+  color: #333;
   padding: 2px 4px;
+
+  .building-label {
+    display: inline-block;
+    color: #999;
+    padding-right: 4px;
+  }
+
+  .building-value {
+    display: inline-block;
+    font-weight: bold;
+  }
 }
 
 .tree-item {
@@ -143,10 +155,8 @@
 }
 
 .product-card {
-  border-radius: 4px;
-  padding: 8px;
-  margin: 6px 4px;
-  background: #508991;
+  padding: 4px 12px;
+  margin: 2px 4px;
   color: white;
   cursor: pointer;
   white-space: nowrap;

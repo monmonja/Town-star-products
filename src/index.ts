@@ -142,6 +142,7 @@ import WorkerHouse from "./workers/worker-house";
 import ProductSelector from "./ui/product-selection";
 import Petroleum from "./crafts/petroleum";
 import StackedBox from "./crafts/stacked-box";
+import AquaculturistHouse from "./workers/aquaculturist-house";
 
 window.products = {
 
@@ -280,6 +281,7 @@ window.products = {
   [Road.name]: new Road(),
 
   // workers
+  [AquaculturistHouse.name]: new AquaculturistHouse(),
   [ATV.name]: new ATV(),
   [BeeKeeperHouse.name]: new BeeKeeperHouse(),
   [BuilderHouse.name]: new BuilderHouse(),

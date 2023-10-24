@@ -8,7 +8,7 @@ export default class Cotton extends Craft {
   name = "Cotton";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 4 }),
+    createRequirement({ craft: Water, quantity: 4, drawInline: true }),
   ];
 
   generatedFrom = [

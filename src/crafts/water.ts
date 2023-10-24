@@ -10,8 +10,4 @@ export default class Water extends Craft {
     Well,
     WindPump,
   ];
-
-  storage = [
-    Warehouse,
-  ];
 }

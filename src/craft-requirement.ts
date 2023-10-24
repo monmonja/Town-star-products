@@ -6,6 +6,7 @@ interface CraftRequirement {
   quantity: number;
   building?: Placeable | any;
   required?: boolean;
+  drawInline?: boolean;
 }
 
 function createRequirement(parameter: CraftRequirement): CraftRequirement {

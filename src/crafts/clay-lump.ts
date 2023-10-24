@@ -8,7 +8,7 @@ export default class ClayLump extends Craft {
   name = "Clay Lump";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 3 }),
+    createRequirement({ craft: Water, quantity: 3, drawInline: true }),
   ];
 
   generatedFrom = [

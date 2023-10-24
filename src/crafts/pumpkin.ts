@@ -8,7 +8,7 @@ export default class Pumpkin extends Craft {
   name = "Pumpkin";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 10 }),
+    createRequirement({ craft: Water, quantity: 10, drawInline: true }),
   ];
 
   generatedFrom = [

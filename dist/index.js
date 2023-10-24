@@ -4297,7 +4297,8 @@ function (_super) {
     _this.name = "Clay Lump";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_3__["default"],
-      quantity: 3
+      quantity: 3,
+      drawInline: true
     })];
     _this.generatedFrom = [_terrains_clay_field__WEBPACK_IMPORTED_MODULE_1__["default"]];
     _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_4__["default"]];
@@ -4534,7 +4535,8 @@ function (_super) {
     _this.name = "Cotton";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_3__["default"],
-      quantity: 4
+      quantity: 4,
+      drawInline: true
     })];
     _this.generatedFrom = [_crops_cotton_field__WEBPACK_IMPORTED_MODULE_2__["default"]];
     _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
@@ -7119,7 +7121,8 @@ function (_super) {
     _this.name = "Pumpkin";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_2__["default"],
-      quantity: 10
+      quantity: 10,
+      drawInline: true
     })];
     _this.generatedFrom = [_crops_pumpkin_patch__WEBPACK_IMPORTED_MODULE_3__["default"]];
     _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
@@ -7909,7 +7912,8 @@ function (_super) {
     _this.name = "Water Drum";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_2__["default"],
-      quantity: 3
+      quantity: 3,
+      drawInline: true
     })];
     _this.generatedFrom = [_buildings_water_facility__WEBPACK_IMPORTED_MODULE_3__["default"]];
     _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_4__["default"]];
@@ -7934,9 +7938,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
-/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
-/* harmony import */ var _buildings_well__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/well */ "./src/buildings/well.ts");
-/* harmony import */ var _buildings_wind_pump__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/wind-pump */ "./src/buildings/wind-pump.ts");
+/* harmony import */ var _buildings_well__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../buildings/well */ "./src/buildings/well.ts");
+/* harmony import */ var _buildings_wind_pump__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/wind-pump */ "./src/buildings/wind-pump.ts");
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
     _extendStatics = Object.setPrototypeOf || {
@@ -7969,7 +7972,6 @@ var __extends = undefined && undefined.__extends || function () {
 
 
 
-
 var Water =
 /** @class */
 function (_super) {
@@ -7979,8 +7981,7 @@ function (_super) {
     var _this = _super !== null && _super.apply(this, arguments) || this;
 
     _this.name = "Water";
-    _this.generatedFrom = [_buildings_well__WEBPACK_IMPORTED_MODULE_2__["default"], _buildings_wind_pump__WEBPACK_IMPORTED_MODULE_3__["default"]];
-    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_1__["default"]];
+    _this.generatedFrom = [_buildings_well__WEBPACK_IMPORTED_MODULE_1__["default"], _buildings_wind_pump__WEBPACK_IMPORTED_MODULE_2__["default"]];
     return _this;
   }
 
@@ -9608,7 +9609,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ui_product_selection__WEBPACK_IMPORTED_MODULE_134__ = __webpack_require__(/*! ./ui/product-selection */ "./src/ui/product-selection.ts");
 /* harmony import */ var _crafts_petroleum__WEBPACK_IMPORTED_MODULE_135__ = __webpack_require__(/*! ./crafts/petroleum */ "./src/crafts/petroleum.ts");
 /* harmony import */ var _crafts_stacked_box__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ./crafts/stacked-box */ "./src/crafts/stacked-box.ts");
+/* harmony import */ var _workers_aquaculturist_house__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ./workers/aquaculturist-house */ "./src/workers/aquaculturist-house.ts");
 var _a;
+
 
 
 
@@ -9752,7 +9755,7 @@ _a[_crafts_baguette__WEBPACK_IMPORTED_MODULE_11__["default"].name] = new _crafts
 _a[_buildings_bakery__WEBPACK_IMPORTED_MODULE_0__["default"].name] = new _buildings_bakery__WEBPACK_IMPORTED_MODULE_0__["default"](), _a[_buildings_beehive__WEBPACK_IMPORTED_MODULE_45__["default"].name] = new _buildings_beehive__WEBPACK_IMPORTED_MODULE_45__["default"](), _a[_buildings_boxing_facility__WEBPACK_IMPORTED_MODULE_15__["default"].name] = new _buildings_boxing_facility__WEBPACK_IMPORTED_MODULE_15__["default"](), _a[_buildings_cakery__WEBPACK_IMPORTED_MODULE_46__["default"].name] = new _buildings_cakery__WEBPACK_IMPORTED_MODULE_46__["default"](), _a[_buildings_candy_shop__WEBPACK_IMPORTED_MODULE_104__["default"].name] = new _buildings_candy_shop__WEBPACK_IMPORTED_MODULE_104__["default"](), _a[_buildings_chicken_coop__WEBPACK_IMPORTED_MODULE_103__["default"].name] = new _buildings_chicken_coop__WEBPACK_IMPORTED_MODULE_103__["default"](), _a[_buildings_chocolate_shop__WEBPACK_IMPORTED_MODULE_26__["default"].name] = new _buildings_chocolate_shop__WEBPACK_IMPORTED_MODULE_26__["default"](), _a[_buildings_fabric_plant__WEBPACK_IMPORTED_MODULE_47__["default"].name] = new _buildings_fabric_plant__WEBPACK_IMPORTED_MODULE_47__["default"](), _a[_buildings_feed_mill__WEBPACK_IMPORTED_MODULE_48__["default"].name] = new _buildings_feed_mill__WEBPACK_IMPORTED_MODULE_48__["default"](), _a[_buildings_fuel_storage__WEBPACK_IMPORTED_MODULE_49__["default"].name] = new _buildings_fuel_storage__WEBPACK_IMPORTED_MODULE_49__["default"](), _a[_buildings_glass_factory__WEBPACK_IMPORTED_MODULE_50__["default"].name] = new _buildings_glass_factory__WEBPACK_IMPORTED_MODULE_50__["default"](), _a[_buildings_iron_mine__WEBPACK_IMPORTED_MODULE_51__["default"].name] = new _buildings_iron_mine__WEBPACK_IMPORTED_MODULE_51__["default"](), _a[_buildings_lumber_mill__WEBPACK_IMPORTED_MODULE_52__["default"].name] = new _buildings_lumber_mill__WEBPACK_IMPORTED_MODULE_52__["default"](), _a[_buildings_lumber_yard__WEBPACK_IMPORTED_MODULE_53__["default"].name] = new _buildings_lumber_yard__WEBPACK_IMPORTED_MODULE_53__["default"](), _a[_buildings_milk_barn__WEBPACK_IMPORTED_MODULE_54__["default"].name] = new _buildings_milk_barn__WEBPACK_IMPORTED_MODULE_54__["default"](), _a[_buildings_nuclear_power__WEBPACK_IMPORTED_MODULE_55__["default"].name] = new _buildings_nuclear_power__WEBPACK_IMPORTED_MODULE_55__["default"](), _a[_buildings_oil_pump__WEBPACK_IMPORTED_MODULE_56__["default"].name] = new _buildings_oil_pump__WEBPACK_IMPORTED_MODULE_56__["default"](), _a[_buildings_pantry__WEBPACK_IMPORTED_MODULE_57__["default"].name] = new _buildings_pantry__WEBPACK_IMPORTED_MODULE_57__["default"](), _a[_buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_58__["default"].name] = new _buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_58__["default"](), _a[_buildings_power_plant__WEBPACK_IMPORTED_MODULE_59__["default"].name] = new _buildings_power_plant__WEBPACK_IMPORTED_MODULE_59__["default"](), _a[_buildings_refinery__WEBPACK_IMPORTED_MODULE_60__["default"].name] = new _buildings_refinery__WEBPACK_IMPORTED_MODULE_60__["default"](), _a[_buildings_sand_mine__WEBPACK_IMPORTED_MODULE_61__["default"].name] = new _buildings_sand_mine__WEBPACK_IMPORTED_MODULE_61__["default"](), _a[_buildings_shallow_mine__WEBPACK_IMPORTED_MODULE_62__["default"].name] = new _buildings_shallow_mine__WEBPACK_IMPORTED_MODULE_62__["default"](), _a[_buildings_sheep_pen__WEBPACK_IMPORTED_MODULE_63__["default"].name] = new _buildings_sheep_pen__WEBPACK_IMPORTED_MODULE_63__["default"](), _a[_buildings_silo__WEBPACK_IMPORTED_MODULE_64__["default"].name] = new _buildings_silo__WEBPACK_IMPORTED_MODULE_64__["default"](), _a[_buildings_steel_mill__WEBPACK_IMPORTED_MODULE_65__["default"].name] = new _buildings_steel_mill__WEBPACK_IMPORTED_MODULE_65__["default"](), _a[_buildings_storehouse__WEBPACK_IMPORTED_MODULE_66__["default"].name] = new _buildings_storehouse__WEBPACK_IMPORTED_MODULE_66__["default"](), _a[_buildings_trough__WEBPACK_IMPORTED_MODULE_67__["default"].name] = new _buildings_trough__WEBPACK_IMPORTED_MODULE_67__["default"](), _a[_buildings_warehouse__WEBPACK_IMPORTED_MODULE_68__["default"].name] = new _buildings_warehouse__WEBPACK_IMPORTED_MODULE_68__["default"](), _a[_buildings_water_facility__WEBPACK_IMPORTED_MODULE_69__["default"].name] = new _buildings_water_facility__WEBPACK_IMPORTED_MODULE_69__["default"](), _a[_buildings_water_pump__WEBPACK_IMPORTED_MODULE_70__["default"].name] = new _buildings_water_pump__WEBPACK_IMPORTED_MODULE_70__["default"](), _a[_buildings_well__WEBPACK_IMPORTED_MODULE_71__["default"].name] = new _buildings_well__WEBPACK_IMPORTED_MODULE_71__["default"](), _a[_buildings_wind_mill__WEBPACK_IMPORTED_MODULE_72__["default"].name] = new _buildings_wind_mill__WEBPACK_IMPORTED_MODULE_72__["default"](), _a[_buildings_wind_pump__WEBPACK_IMPORTED_MODULE_73__["default"].name] = new _buildings_wind_pump__WEBPACK_IMPORTED_MODULE_73__["default"](), _a[_buildings_winery__WEBPACK_IMPORTED_MODULE_74__["default"].name] = new _buildings_winery__WEBPACK_IMPORTED_MODULE_74__["default"](), _a[_buildings_wood_shed__WEBPACK_IMPORTED_MODULE_75__["default"].name] = new _buildings_wood_shed__WEBPACK_IMPORTED_MODULE_75__["default"](), // crops
 _a[_crops_cabernet_vines__WEBPACK_IMPORTED_MODULE_101__["default"].name] = new _crops_cabernet_vines__WEBPACK_IMPORTED_MODULE_101__["default"](), _a[_crops_chardonnay_vines__WEBPACK_IMPORTED_MODULE_102__["default"].name] = new _crops_chardonnay_vines__WEBPACK_IMPORTED_MODULE_102__["default"](), _a[_crops_cocoa_tree__WEBPACK_IMPORTED_MODULE_105__["default"].name] = new _crops_cocoa_tree__WEBPACK_IMPORTED_MODULE_105__["default"](), _a[_crops_cotton_field__WEBPACK_IMPORTED_MODULE_106__["default"].name] = new _crops_cotton_field__WEBPACK_IMPORTED_MODULE_106__["default"](), _a[_crops_oak_tree_farm__WEBPACK_IMPORTED_MODULE_107__["default"].name] = new _crops_oak_tree_farm__WEBPACK_IMPORTED_MODULE_107__["default"](), _a[_crops_peppermint_field__WEBPACK_IMPORTED_MODULE_108__["default"].name] = new _crops_peppermint_field__WEBPACK_IMPORTED_MODULE_108__["default"](), _a[_crops_pinot_noir_vines__WEBPACK_IMPORTED_MODULE_109__["default"].name] = new _crops_pinot_noir_vines__WEBPACK_IMPORTED_MODULE_109__["default"](), _a[_crops_pumpkin_patch__WEBPACK_IMPORTED_MODULE_110__["default"].name] = new _crops_pumpkin_patch__WEBPACK_IMPORTED_MODULE_110__["default"](), _a[_crops_salt_field__WEBPACK_IMPORTED_MODULE_111__["default"].name] = new _crops_salt_field__WEBPACK_IMPORTED_MODULE_111__["default"](), _a[_crops_strawberry_farm__WEBPACK_IMPORTED_MODULE_112__["default"].name] = new _crops_strawberry_farm__WEBPACK_IMPORTED_MODULE_112__["default"](), _a[_crops_sugercane_field__WEBPACK_IMPORTED_MODULE_113__["default"].name] = new _crops_sugercane_field__WEBPACK_IMPORTED_MODULE_113__["default"](), _a[_crops_tree_farm__WEBPACK_IMPORTED_MODULE_114__["default"].name] = new _crops_tree_farm__WEBPACK_IMPORTED_MODULE_114__["default"](), _a[_crops_wheat_field__WEBPACK_IMPORTED_MODULE_115__["default"].name] = new _crops_wheat_field__WEBPACK_IMPORTED_MODULE_115__["default"](), // terrains
 _a[_terrains_clay_field__WEBPACK_IMPORTED_MODULE_116__["default"].name] = new _terrains_clay_field__WEBPACK_IMPORTED_MODULE_116__["default"](), _a[_terrains_clover_field__WEBPACK_IMPORTED_MODULE_117__["default"].name] = new _terrains_clover_field__WEBPACK_IMPORTED_MODULE_117__["default"](), _a[_terrains_dirt_road__WEBPACK_IMPORTED_MODULE_118__["default"].name] = new _terrains_dirt_road__WEBPACK_IMPORTED_MODULE_118__["default"](), _a[_terrains_meadow__WEBPACK_IMPORTED_MODULE_8__["default"].name] = new _terrains_meadow__WEBPACK_IMPORTED_MODULE_8__["default"](), _a[_terrains_mountains__WEBPACK_IMPORTED_MODULE_119__["default"].name] = new _terrains_mountains__WEBPACK_IMPORTED_MODULE_119__["default"](), _a[_terrains_open_world__WEBPACK_IMPORTED_MODULE_120__["default"].name] = new _terrains_open_world__WEBPACK_IMPORTED_MODULE_120__["default"](), _a[_terrains_paved_road__WEBPACK_IMPORTED_MODULE_121__["default"].name] = new _terrains_paved_road__WEBPACK_IMPORTED_MODULE_121__["default"](), _a[_terrains_pond__WEBPACK_IMPORTED_MODULE_122__["default"].name] = new _terrains_pond__WEBPACK_IMPORTED_MODULE_122__["default"](), _a[_terrains_road__WEBPACK_IMPORTED_MODULE_123__["default"].name] = new _terrains_road__WEBPACK_IMPORTED_MODULE_123__["default"](), // workers
-_a[_workers_atv__WEBPACK_IMPORTED_MODULE_124__["default"].name] = new _workers_atv__WEBPACK_IMPORTED_MODULE_124__["default"](), _a[_workers_bee_keeper_house__WEBPACK_IMPORTED_MODULE_125__["default"].name] = new _workers_bee_keeper_house__WEBPACK_IMPORTED_MODULE_125__["default"](), _a[_workers_builder_house__WEBPACK_IMPORTED_MODULE_126__["default"].name] = new _workers_builder_house__WEBPACK_IMPORTED_MODULE_126__["default"](), _a[_workers_farm_house__WEBPACK_IMPORTED_MODULE_127__["default"].name] = new _workers_farm_house__WEBPACK_IMPORTED_MODULE_127__["default"](), _a[_workers_farm_tractor__WEBPACK_IMPORTED_MODULE_128__["default"].name] = new _workers_farm_tractor__WEBPACK_IMPORTED_MODULE_128__["default"](), _a[_workers_forklift__WEBPACK_IMPORTED_MODULE_129__["default"].name] = new _workers_forklift__WEBPACK_IMPORTED_MODULE_129__["default"](), _a[_workers_lumberjack_house__WEBPACK_IMPORTED_MODULE_130__["default"].name] = new _workers_lumberjack_house__WEBPACK_IMPORTED_MODULE_130__["default"](), _a[_workers_ranch_house__WEBPACK_IMPORTED_MODULE_131__["default"].name] = new _workers_ranch_house__WEBPACK_IMPORTED_MODULE_131__["default"](), _a[_workers_the_logger_house__WEBPACK_IMPORTED_MODULE_132__["default"].name] = new _workers_the_logger_house__WEBPACK_IMPORTED_MODULE_132__["default"](), _a[_workers_worker_house__WEBPACK_IMPORTED_MODULE_133__["default"].name] = new _workers_worker_house__WEBPACK_IMPORTED_MODULE_133__["default"](), _a);
+_a[_workers_aquaculturist_house__WEBPACK_IMPORTED_MODULE_137__["default"].name] = new _workers_aquaculturist_house__WEBPACK_IMPORTED_MODULE_137__["default"](), _a[_workers_atv__WEBPACK_IMPORTED_MODULE_124__["default"].name] = new _workers_atv__WEBPACK_IMPORTED_MODULE_124__["default"](), _a[_workers_bee_keeper_house__WEBPACK_IMPORTED_MODULE_125__["default"].name] = new _workers_bee_keeper_house__WEBPACK_IMPORTED_MODULE_125__["default"](), _a[_workers_builder_house__WEBPACK_IMPORTED_MODULE_126__["default"].name] = new _workers_builder_house__WEBPACK_IMPORTED_MODULE_126__["default"](), _a[_workers_farm_house__WEBPACK_IMPORTED_MODULE_127__["default"].name] = new _workers_farm_house__WEBPACK_IMPORTED_MODULE_127__["default"](), _a[_workers_farm_tractor__WEBPACK_IMPORTED_MODULE_128__["default"].name] = new _workers_farm_tractor__WEBPACK_IMPORTED_MODULE_128__["default"](), _a[_workers_forklift__WEBPACK_IMPORTED_MODULE_129__["default"].name] = new _workers_forklift__WEBPACK_IMPORTED_MODULE_129__["default"](), _a[_workers_lumberjack_house__WEBPACK_IMPORTED_MODULE_130__["default"].name] = new _workers_lumberjack_house__WEBPACK_IMPORTED_MODULE_130__["default"](), _a[_workers_ranch_house__WEBPACK_IMPORTED_MODULE_131__["default"].name] = new _workers_ranch_house__WEBPACK_IMPORTED_MODULE_131__["default"](), _a[_workers_the_logger_house__WEBPACK_IMPORTED_MODULE_132__["default"].name] = new _workers_the_logger_house__WEBPACK_IMPORTED_MODULE_132__["default"](), _a[_workers_worker_house__WEBPACK_IMPORTED_MODULE_133__["default"].name] = new _workers_worker_house__WEBPACK_IMPORTED_MODULE_133__["default"](), _a);
 var productSelector = new _ui_product_selection__WEBPACK_IMPORTED_MODULE_134__["default"]('product-selector', window.products);
 productSelector.populate();
 productSelector.addEvent();
@@ -10410,6 +10413,89 @@ function () {
 }();
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProductSelector);
+
+/***/ }),
+
+/***/ "./src/workers/aquaculturist-house.ts":
+/*!********************************************!*\
+  !*** ./src/workers/aquaculturist-house.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../crafts/oak-wood */ "./src/crafts/oak-wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var AquaculturistHouse =
+/** @class */
+function (_super) {
+  __extends(AquaculturistHouse, _super);
+
+  function AquaculturistHouse() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Aquaculturist House";
+    _this.price = 50000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 5
+    })];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return AquaculturistHouse;
+}(_item__WEBPACK_IMPORTED_MODULE_3__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AquaculturistHouse);
 
 /***/ }),
 

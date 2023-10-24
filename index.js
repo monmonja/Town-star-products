@@ -85,9 +85,40 @@ class TreeGenerator {
     }
 
     card.appendChild(createDiv(item.name, 'product-name'));
+
+    let buildingEl = document.createElement('div');
+    buildingEl.className = 'building-generated-from';
     if (item.generatedFrom && item.generatedFrom[0]) {
-      card.appendChild(createDiv((new item.generatedFrom[0]()).name, 'building-generated-from'));
+      buildingEl.appendChild(createDiv('from ', 'building-label'));
+      buildingEl.appendChild(createDiv(item.generatedFrom.map((building) => {
+        return (new building()).name
+      }).join(', '), 'building-value'));
     }
+    if (item.storage && item.storage[0]) {
+      buildingEl.appendChild(createDiv('; store in ', 'building-label'));
+      buildingEl.appendChild(createDiv(item.storage.map((building) => {
+        return (new building()).name
+      }).join(', '), 'building-value'));
+    }
+    if (item.requires) {
+      let requiresEl = document.createElement('div');
+      requiresEl.classList = 'building-value';
+      let hasInlineRequire = false;
+      item.requires.forEach((item) => {
+        if (typeof item.required === 'undefined' || item.required === true) {
+          if (item.drawInline) {
+            hasInlineRequire = true;
+
+            requiresEl.appendChild(createDiv(`${item.quantity} ${Object.keys(item.product)[0]}`, 'building-value'));
+          }
+        }
+      });
+      if (hasInlineRequire) {
+        buildingEl.appendChild(createDiv('; needs ', 'building-label'));
+        buildingEl.append(requiresEl);
+      }
+    }
+    card.appendChild(buildingEl);
     this.drawBuildMaterials(item, card);
 
     card.addEventListener('mouseover', () => {
@@ -124,13 +155,17 @@ class TreeGenerator {
 
     if (product[productKey].requires) {
       let hasChildren = false;
+      let hasItemAdded = false;
       let childDiv = document.createElement('div');
 
       childDiv.className = 'tree-children';
       product[productKey].requires.forEach((item) => {
         if (typeof item.required === 'undefined' || item.required === true) {
           hasChildren = true;
-          this.drawTreeLayout(item.product, item.quantity, childDiv);
+          if (!item.drawInline) {
+            hasItemAdded = true;
+            this.drawTreeLayout(item.product, item.quantity, childDiv);
+          }
         }
       });
 
@@ -138,7 +173,9 @@ class TreeGenerator {
         div.classList.add('has-children');
       }
 
-      div.appendChild(childDiv);
+      if (hasItemAdded) {
+        div.appendChild(childDiv);
+      }
     }
 
     parentDiv.appendChild(div);

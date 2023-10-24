@@ -8,7 +8,7 @@ export default class WaterDrum extends Craft {
   name = "Water Drum";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 3 }),
+    createRequirement({ craft: Water, quantity: 3, drawInline: true }),
   ];
 
   generatedFrom = [
