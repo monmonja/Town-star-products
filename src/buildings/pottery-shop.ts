@@ -7,6 +7,7 @@ import Item from "../item";
 import Energy from "../crafts/energy";
 import CeramicBowl from "../crafts/ceramic-bowl";
 import Road from "../terrains/road";
+import JackOLantern from "../crafts/jack-o-lantern";
 
 export default class PotteryShop extends Item implements Buildable, Producer {
   name = "Pottery Shop";
@@ -22,6 +23,9 @@ export default class PotteryShop extends Item implements Buildable, Producer {
 
   output = [
     CeramicBowl,
+    JackOLantern,
+    //SupplyBox,
+    //HeartShapedPrint,
   ];
 
   requirements = [

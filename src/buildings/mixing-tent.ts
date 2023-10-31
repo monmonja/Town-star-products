@@ -1,20 +1,18 @@
 import Buildable from "../buildable";
 import { createRequirement } from "../craft-requirement";
 import Wood from "../crafts/wood";
-import Lumber from "../crafts/lumber";
-import Energy from "../crafts/energy";
 import Producer from "../producer";
 import Item from "../item";
-import FoodParcel from "../crafts/food-parcel";
-import GiftParcel from "../crafts/gift-parcel";
+import Energy from "../crafts/energy";
 import Road from "../terrains/road";
-import PartyBox from "../crafts/party-box";
+import Lumber from "../crafts/lumber";
+import IceBlock from "../crafts/ice-block";
+import MagicPowder from "../crafts/magic-powder";
 
-export default class BoxingFacility extends Item implements Buildable, Producer {
-  name = "Boxing Facility";
-  price = 300_000;
+export default class MixingTent extends Item implements Buildable, Producer {
+  name = "Mixing Tent";
+  price = 550_000;
   isNFT = false;
-  icon = "buildings/icon_boxing_Facility.png";
 
   buildRequirements = [
     createRequirement({ craft: Lumber, quantity: 10 }),
@@ -23,11 +21,10 @@ export default class BoxingFacility extends Item implements Buildable, Producer 
   ];
 
   output = [
-    FoodParcel,
-    GiftParcel,
-    PartyBox,
-    //StackBox,
-    //JewelrySet,
+    //FishChum,
+    //WhiteRice,
+    //FoodMix,
+    //Cheese,
   ];
 
   requirements = [

@@ -143,6 +143,11 @@ import ProductSelector from "./ui/product-selection";
 import Petroleum from "./crafts/petroleum";
 import StackedBox from "./crafts/stacked-box";
 import AquaculturistHouse from "./workers/aquaculturist-house";
+import TrickOrTreatBag from "./crafts/trick-or-treat-bag";
+import Corn from "./crafts/corn";
+import CandyCorn from "./crafts/candy-corn";
+import CornField from "./crops/corn-field";
+import CornStarch from "./crafts/corn-starch";
 
 window.products = {
 
@@ -154,6 +159,7 @@ window.products = {
   [Butter.name]: new Butter(),
   [CabernetGrapes.name]: new CabernetGrapes(),
   [CabernetSauvignon.name]: new CabernetSauvignon(),
+  [CandyCorn.name]: new CandyCorn(),
   [Cake.name]: new Cake(),
   [CandyCanes.name]: new CandyCanes(),
   [CeramicBowl.name]: new CeramicBowl(),
@@ -164,6 +170,8 @@ window.products = {
   [Chromium.name]: new Chromium(),
   [ClayLump.name]: new ClayLump(),
   [Cocoa.name]: new Cocoa(),
+  [Corn.name]: new Corn(),
+  [CornStarch.name]: new CornStarch(),
   [Cotton.name]: new Cotton(),
   [CottonYarn.name]: new CottonYarn(),
   [CrudeOil.name]: new CrudeOil(),
@@ -205,6 +213,7 @@ window.products = {
   [Strawberries.name]: new Strawberries(),
   [Sugar.name]: new Sugar(),
   [Sugarcane.name]: new Sugarcane(),
+  [TrickOrTreatBag.name]: new TrickOrTreatBag(),
   [Uniforms.name]: new Uniforms(),
   [Water.name]: new Water(),
   [WaterDrum.name]: new WaterDrum(),
@@ -258,6 +267,7 @@ window.products = {
   [CabernetVines.name]: new CabernetVines(),
   [ChardonnayVines.name]: new ChardonnayVines(),
   [CocoaTree.name]: new CocoaTree(),
+  [CornField.name]: new CornField(),
   [CottonField.name]: new CottonField(),
   [OakTreeFarm.name]: new OakTreeFarm(),
   [PeppermintField.name]: new PeppermintField(),

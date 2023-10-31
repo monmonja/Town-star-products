@@ -21,6 +21,7 @@ export default class GlassFactory extends Item implements Buildable {
 
   output = [
     WineBottle,
+    //MoltenGlass,
   ];
 
   requirements = [

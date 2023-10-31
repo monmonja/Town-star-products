@@ -6,6 +6,7 @@ import Item from "../item";
 import OakWood from "../crafts/oak-wood";
 import WaterDrum from "../crafts/water-drum";
 import Road from "../terrains/road";
+import IceBlock from "../crafts/ice-block";
 
 export default class WaterFacility extends Item implements Buildable, Producer {
   name = "Water Facility";
@@ -20,6 +21,7 @@ export default class WaterFacility extends Item implements Buildable, Producer {
 
   output = [
     WaterDrum,
+    IceBlock,
   ];
 
   requirements = [

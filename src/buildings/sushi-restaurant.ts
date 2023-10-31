@@ -9,27 +9,27 @@ import Steel from "../crafts/steel";
 import BlueSteel from "../crafts/blue-steel";
 import PavedRoad from "../terrains/paved-road";
 import WaterPump from "./water-pump";
+import Wood from "../crafts/wood";
 
-export default class SteelMill extends Item implements Buildable, Producer {
+export default class SushiRestaurant extends Item implements Buildable, Producer {
   name = "Steel Mill";
   price = 1_500_000;
   isNFT = false;
   icon = "buildings/icon_steelMill.png";
 
   buildRequirements = [
-    createRequirement({ craft: Iron, quantity: 2 }),
-    createRequirement({ craft: Lumber, quantity: 2 }),
+    createRequirement({ craft: Lumber, quantity: 10 }),
+    createRequirement({ craft: Wood, quantity: 10 }),
     createRequirement({ craft: Energy, quantity: 10 }),
   ];
 
   output = [
-    Steel,
-    BlueSteel,
-    //RedSteel,
+ //   SalmonNigiri,
+ //   EelNigiri,
+ //   SushiBoat,
   ];
 
   requirements = [
     PavedRoad,
-    WaterPump,
   ];
 }
