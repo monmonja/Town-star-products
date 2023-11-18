@@ -197,6 +197,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _crafts_gift_parcel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../crafts/gift-parcel */ "./src/crafts/gift-parcel.ts");
 /* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
 /* harmony import */ var _crafts_party_box__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../crafts/party-box */ "./src/crafts/party-box.ts");
+/* harmony import */ var _crafts_stack_box__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../crafts/stack-box */ "./src/crafts/stack-box.ts");
+/* harmony import */ var _crafts_jewelry_set__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../crafts/jewelry-set */ "./src/crafts/jewelry-set.ts");
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
     _extendStatics = Object.setPrototypeOf || {
@@ -235,6 +237,8 @@ var __extends = undefined && undefined.__extends || function () {
 
 
 
+
+
 var BoxingFacility =
 /** @class */
 function (_super) {
@@ -257,9 +261,7 @@ function (_super) {
       craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"],
       quantity: 10
     })];
-    _this.output = [_crafts_food_parcel__WEBPACK_IMPORTED_MODULE_5__["default"], _crafts_gift_parcel__WEBPACK_IMPORTED_MODULE_6__["default"], _crafts_party_box__WEBPACK_IMPORTED_MODULE_8__["default"] //StackBox,
-    //JewelrySet,
-    ];
+    _this.output = [_crafts_food_parcel__WEBPACK_IMPORTED_MODULE_5__["default"], _crafts_gift_parcel__WEBPACK_IMPORTED_MODULE_6__["default"], _crafts_party_box__WEBPACK_IMPORTED_MODULE_8__["default"], _crafts_stack_box__WEBPACK_IMPORTED_MODULE_9__["default"], _crafts_jewelry_set__WEBPACK_IMPORTED_MODULE_10__["default"]];
     _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_7__["default"]];
     return _this;
   }
@@ -596,6 +598,82 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/buildings/copper-panning-site.ts":
+/*!**********************************************!*\
+  !*** ./src/buildings/copper-panning-site.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+var CopperPanningSite =
+/** @class */
+function (_super) {
+  __extends(CopperPanningSite, _super);
+
+  function CopperPanningSite() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Copper Panning Site";
+    _this.price = 1500;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
+      quantity: 1
+    })];
+    _this.output = [];
+    return _this;
+  }
+
+  return CopperPanningSite;
+}(_item__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CopperPanningSite);
+
+/***/ }),
+
 /***/ "./src/buildings/fabric-plant.ts":
 /*!***************************************!*\
   !*** ./src/buildings/fabric-plant.ts ***!
@@ -763,6 +841,254 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/buildings/fish-farm.ts":
+/*!************************************!*\
+  !*** ./src/buildings/fish-farm.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_paved_road__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../terrains/paved-road */ "./src/terrains/paved-road.ts");
+/* harmony import */ var _terrains_mountains__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../terrains/mountains */ "./src/terrains/mountains.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+/* harmony import */ var _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/oak-wood */ "./src/crafts/oak-wood.ts");
+/* harmony import */ var _crafts_eel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../crafts/eel */ "./src/crafts/eel.ts");
+/* harmony import */ var _crafts_roe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../crafts/roe */ "./src/crafts/roe.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+
+var FishFarm =
+/** @class */
+function (_super) {
+  __extends(FishFarm, _super);
+
+  function FishFarm() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Fish Farm";
+    _this.price = 95000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 5
+    })];
+    _this.output = [_crafts_eel__WEBPACK_IMPORTED_MODULE_6__["default"], _crafts_roe__WEBPACK_IMPORTED_MODULE_7__["default"]];
+    _this.requirements = [_terrains_paved_road__WEBPACK_IMPORTED_MODULE_2__["default"], _terrains_mountains__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return FishFarm;
+}(_item__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FishFarm);
+
+/***/ }),
+
+/***/ "./src/buildings/forge.ts":
+/*!********************************!*\
+  !*** ./src/buildings/forge.ts ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var Forge =
+/** @class */
+function (_super) {
+  __extends(Forge, _super);
+
+  function Forge() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Forge";
+    _this.price = 27500;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 5
+    })];
+    _this.output = [//Cooper,
+      //Silver,
+      //Gold,
+    ];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return Forge;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Forge);
+
+/***/ }),
+
+/***/ "./src/buildings/foundry.ts":
+/*!**********************************!*\
+  !*** ./src/buildings/foundry.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+var Foundry =
+/** @class */
+function (_super) {
+  __extends(Foundry, _super);
+
+  function Foundry() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Foundry";
+    _this.price = 1500000;
+    _this.isNFT = false;
+    _this.buildRequirements = [//createRequirement({ craft: Copper, quantity: 25 }),
+    //createRequirement({ craft: Silver, quantity: 25 }),
+    (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 10
+    })];
+    _this.output = [//CopperJumpRing,
+      //SilverJumpRing,
+      //SterlingSilver,
+      //SterlingSilverJumpRing,
+      //GoldPlatedHeartPendant,
+    ];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return Foundry;
+}(_item__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Foundry);
+
+/***/ }),
+
 /***/ "./src/buildings/fuel-storage.ts":
 /*!***************************************!*\
   !*** ./src/buildings/fuel-storage.ts ***!
@@ -914,6 +1240,83 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/buildings/gold-panning-site.ts":
+/*!********************************************!*\
+  !*** ./src/buildings/gold-panning-site.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+var GoldPanningSite =
+/** @class */
+function (_super) {
+  __extends(GoldPanningSite, _super);
+
+  function GoldPanningSite() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Gold Panning Site";
+    _this.price = 5000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
+      quantity: 1
+    })];
+    _this.output = [//GoldOre
+    ];
+    return _this;
+  }
+
+  return GoldPanningSite;
+}(_item__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GoldPanningSite);
+
+/***/ }),
+
 /***/ "./src/buildings/iron-mine.ts":
 /*!************************************!*\
   !*** ./src/buildings/iron-mine.ts ***!
@@ -1004,6 +1407,242 @@ function (_super) {
 }(_item__WEBPACK_IMPORTED_MODULE_3__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IronMine);
+
+/***/ }),
+
+/***/ "./src/buildings/italian-restaurant.ts":
+/*!*********************************************!*\
+  !*** ./src/buildings/italian-restaurant.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var ItalianRestaurant =
+/** @class */
+function (_super) {
+  __extends(ItalianRestaurant, _super);
+
+  function ItalianRestaurant() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Italian Restaurant";
+    _this.price = 850000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 10
+    })];
+    _this.output = [//PizzaBase,
+      //ShrimpPizza
+      //FourCheesePizza,
+      //Risotto,
+      //Lasagna,
+    ];
+    return _this;
+  }
+
+  return ItalianRestaurant;
+}(_item__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ItalianRestaurant);
+
+/***/ }),
+
+/***/ "./src/buildings/jewelry-crafting-table.ts":
+/*!*************************************************!*\
+  !*** ./src/buildings/jewelry-crafting-table.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+var JewelryCraftingTable =
+/** @class */
+function (_super) {
+  __extends(JewelryCraftingTable, _super);
+
+  function JewelryCraftingTable() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Jewelry Crafting Table";
+    _this.price = 300000;
+    _this.isNFT = false;
+    _this.buildRequirements = [//createRequirement({ craft: Copper, quantity: 10 }),
+    //createRequirement({ craft: Silver, quantity: 10 }),
+    (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 10
+    })];
+    _this.output = [//CopperJumpRing,
+      //SilverJumpRing
+      ///ChandelierEarrings,
+      //LobsterClasp,
+      //Bracelet,
+      //GoldenHeartNecklace,
+    ];
+    return _this;
+  }
+
+  return JewelryCraftingTable;
+}(_item__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (JewelryCraftingTable);
+
+/***/ }),
+
+/***/ "./src/buildings/jewelry-store.ts":
+/*!****************************************!*\
+  !*** ./src/buildings/jewelry-store.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+var JewelryStore =
+/** @class */
+function (_super) {
+  __extends(JewelryStore, _super);
+
+  function JewelryStore() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Jewelry Store";
+    _this.price = 60000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
+      quantity: 20
+    })];
+    _this.output = [];
+    return _this;
+  }
+
+  return JewelryStore;
+}(_item__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (JewelryStore);
 
 /***/ }),
 
@@ -1325,6 +1964,180 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/buildings/mixing-tent.ts":
+/*!**************************************!*\
+  !*** ./src/buildings/mixing-tent.ts ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var MixingTent =
+/** @class */
+function (_super) {
+  __extends(MixingTent, _super);
+
+  function MixingTent() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Mixing Tent";
+    _this.price = 550000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 10
+    })];
+    _this.output = [//FishChum,
+      //WhiteRice,
+      //FoodMix,
+      //Cheese,
+    ];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return MixingTent;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MixingTent);
+
+/***/ }),
+
+/***/ "./src/buildings/north-pole-creation-lab.ts":
+/*!**************************************************!*\
+  !*** ./src/buildings/north-pole-creation-lab.ts ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var NorthPoleCreationLab =
+/** @class */
+function (_super) {
+  __extends(NorthPoleCreationLab, _super);
+
+  function NorthPoleCreationLab() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "North Pole Creation Lab";
+    _this.price = 500000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 10
+    })];
+    _this.output = [//Lights,
+      //BoomCanes,
+    ];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return NorthPoleCreationLab;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NorthPoleCreationLab);
+
+/***/ }),
+
 /***/ "./src/buildings/nuclear-power.ts":
 /*!****************************************!*\
   !*** ./src/buildings/nuclear-power.ts ***!
@@ -1486,6 +2299,79 @@ function (_super) {
 }(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OilPump);
+
+/***/ }),
+
+/***/ "./src/buildings/ore-storage.ts":
+/*!**************************************!*\
+  !*** ./src/buildings/ore-storage.ts ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+var OreStorage =
+/** @class */
+function (_super) {
+  __extends(OreStorage, _super);
+
+  function OreStorage() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Ore Storage";
+    _this.price = 20000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 10
+    })];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return OreStorage;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OreStorage);
 
 /***/ }),
 
@@ -1899,6 +2785,263 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/buildings/santas-factory.ts":
+/*!*****************************************!*\
+  !*** ./src/buildings/santas-factory.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var SantasFactory =
+/** @class */
+function (_super) {
+  __extends(SantasFactory, _super);
+
+  function SantasFactory() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Santa's Factory";
+    _this.price = 5000000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 10
+    })];
+    _this.output = [//   Bicycle,
+      //   RockingHorse,
+    ];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return SantasFactory;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SantasFactory);
+
+/***/ }),
+
+/***/ "./src/buildings/sauce-facility.ts":
+/*!*****************************************!*\
+  !*** ./src/buildings/sauce-facility.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var SauceFacility =
+/** @class */
+function (_super) {
+  __extends(SauceFacility, _super);
+
+  function SauceFacility() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Sauce Facility";
+    _this.price = 450000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 10
+    })];
+    _this.output = [//  RiceVinegar,
+      //  TomatoPaste,
+      //  PastaSauce,
+    ];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return SauceFacility;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SauceFacility);
+
+/***/ }),
+
+/***/ "./src/buildings/seafood-warehouse.ts":
+/*!********************************************!*\
+  !*** ./src/buildings/seafood-warehouse.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var SeafoodWarehouse =
+/** @class */
+function (_super) {
+  __extends(SeafoodWarehouse, _super);
+
+  function SeafoodWarehouse() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Seafood Warehouse";
+    _this.price = 50000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 10
+    })];
+    _this.output = [_crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return SeafoodWarehouse;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SeafoodWarehouse);
+
+/***/ }),
+
 /***/ "./src/buildings/shallow-mine.ts":
 /*!***************************************!*\
   !*** ./src/buildings/shallow-mine.ts ***!
@@ -2066,6 +3209,81 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/buildings/shrimp-farm.ts":
+/*!**************************************!*\
+  !*** ./src/buildings/shrimp-farm.ts ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+var ShrimpFarm =
+/** @class */
+function (_super) {
+  __extends(ShrimpFarm, _super);
+
+  function ShrimpFarm() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Shrimp Farm";
+    _this.price = 45000;
+    _this.isNFT = false;
+    _this.buildRequirements = [//  createRequirement({ craft: Seaweed, quantity: 10 }),
+    (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 20
+    })];
+    _this.output = [,];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return ShrimpFarm;
+}(_item__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ShrimpFarm);
+
+/***/ }),
+
 /***/ "./src/buildings/silo.ts":
 /*!*******************************!*\
   !*** ./src/buildings/silo.ts ***!
@@ -2137,6 +3355,83 @@ function (_super) {
 }(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Silo);
+
+/***/ }),
+
+/***/ "./src/buildings/silver-panning-site.ts":
+/*!**********************************************!*\
+  !*** ./src/buildings/silver-panning-site.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+var SilverPanningSite =
+/** @class */
+function (_super) {
+  __extends(SilverPanningSite, _super);
+
+  function SilverPanningSite() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Silver Panning Site";
+    _this.price = 4000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
+      quantity: 1
+    })];
+    _this.output = [//  SilverOre
+    ];
+    return _this;
+  }
+
+  return SilverPanningSite;
+}(_item__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SilverPanningSite);
 
 /***/ }),
 
@@ -2303,6 +3598,94 @@ function (_super) {
 }(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Storehouse);
+
+/***/ }),
+
+/***/ "./src/buildings/sushi-restaurant.ts":
+/*!*******************************************!*\
+  !*** ./src/buildings/sushi-restaurant.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _terrains_paved_road__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../terrains/paved-road */ "./src/terrains/paved-road.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var SushiRestaurant =
+/** @class */
+function (_super) {
+  __extends(SushiRestaurant, _super);
+
+  function SushiRestaurant() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Steel Mill";
+    _this.price = 1500000;
+    _this.isNFT = false;
+    _this.icon = "buildings/icon_steelMill.png";
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 10
+    })];
+    _this.output = [//   SalmonNigiri,
+      //   EelNigiri,
+      //   SushiBoat,
+    ];
+    _this.requirements = [_terrains_paved_road__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return SushiRestaurant;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SushiRestaurant);
 
 /***/ }),
 
@@ -2996,6 +4379,175 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/buildings/wire-mill.ts":
+/*!************************************!*\
+  !*** ./src/buildings/wire-mill.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var WireMill =
+/** @class */
+function (_super) {
+  __extends(WireMill, _super);
+
+  function WireMill() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Wire Mill";
+    _this.price = 100000;
+    _this.isNFT = false;
+    _this.buildRequirements = [//   createRequirement({ craft: Cooper, quantity: 10 }),
+    (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 5
+    })];
+    _this.output = [//   CopperWire,
+      //   SilverWire,
+    ];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return WireMill;
+}(_item__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WireMill);
+
+/***/ }),
+
+/***/ "./src/buildings/wizards-workshop.ts":
+/*!*******************************************!*\
+  !*** ./src/buildings/wizards-workshop.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _crafts_mystic_matter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../crafts/mystic-matter */ "./src/crafts/mystic-matter.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var WizardsWorkshop =
+/** @class */
+function (_super) {
+  __extends(WizardsWorkshop, _super);
+
+  function WizardsWorkshop() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Wizard's Workshop";
+    _this.price = 1500000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 10
+    })];
+    _this.output = [_crafts_mystic_matter__WEBPACK_IMPORTED_MODULE_6__["default"] // Glue,
+    ];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return WizardsWorkshop;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WizardsWorkshop);
+
+/***/ }),
+
 /***/ "./src/buildings/wood-shed.ts":
 /*!************************************!*\
   !*** ./src/buildings/wood-shed.ts ***!
@@ -3062,6 +4614,85 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/buildings/worm-farm.ts":
+/*!************************************!*\
+  !*** ./src/buildings/worm-farm.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var WormFarm =
+/** @class */
+function (_super) {
+  __extends(WormFarm, _super);
+
+  function WormFarm() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Worm Farm";
+    _this.price = 35000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.output = [,];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return WormFarm;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WormFarm);
+
+/***/ }),
+
 /***/ "./src/craft-requirement.ts":
 /*!**********************************!*\
   !*** ./src/craft-requirement.ts ***!
@@ -3093,6 +4724,170 @@ function createRequirement(parameter) {
 }
 
 
+
+/***/ }),
+
+/***/ "./src/crafts/apple-pie.ts":
+/*!*********************************!*\
+  !*** ./src/crafts/apple-pie.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _butter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./butter */ "./src/crafts/butter.ts");
+/* harmony import */ var _crops_apple_tree__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crops/apple-tree */ "./src/crops/apple-tree.ts");
+/* harmony import */ var _buildings_silo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/silo */ "./src/buildings/silo.ts");
+/* harmony import */ var _flour__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./flour */ "./src/crafts/flour.ts");
+/* harmony import */ var _apple__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./apple */ "./src/crafts/apple.ts");
+/* harmony import */ var _corn_starch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./corn-starch */ "./src/crafts/corn-starch.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+
+var ApplePie =
+/** @class */
+function (_super) {
+  __extends(ApplePie, _super);
+
+  function ApplePie() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Apple Pie";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _flour__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _apple__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _butter__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _corn_starch__WEBPACK_IMPORTED_MODULE_7__["default"],
+      quantity: 2
+    })];
+    _this.generatedFrom = [_crops_apple_tree__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return ApplePie;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ApplePie);
+
+/***/ }),
+
+/***/ "./src/crafts/apple.ts":
+/*!*****************************!*\
+  !*** ./src/crafts/apple.ts ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crops_apple_tree__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../crops/apple-tree */ "./src/crops/apple-tree.ts");
+/* harmony import */ var _buildings_silo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/silo */ "./src/buildings/silo.ts");
+/* harmony import */ var _water__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var Apple =
+/** @class */
+function (_super) {
+  __extends(Apple, _super);
+
+  function Apple() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Apple";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _water__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 6,
+      drawInline: true
+    })];
+    _this.generatedFrom = [_crops_apple_tree__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return Apple;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Apple);
 
 /***/ }),
 
@@ -3264,6 +5059,90 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/bicycle.ts":
+/*!*******************************!*\
+  !*** ./src/crafts/bicycle.ts ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+/* harmony import */ var _mystic_matter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mystic-matter */ "./src/crafts/mystic-matter.ts");
+/* harmony import */ var _buildings_santas_factory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/santas-factory */ "./src/buildings/santas-factory.ts");
+/* harmony import */ var _blue_steel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blue-steel */ "./src/crafts/blue-steel.ts");
+/* harmony import */ var _lights__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./lights */ "./src/crafts/lights.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var Bicycle =
+/** @class */
+function (_super) {
+  __extends(Bicycle, _super);
+
+  function Bicycle() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Bicycle";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _blue_steel__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _mystic_matter__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _lights__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 2
+    })];
+    _this.generatedFrom = [_buildings_santas_factory__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return Bicycle;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Bicycle);
+
+/***/ }),
+
 /***/ "./src/crafts/blue-steel.ts":
 /*!**********************************!*\
   !*** ./src/crafts/blue-steel.ts ***!
@@ -3345,6 +5224,174 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlueSteel);
+
+/***/ }),
+
+/***/ "./src/crafts/boom-canes.ts":
+/*!**********************************!*\
+  !*** ./src/crafts/boom-canes.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+/* harmony import */ var _buildings_north_pole_creation_lab__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/north-pole-creation-lab */ "./src/buildings/north-pole-creation-lab.ts");
+/* harmony import */ var _magic_powder__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./magic-powder */ "./src/crafts/magic-powder.ts");
+/* harmony import */ var _mystic_matter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mystic-matter */ "./src/crafts/mystic-matter.ts");
+/* harmony import */ var _candy_canes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./candy-canes */ "./src/crafts/candy-canes.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var BoomCanes =
+/** @class */
+function (_super) {
+  __extends(BoomCanes, _super);
+
+  function BoomCanes() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Boom Canes";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _magic_powder__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _mystic_matter__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _candy_canes__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 2
+    })];
+    _this.generatedFrom = [_buildings_north_pole_creation_lab__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return BoomCanes;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BoomCanes);
+
+/***/ }),
+
+/***/ "./src/crafts/bracelet.ts":
+/*!********************************!*\
+  !*** ./src/crafts/bracelet.ts ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _copper_jump_ring__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./copper-jump-ring */ "./src/crafts/copper-jump-ring.ts");
+/* harmony import */ var _silver_jump_ring__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./silver-jump-ring */ "./src/crafts/silver-jump-ring.ts");
+/* harmony import */ var _lobster_clasp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lobster-clasp */ "./src/crafts/lobster-clasp.ts");
+/* harmony import */ var _buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/jewelry-crafting-table */ "./src/buildings/jewelry-crafting-table.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var Bracelet =
+/** @class */
+function (_super) {
+  __extends(Bracelet, _super);
+
+  function Bracelet() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Bracelet";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _copper_jump_ring__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 6
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silver_jump_ring__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 3
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _lobster_clasp__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    _this.storage = [_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_6__["default"]];
+    return _this;
+  }
+
+  return Bracelet;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Bracelet);
 
 /***/ }),
 
@@ -4011,6 +6058,90 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/chandelier-earrings.ts":
+/*!*******************************************!*\
+  !*** ./src/crafts/chandelier-earrings.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/jewelry-crafting-table */ "./src/buildings/jewelry-crafting-table.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+/* harmony import */ var _copper_jump_ring__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./copper-jump-ring */ "./src/crafts/copper-jump-ring.ts");
+/* harmony import */ var _silver_jump_ring__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./silver-jump-ring */ "./src/crafts/silver-jump-ring.ts");
+/* harmony import */ var _silver_wire__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./silver-wire */ "./src/crafts/silver-wire.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var ChandelierEarrings =
+/** @class */
+function (_super) {
+  __extends(ChandelierEarrings, _super);
+
+  function ChandelierEarrings() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Chandelier Earrings";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _copper_jump_ring__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 4
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silver_jump_ring__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silver_wire__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 2
+    })];
+    _this.generatedFrom = [_buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return ChandelierEarrings;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChandelierEarrings);
+
+/***/ }),
+
 /***/ "./src/crafts/chardonnay-grapes.ts":
 /*!*****************************************!*\
   !*** ./src/crafts/chardonnay-grapes.ts ***!
@@ -4154,7 +6285,7 @@ function (_super) {
     _this.name = "Chardonnay";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _chardonnay_grapes__WEBPACK_IMPORTED_MODULE_2__["default"],
-      quantity: 3
+      quantity: 6
     }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _wine_bottle__WEBPACK_IMPORTED_MODULE_3__["default"],
       quantity: 1
@@ -4171,6 +6302,85 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Chardonnay);
+
+/***/ }),
+
+/***/ "./src/crafts/cheese.ts":
+/*!******************************!*\
+  !*** ./src/crafts/cheese.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _milk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./milk */ "./src/crafts/milk.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/mixing-tent */ "./src/buildings/mixing-tent.ts");
+/* harmony import */ var _rice_vinegar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./rice-vinegar */ "./src/crafts/rice-vinegar.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var Cheese =
+/** @class */
+function (_super) {
+  __extends(Cheese, _super);
+
+  function Cheese() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Cheese";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _milk__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _rice_vinegar__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return Cheese;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Cheese);
 
 /***/ }),
 
@@ -4516,9 +6726,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
 /* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
 /* harmony import */ var _water__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./water */ "./src/crafts/water.ts");
-/* harmony import */ var _wood__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./wood */ "./src/crafts/wood.ts");
-/* harmony import */ var _crops_cocoa_tree__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crops/cocoa-tree */ "./src/crops/cocoa-tree.ts");
-/* harmony import */ var _buildings_silo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/silo */ "./src/buildings/silo.ts");
+/* harmony import */ var _crops_cocoa_tree__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crops/cocoa-tree */ "./src/crops/cocoa-tree.ts");
+/* harmony import */ var _buildings_silo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/silo */ "./src/buildings/silo.ts");
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
     _extendStatics = Object.setPrototypeOf || {
@@ -4553,7 +6762,6 @@ var __extends = undefined && undefined.__extends || function () {
 
 
 
-
 var Cocoa =
 /** @class */
 function (_super) {
@@ -4565,13 +6773,11 @@ function (_super) {
     _this.name = "Cocoa";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _water__WEBPACK_IMPORTED_MODULE_2__["default"],
-      quantity: 5
-    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
-      craft: _wood__WEBPACK_IMPORTED_MODULE_3__["default"],
-      quantity: 1
+      quantity: 5,
+      drawInline: true
     })];
-    _this.generatedFrom = [_crops_cocoa_tree__WEBPACK_IMPORTED_MODULE_4__["default"]];
-    _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    _this.generatedFrom = [_crops_cocoa_tree__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
     return _this;
   }
 
@@ -4640,6 +6846,313 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Cold);
+
+/***/ }),
+
+/***/ "./src/crafts/copper-jump-ring.ts":
+/*!****************************************!*\
+  !*** ./src/crafts/copper-jump-ring.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/jewelry-crafting-table */ "./src/buildings/jewelry-crafting-table.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+/* harmony import */ var _copper_wire__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./copper-wire */ "./src/crafts/copper-wire.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var CopperJumpRing =
+/** @class */
+function (_super) {
+  __extends(CopperJumpRing, _super);
+
+  function CopperJumpRing() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Copper Jump Ring";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _copper_wire__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return CopperJumpRing;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CopperJumpRing);
+
+/***/ }),
+
+/***/ "./src/crafts/copper-ore.ts":
+/*!**********************************!*\
+  !*** ./src/crafts/copper-ore.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_copper_panning_site__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/copper-panning-site */ "./src/buildings/copper-panning-site.ts");
+/* harmony import */ var _buildings_ore_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/ore-storage */ "./src/buildings/ore-storage.ts");
+/* harmony import */ var _water__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var CopperOre =
+/** @class */
+function (_super) {
+  __extends(CopperOre, _super);
+
+  function CopperOre() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Copper Ore";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _water__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1,
+      drawInline: true
+    })];
+    _this.generatedFrom = [_buildings_copper_panning_site__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_ore_storage__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return CopperOre;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CopperOre);
+
+/***/ }),
+
+/***/ "./src/crafts/copper-wire.ts":
+/*!***********************************!*\
+  !*** ./src/crafts/copper-wire.ts ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _energy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+/* harmony import */ var _buildings_wire_mill__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/wire-mill */ "./src/buildings/wire-mill.ts");
+/* harmony import */ var _copper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./copper */ "./src/crafts/copper.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var CopperWire =
+/** @class */
+function (_super) {
+  __extends(CopperWire, _super);
+
+  function CopperWire() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Copper Wire";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _copper__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _energy__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_wire_mill__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return CopperWire;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CopperWire);
+
+/***/ }),
+
+/***/ "./src/crafts/copper.ts":
+/*!******************************!*\
+  !*** ./src/crafts/copper.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+/* harmony import */ var _copper_ore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./copper-ore */ "./src/crafts/copper-ore.ts");
+/* harmony import */ var _wood__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _buildings_forge__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/forge */ "./src/buildings/forge.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var Copper =
+/** @class */
+function (_super) {
+  __extends(Copper, _super);
+
+  function Copper() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Copper";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _copper_ore__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _wood__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_forge__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return Copper;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Copper);
 
 /***/ }),
 
@@ -5247,6 +7760,164 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/eel-nigiri.ts":
+/*!**********************************!*\
+  !*** ./src/crafts/eel-nigiri.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/seafood-warehouse */ "./src/buildings/seafood-warehouse.ts");
+/* harmony import */ var _buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/sushi-restaurant */ "./src/buildings/sushi-restaurant.ts");
+/* harmony import */ var _eel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./eel */ "./src/crafts/eel.ts");
+/* harmony import */ var _white_rice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./white-rice */ "./src/crafts/white-rice.ts");
+/* harmony import */ var _wasabi__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./wasabi */ "./src/crafts/wasabi.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var EelNigiri =
+/** @class */
+function (_super) {
+  __extends(EelNigiri, _super);
+
+  function EelNigiri() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Eel Nigiri";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _white_rice__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _eel__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _wasabi__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return EelNigiri;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EelNigiri);
+
+/***/ }),
+
+/***/ "./src/crafts/eel.ts":
+/*!***************************!*\
+  !*** ./src/crafts/eel.ts ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/seafood-warehouse */ "./src/buildings/seafood-warehouse.ts");
+/* harmony import */ var _buildings_fish_farm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/fish-farm */ "./src/buildings/fish-farm.ts");
+/* harmony import */ var _food_mix__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./food-mix */ "./src/crafts/food-mix.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var Eel =
+/** @class */
+function (_super) {
+  __extends(Eel, _super);
+
+  function Eel() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Eel";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _food_mix__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_fish_farm__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return Eel;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Eel);
+
+/***/ }),
+
 /***/ "./src/crafts/eggs.ts":
 /*!****************************!*\
   !*** ./src/crafts/eggs.ts ***!
@@ -5328,6 +7999,90 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Eggs);
+
+/***/ }),
+
+/***/ "./src/crafts/enchanted-object.ts":
+/*!****************************************!*\
+  !*** ./src/crafts/enchanted-object.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/seafood-warehouse */ "./src/buildings/seafood-warehouse.ts");
+/* harmony import */ var _buildings_master_wizard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/master-wizard */ "./src/buildings/master-wizard.ts");
+/* harmony import */ var _peppermint__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./peppermint */ "./src/crafts/peppermint.ts");
+/* harmony import */ var _mystic_matter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mystic-matter */ "./src/crafts/mystic-matter.ts");
+/* harmony import */ var _molten_glass__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./molten-glass */ "./src/crafts/molten-glass.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var EnchantedObject =
+/** @class */
+function (_super) {
+  __extends(EnchantedObject, _super);
+
+  function EnchantedObject() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Enchanted Object";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _mystic_matter__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _peppermint__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 3
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _molten_glass__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_master_wizard__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return EnchantedObject;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EnchantedObject);
 
 /***/ }),
 
@@ -5664,6 +8419,85 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/fish-chum.ts":
+/*!*********************************!*\
+  !*** ./src/crafts/fish-chum.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/seafood-warehouse */ "./src/buildings/seafood-warehouse.ts");
+/* harmony import */ var _buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/mixing-tent */ "./src/buildings/mixing-tent.ts");
+/* harmony import */ var _seaweed__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./seaweed */ "./src/crafts/seaweed.ts");
+/* harmony import */ var _shrimp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shrimp */ "./src/crafts/shrimp.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var FishChum =
+/** @class */
+function (_super) {
+  __extends(FishChum, _super);
+
+  function FishChum() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Fish Chum";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _seaweed__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _shrimp__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 2
+    })];
+    _this.generatedFrom = [_buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return FishChum;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FishChum);
+
+/***/ }),
+
 /***/ "./src/crafts/flour.ts":
 /*!*****************************!*\
   !*** ./src/crafts/flour.ts ***!
@@ -5743,6 +8577,85 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/food-mix.ts":
+/*!********************************!*\
+  !*** ./src/crafts/food-mix.ts ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/mixing-tent */ "./src/buildings/mixing-tent.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _roe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./roe */ "./src/crafts/roe.ts");
+/* harmony import */ var _worms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./worms */ "./src/crafts/worms.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var FoodMix =
+/** @class */
+function (_super) {
+  __extends(FoodMix, _super);
+
+  function FoodMix() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Food Mix";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _roe__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _worms__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return FoodMix;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FoodMix);
+
+/***/ }),
+
 /***/ "./src/crafts/food-parcel.ts":
 /*!***********************************!*\
   !*** ./src/crafts/food-parcel.ts ***!
@@ -5806,14 +8719,14 @@ function (_super) {
 
     _this.name = "Food Parcel";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
-      craft: _honey__WEBPACK_IMPORTED_MODULE_4__["default"],
-      quantity: 1
+      craft: _baguette__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 3
     }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _jam__WEBPACK_IMPORTED_MODULE_3__["default"],
       quantity: 2
     }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
-      craft: _baguette__WEBPACK_IMPORTED_MODULE_2__["default"],
-      quantity: 3
+      craft: _honey__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
     })];
     _this.generatedFrom = [_buildings_boxing_facility__WEBPACK_IMPORTED_MODULE_5__["default"]];
     _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_6__["default"]];
@@ -5824,6 +8737,90 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FoodParcel);
+
+/***/ }),
+
+/***/ "./src/crafts/four-cheese-pizza.ts":
+/*!*****************************************!*\
+  !*** ./src/crafts/four-cheese-pizza.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _cheese__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cheese */ "./src/crafts/cheese.ts");
+/* harmony import */ var _buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/italian-restaurant */ "./src/buildings/italian-restaurant.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _pizza_base__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pizza-base */ "./src/crafts/pizza-base.ts");
+/* harmony import */ var _tomatoes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tomatoes */ "./src/crafts/tomatoes.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var FourCheesePizza =
+/** @class */
+function (_super) {
+  __extends(FourCheesePizza, _super);
+
+  function FourCheesePizza() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Four Cheese Pizza";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _pizza_base__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _cheese__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _tomatoes__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 5
+    })];
+    _this.generatedFrom = [_buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return FourCheesePizza;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FourCheesePizza);
 
 /***/ }),
 
@@ -5995,6 +8992,575 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/glue.ts":
+/*!****************************!*\
+  !*** ./src/crafts/glue.ts ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _honey__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./honey */ "./src/crafts/honey.ts");
+/* harmony import */ var _buildings_wizards_workshop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/wizards-workshop */ "./src/buildings/wizards-workshop.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _honeycomb__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./honeycomb */ "./src/crafts/honeycomb.ts");
+/* harmony import */ var _terrains_clay_field__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../terrains/clay-field */ "./src/terrains/clay-field.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var Glue =
+/** @class */
+function (_super) {
+  __extends(Glue, _super);
+
+  function Glue() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Glue";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _honeycomb__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _honey__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _terrains_clay_field__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 2
+    })];
+    _this.generatedFrom = [_buildings_wizards_workshop__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return Glue;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Glue);
+
+/***/ }),
+
+/***/ "./src/crafts/gold-jump-ring.ts":
+/*!**************************************!*\
+  !*** ./src/crafts/gold-jump-ring.ts ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+/* harmony import */ var _buildings_forge__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/forge */ "./src/buildings/forge.ts");
+/* harmony import */ var _wood__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _gold_ore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./gold-ore */ "./src/crafts/gold-ore.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var GoldJumpRing =
+/** @class */
+function (_super) {
+  __extends(GoldJumpRing, _super);
+
+  function GoldJumpRing() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Gold Jump Ring";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _gold_ore__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 3
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _wood__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_forge__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return GoldJumpRing;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GoldJumpRing);
+
+/***/ }),
+
+/***/ "./src/crafts/gold-ore.ts":
+/*!********************************!*\
+  !*** ./src/crafts/gold-ore.ts ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _wood__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _buildings_gold_panning_site__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/gold-panning-site */ "./src/buildings/gold-panning-site.ts");
+/* harmony import */ var _buildings_ore_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/ore-storage */ "./src/buildings/ore-storage.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var GoldOre =
+/** @class */
+function (_super) {
+  __extends(GoldOre, _super);
+
+  function GoldOre() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Gold Ore";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _wood__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1,
+      drawInline: true
+    })];
+    _this.generatedFrom = [_buildings_gold_panning_site__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_ore_storage__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return GoldOre;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GoldOre);
+
+/***/ }),
+
+/***/ "./src/crafts/gold-plated-heart-pendant.ts":
+/*!*************************************************!*\
+  !*** ./src/crafts/gold-plated-heart-pendant.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+/* harmony import */ var _buildings_foundry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/foundry */ "./src/buildings/foundry.ts");
+/* harmony import */ var _heart_shaped_print__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./heart-shaped-print */ "./src/crafts/heart-shaped-print.ts");
+/* harmony import */ var _gold__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./gold */ "./src/crafts/gold.ts");
+/* harmony import */ var _copper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./copper */ "./src/crafts/copper.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var GoldPlatedHeartPendant =
+/** @class */
+function (_super) {
+  __extends(GoldPlatedHeartPendant, _super);
+
+  function GoldPlatedHeartPendant() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Gold-Plated Heart Pendant";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _heart_shaped_print__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _copper__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _gold__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 2
+    })];
+    _this.generatedFrom = [_buildings_foundry__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return GoldPlatedHeartPendant;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GoldPlatedHeartPendant);
+
+/***/ }),
+
+/***/ "./src/crafts/gold.ts":
+/*!****************************!*\
+  !*** ./src/crafts/gold.ts ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+/* harmony import */ var _buildings_forge__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/forge */ "./src/buildings/forge.ts");
+/* harmony import */ var _wood__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _gold_ore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./gold-ore */ "./src/crafts/gold-ore.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var Gold =
+/** @class */
+function (_super) {
+  __extends(Gold, _super);
+
+  function Gold() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Gold";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _gold_ore__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 3
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _wood__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_forge__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return Gold;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Gold);
+
+/***/ }),
+
+/***/ "./src/crafts/golden-heart-necklace.ts":
+/*!*********************************************!*\
+  !*** ./src/crafts/golden-heart-necklace.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/jewelry-crafting-table */ "./src/buildings/jewelry-crafting-table.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+/* harmony import */ var _gold_plated_heart_pendant__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./gold-plated-heart-pendant */ "./src/crafts/gold-plated-heart-pendant.ts");
+/* harmony import */ var _lobster_clasp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./lobster-clasp */ "./src/crafts/lobster-clasp.ts");
+/* harmony import */ var _silver_jump_ring__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./silver-jump-ring */ "./src/crafts/silver-jump-ring.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var GoldenHeartNecklace =
+/** @class */
+function (_super) {
+  __extends(GoldenHeartNecklace, _super);
+
+  function GoldenHeartNecklace() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Golden Heart Necklace";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _gold_plated_heart_pendant__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _lobster_clasp__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silver_jump_ring__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 5
+    })];
+    _this.generatedFrom = [_buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return GoldenHeartNecklace;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GoldenHeartNecklace);
+
+/***/ }),
+
+/***/ "./src/crafts/heart-shaped-print.ts":
+/*!******************************************!*\
+  !*** ./src/crafts/heart-shaped-print.ts ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _strawberries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./strawberries */ "./src/crafts/strawberries.ts");
+/* harmony import */ var _energy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _clay_lump__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./clay-lump */ "./src/crafts/clay-lump.ts");
+/* harmony import */ var _buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/pottery-shop */ "./src/buildings/pottery-shop.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var HeartShapedPrint =
+/** @class */
+function (_super) {
+  __extends(HeartShapedPrint, _super);
+
+  function HeartShapedPrint() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "HeartShapedPrint";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _clay_lump__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _energy__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _strawberries__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    _this.storage = [_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_6__["default"]];
+    return _this;
+  }
+
+  return HeartShapedPrint;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeartShapedPrint);
+
+/***/ }),
+
 /***/ "./src/crafts/honey.ts":
 /*!*****************************!*\
   !*** ./src/crafts/honey.ts ***!
@@ -6160,6 +9726,81 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Honeycomb);
+
+/***/ }),
+
+/***/ "./src/crafts/husk-rice..ts":
+/*!**********************************!*\
+  !*** ./src/crafts/husk-rice..ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _water__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./water */ "./src/crafts/water.ts");
+/* harmony import */ var _buildings_silo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/silo */ "./src/buildings/silo.ts");
+/* harmony import */ var _crops_rice_field__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crops/rice-field */ "./src/crops/rice-field.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var HuskRice =
+/** @class */
+function (_super) {
+  __extends(HuskRice, _super);
+
+  function HuskRice() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Husk Rice";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _water__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 8,
+      drawInline: true
+    })];
+    _this.generatedFrom = [_crops_rice_field__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return HuskRice;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HuskRice);
 
 /***/ }),
 
@@ -6392,13 +10033,13 @@ function (_super) {
     _this.name = "Jack O Lantern";
     _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _pumpkin__WEBPACK_IMPORTED_MODULE_4__["default"],
-      quantity: 10
+      quantity: 1
     }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _wax__WEBPACK_IMPORTED_MODULE_5__["default"],
-      quantity: 3
+      quantity: 2
     }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
       craft: _cotton_yarn__WEBPACK_IMPORTED_MODULE_6__["default"],
-      quantity: 1
+      quantity: 2
     })];
     _this.generatedFrom = [_buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_2__["default"]];
     _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_3__["default"]];
@@ -6580,6 +10221,258 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/jewelry-set.ts":
+/*!***********************************!*\
+  !*** ./src/crafts/jewelry-set.ts ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _wooden_box__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./wooden-box */ "./src/crafts/wooden-box.ts");
+/* harmony import */ var _bracelet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bracelet */ "./src/crafts/bracelet.ts");
+/* harmony import */ var _chandelier_earrings__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chandelier-earrings */ "./src/crafts/chandelier-earrings.ts");
+/* harmony import */ var _golden_heart_necklace__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./golden-heart-necklace */ "./src/crafts/golden-heart-necklace.ts");
+/* harmony import */ var _buildings_boxing_facility__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../buildings/boxing-facility */ "./src/buildings/boxing-facility.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+
+var JewelrySet =
+/** @class */
+function (_super) {
+  __extends(JewelrySet, _super);
+
+  function JewelrySet() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Jewelry Set";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _wooden_box__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _bracelet__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _chandelier_earrings__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _golden_heart_necklace__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_boxing_facility__WEBPACK_IMPORTED_MODULE_6__["default"]];
+    _this.storage = [_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_7__["default"]];
+    return _this;
+  }
+
+  return JewelrySet;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (JewelrySet);
+
+/***/ }),
+
+/***/ "./src/crafts/lasagna.ts":
+/*!*******************************!*\
+  !*** ./src/crafts/lasagna.ts ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_beehive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/beehive */ "./src/buildings/beehive.ts");
+/* harmony import */ var _buildings_pantry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/pantry */ "./src/buildings/pantry.ts");
+/* harmony import */ var _eggs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./eggs */ "./src/crafts/eggs.ts");
+/* harmony import */ var _cheese__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./cheese */ "./src/crafts/cheese.ts");
+/* harmony import */ var _pasta_sauce__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pasta-sauce */ "./src/crafts/pasta-sauce.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var Lasagna =
+/** @class */
+function (_super) {
+  __extends(Lasagna, _super);
+
+  function Lasagna() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Lasagna";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _cheese__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _pasta_sauce__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _eggs__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_beehive__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_pantry__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return Lasagna;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Lasagna);
+
+/***/ }),
+
+/***/ "./src/crafts/lights.ts":
+/*!******************************!*\
+  !*** ./src/crafts/lights.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_beehive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/beehive */ "./src/buildings/beehive.ts");
+/* harmony import */ var _buildings_pantry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/pantry */ "./src/buildings/pantry.ts");
+/* harmony import */ var _molten_glass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./molten-glass */ "./src/crafts/molten-glass.ts");
+/* harmony import */ var _energy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./energy */ "./src/crafts/energy.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var Lights =
+/** @class */
+function (_super) {
+  __extends(Lights, _super);
+
+  function Lights() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Lights";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _energy__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 3
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _molten_glass__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 2
+    })];
+    _this.generatedFrom = [_buildings_beehive__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_pantry__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return Lights;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Lights);
+
+/***/ }),
+
 /***/ "./src/crafts/limestone.ts":
 /*!*********************************!*\
   !*** ./src/crafts/limestone.ts ***!
@@ -6663,6 +10556,90 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Limestone);
+
+/***/ }),
+
+/***/ "./src/crafts/lobster-clasp.ts":
+/*!*************************************!*\
+  !*** ./src/crafts/lobster-clasp.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/jewelry-crafting-table */ "./src/buildings/jewelry-crafting-table.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+/* harmony import */ var _silver_wire__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./silver-wire */ "./src/crafts/silver-wire.ts");
+/* harmony import */ var _copper_jump_ring__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./copper-jump-ring */ "./src/crafts/copper-jump-ring.ts");
+/* harmony import */ var _sterling_silver_jump_ring__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sterling-silver-jump-ring */ "./src/crafts/sterling-silver-jump-ring.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var LobsterClasp =
+/** @class */
+function (_super) {
+  __extends(LobsterClasp, _super);
+
+  function LobsterClasp() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Lobster Clasp";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _sterling_silver_jump_ring__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _copper_jump_ring__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silver_wire__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return LobsterClasp;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LobsterClasp);
 
 /***/ }),
 
@@ -6917,6 +10894,174 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Milk);
+
+/***/ }),
+
+/***/ "./src/crafts/molten-glass.ts":
+/*!************************************!*\
+  !*** ./src/crafts/molten-glass.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _silica__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./silica */ "./src/crafts/silica.ts");
+/* harmony import */ var _limestone__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./limestone */ "./src/crafts/limestone.ts");
+/* harmony import */ var _chromium__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chromium */ "./src/crafts/chromium.ts");
+/* harmony import */ var _buildings_glass_factory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/glass-factory */ "./src/buildings/glass-factory.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var MoltenGlass =
+/** @class */
+function (_super) {
+  __extends(MoltenGlass, _super);
+
+  function MoltenGlass() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Molten Glass";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silica__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 4
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _chromium__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _limestone__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_glass_factory__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_6__["default"]];
+    return _this;
+  }
+
+  return MoltenGlass;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MoltenGlass);
+
+/***/ }),
+
+/***/ "./src/crafts/mystic-matter.ts":
+/*!*************************************!*\
+  !*** ./src/crafts/mystic-matter.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+/* harmony import */ var _cotton_yarn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./cotton-yarn */ "./src/crafts/cotton-yarn.ts");
+/* harmony import */ var _limestone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./limestone */ "./src/crafts/limestone.ts");
+/* harmony import */ var _buildings_wizards_workshop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/wizards-workshop */ "./src/buildings/wizards-workshop.ts");
+/* harmony import */ var _glue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./glue */ "./src/crafts/glue.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var MysticMatter =
+/** @class */
+function (_super) {
+  __extends(MysticMatter, _super);
+
+  function MysticMatter() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Mystic Matter";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _glue__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _cotton_yarn__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _limestone__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_wizards_workshop__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return MysticMatter;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MysticMatter);
 
 /***/ }),
 
@@ -7223,6 +11368,90 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PartyBox);
+
+/***/ }),
+
+/***/ "./src/crafts/pasta-sauce.ts":
+/*!***********************************!*\
+  !*** ./src/crafts/pasta-sauce.ts ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _salt__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./salt */ "./src/crafts/salt.ts");
+/* harmony import */ var _sugar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sugar */ "./src/crafts/sugar.ts");
+/* harmony import */ var _buildings_sauce_facility__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/sauce-facility */ "./src/buildings/sauce-facility.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _tomato_paste__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tomato-paste */ "./src/crafts/tomato-paste.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var PastaSauce =
+/** @class */
+function (_super) {
+  __extends(PastaSauce, _super);
+
+  function PastaSauce() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Pasta Sauce";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _tomato_paste__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _salt__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _sugar__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_sauce_facility__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    return _this;
+  }
+
+  return PastaSauce;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PastaSauce);
 
 /***/ }),
 
@@ -7548,6 +11777,90 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/pizza-base.ts":
+/*!**********************************!*\
+  !*** ./src/crafts/pizza-base.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _cheese__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cheese */ "./src/crafts/cheese.ts");
+/* harmony import */ var _buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/italian-restaurant */ "./src/buildings/italian-restaurant.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _dough__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dough */ "./src/crafts/dough.ts");
+/* harmony import */ var _tomato_paste__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tomato-paste */ "./src/crafts/tomato-paste.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var PizzaBase =
+/** @class */
+function (_super) {
+  __extends(PizzaBase, _super);
+
+  function PizzaBase() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Pizza Base";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _dough__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _cheese__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _tomato_paste__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return PizzaBase;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PizzaBase);
+
+/***/ }),
+
 /***/ "./src/crafts/pumpkin-pie.ts":
 /*!***********************************!*\
   !*** ./src/crafts/pumpkin-pie.ts ***!
@@ -7704,6 +12017,583 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Pumpkin);
+
+/***/ }),
+
+/***/ "./src/crafts/red-steel.ts":
+/*!*********************************!*\
+  !*** ./src/crafts/red-steel.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_steel_mill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/steel-mill */ "./src/buildings/steel-mill.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+/* harmony import */ var _energy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _steel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./steel */ "./src/crafts/steel.ts");
+/* harmony import */ var _strawberries__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./strawberries */ "./src/crafts/strawberries.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var RedSteel =
+/** @class */
+function (_super) {
+  __extends(RedSteel, _super);
+
+  function RedSteel() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Pumpkin Pie";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _steel__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 3
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _energy__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _strawberries__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 14
+    })];
+    _this.generatedFrom = [_buildings_steel_mill__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return RedSteel;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RedSteel);
+
+/***/ }),
+
+/***/ "./src/crafts/rice-vinegar.ts":
+/*!************************************!*\
+  !*** ./src/crafts/rice-vinegar.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/mixing-tent */ "./src/buildings/mixing-tent.ts");
+/* harmony import */ var _water__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./water */ "./src/crafts/water.ts");
+/* harmony import */ var _white_rice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./white-rice */ "./src/crafts/white-rice.ts");
+/* harmony import */ var _sugarcane__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sugarcane */ "./src/crafts/sugarcane.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var RiceVinegar =
+/** @class */
+function (_super) {
+  __extends(RiceVinegar, _super);
+
+  function RiceVinegar() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Rice Vinegar";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _water__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _white_rice__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _sugarcane__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return RiceVinegar;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RiceVinegar);
+
+/***/ }),
+
+/***/ "./src/crafts/risotto.ts":
+/*!*******************************!*\
+  !*** ./src/crafts/risotto.ts ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _milk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./milk */ "./src/crafts/milk.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _white_rice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./white-rice */ "./src/crafts/white-rice.ts");
+/* harmony import */ var _buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/italian-restaurant */ "./src/buildings/italian-restaurant.ts");
+/* harmony import */ var _cheese__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cheese */ "./src/crafts/cheese.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var Risotto =
+/** @class */
+function (_super) {
+  __extends(Risotto, _super);
+
+  function Risotto() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Risotto";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _white_rice__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 7
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _cheese__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _milk__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return Risotto;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Risotto);
+
+/***/ }),
+
+/***/ "./src/crafts/rocking-horse.ts":
+/*!*************************************!*\
+  !*** ./src/crafts/rocking-horse.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _oak_wood__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./oak-wood */ "./src/crafts/oak-wood.ts");
+/* harmony import */ var _enchanted_object__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./enchanted-object */ "./src/crafts/enchanted-object.ts");
+/* harmony import */ var _iron__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./iron */ "./src/crafts/iron.ts");
+/* harmony import */ var _buildings_santas_factory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/santas-factory */ "./src/buildings/santas-factory.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var RockingHorse =
+/** @class */
+function (_super) {
+  __extends(RockingHorse, _super);
+
+  function RockingHorse() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Rocking Horse";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _oak_wood__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 4
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _enchanted_object__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _iron__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_santas_factory__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_6__["default"]];
+    return _this;
+  }
+
+  return RockingHorse;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RockingHorse);
+
+/***/ }),
+
+/***/ "./src/crafts/roe.ts":
+/*!***************************!*\
+  !*** ./src/crafts/roe.ts ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _seaweed__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./seaweed */ "./src/crafts/seaweed.ts");
+/* harmony import */ var _buildings_fish_farm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/fish-farm */ "./src/buildings/fish-farm.ts");
+/* harmony import */ var _buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/seafood-warehouse */ "./src/buildings/seafood-warehouse.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var Roe =
+/** @class */
+function (_super) {
+  __extends(Roe, _super);
+
+  function Roe() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Roe";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _seaweed__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_fish_farm__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return Roe;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Roe);
+
+/***/ }),
+
+/***/ "./src/crafts/salmon-nigiri.ts":
+/*!*************************************!*\
+  !*** ./src/crafts/salmon-nigiri.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/sushi-restaurant */ "./src/buildings/sushi-restaurant.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _white_rice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./white-rice */ "./src/crafts/white-rice.ts");
+/* harmony import */ var _salmon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./salmon */ "./src/crafts/salmon.ts");
+/* harmony import */ var _energy__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./energy */ "./src/crafts/energy.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var SalmonNigiri =
+/** @class */
+function (_super) {
+  __extends(SalmonNigiri, _super);
+
+  function SalmonNigiri() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Salmon Nigiri";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _white_rice__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _salmon__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _energy__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 3
+    })];
+    _this.generatedFrom = [_buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return SalmonNigiri;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SalmonNigiri);
+
+/***/ }),
+
+/***/ "./src/crafts/salmon.ts":
+/*!******************************!*\
+  !*** ./src/crafts/salmon.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_silo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/silo */ "./src/buildings/silo.ts");
+/* harmony import */ var _crops_wild_net_fishing__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crops/wild-net-fishing */ "./src/crops/wild-net-fishing.ts");
+/* harmony import */ var _crops_fishing_platform__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crops/fishing-platform */ "./src/crops/fishing-platform.ts");
+/* harmony import */ var _energy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./energy */ "./src/crafts/energy.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var Salmon =
+/** @class */
+function (_super) {
+  __extends(Salmon, _super);
+
+  function Salmon() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Salmon";
+    _this.requires = [// createRequirement({ craft: FishChum, quantity: 2, building: WildNetFishing }),
+    (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _energy__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 8,
+      building: _crops_wild_net_fishing__WEBPACK_IMPORTED_MODULE_3__["default"]
+    }), //createRequirement({ craft: FishChum, quantity: 1, building: FishingPlatform }),
+    (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _energy__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 4,
+      building: _crops_fishing_platform__WEBPACK_IMPORTED_MODULE_4__["default"]
+    })];
+    _this.generatedFrom = [_crops_wild_net_fishing__WEBPACK_IMPORTED_MODULE_3__["default"], _crops_fishing_platform__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return Salmon;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Salmon);
 
 /***/ }),
 
@@ -7870,6 +12760,239 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/seaweed.ts":
+/*!*******************************!*\
+  !*** ./src/crafts/seaweed.ts ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crops_seaweed_farm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../crops/seaweed-farm */ "./src/crops/seaweed-farm.ts");
+/* harmony import */ var _water__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./water */ "./src/crafts/water.ts");
+/* harmony import */ var _buildings_silo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/silo */ "./src/buildings/silo.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var Seaweed =
+/** @class */
+function (_super) {
+  __extends(Seaweed, _super);
+
+  function Seaweed() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Seaweed";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _water__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 2,
+      drawInline: true
+    })];
+    _this.generatedFrom = [_crops_seaweed_farm__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return Seaweed;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Seaweed);
+
+/***/ }),
+
+/***/ "./src/crafts/shrimp-pizza.ts":
+/*!************************************!*\
+  !*** ./src/crafts/shrimp-pizza.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _pizza_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pizza-base */ "./src/crafts/pizza-base.ts");
+/* harmony import */ var _shrimp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./shrimp */ "./src/crafts/shrimp.ts");
+/* harmony import */ var _energy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/italian-restaurant */ "./src/buildings/italian-restaurant.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var ShrimpPizza =
+/** @class */
+function (_super) {
+  __extends(ShrimpPizza, _super);
+
+  function ShrimpPizza() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Shrimp Pizza";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _pizza_base__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _shrimp__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _energy__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 3
+    })];
+    _this.generatedFrom = [_buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_6__["default"]];
+    return _this;
+  }
+
+  return ShrimpPizza;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ShrimpPizza);
+
+/***/ }),
+
+/***/ "./src/crafts/shrimp.ts":
+/*!******************************!*\
+  !*** ./src/crafts/shrimp.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/seafood-warehouse */ "./src/buildings/seafood-warehouse.ts");
+/* harmony import */ var _seaweed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./seaweed */ "./src/crafts/seaweed.ts");
+/* harmony import */ var _buildings_shrimp_farm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/shrimp-farm */ "./src/buildings/shrimp-farm.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var Shrimp =
+/** @class */
+function (_super) {
+  __extends(Shrimp, _super);
+
+  function Shrimp() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Shrimp";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _seaweed__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 2
+    })];
+    _this.generatedFrom = [_buildings_shrimp_farm__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    _this.storage = [_buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return Shrimp;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Shrimp);
+
+/***/ }),
+
 /***/ "./src/crafts/silica.ts":
 /*!******************************!*\
   !*** ./src/crafts/silica.ts ***!
@@ -7944,10 +13067,314 @@ function (_super) {
 
 /***/ }),
 
-/***/ "./src/crafts/stacked-box.ts":
+/***/ "./src/crafts/silver-jump-ring.ts":
+/*!****************************************!*\
+  !*** ./src/crafts/silver-jump-ring.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/jewelry-crafting-table */ "./src/buildings/jewelry-crafting-table.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+/* harmony import */ var _silver_wire__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./silver-wire */ "./src/crafts/silver-wire.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var SilverJumpRing =
+/** @class */
+function (_super) {
+  __extends(SilverJumpRing, _super);
+
+  function SilverJumpRing() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Silver Jump Ring";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silver_wire__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return SilverJumpRing;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SilverJumpRing);
+
+/***/ }),
+
+/***/ "./src/crafts/silver-ore.ts":
+/*!**********************************!*\
+  !*** ./src/crafts/silver-ore.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_silver_panning_site__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/silver-panning-site */ "./src/buildings/silver-panning-site.ts");
+/* harmony import */ var _buildings_ore_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/ore-storage */ "./src/buildings/ore-storage.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+var SilverOre =
+/** @class */
+function (_super) {
+  __extends(SilverOre, _super);
+
+  function SilverOre() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Silver Ore";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: SilverOre,
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_silver_panning_site__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_ore_storage__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return SilverOre;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SilverOre);
+
+/***/ }),
+
+/***/ "./src/crafts/silver-wire.ts":
 /*!***********************************!*\
-  !*** ./src/crafts/stacked-box.ts ***!
+  !*** ./src/crafts/silver-wire.ts ***!
   \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/jewelry-crafting-table */ "./src/buildings/jewelry-crafting-table.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+/* harmony import */ var _energy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _silver__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./silver */ "./src/crafts/silver.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var SilverWire =
+/** @class */
+function (_super) {
+  __extends(SilverWire, _super);
+
+  function SilverWire() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Silver Wire";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silver__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _energy__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return SilverWire;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SilverWire);
+
+/***/ }),
+
+/***/ "./src/crafts/silver.ts":
+/*!******************************!*\
+  !*** ./src/crafts/silver.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _silver_ore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./silver-ore */ "./src/crafts/silver-ore.ts");
+/* harmony import */ var _wood__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _buildings_forge__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/forge */ "./src/buildings/forge.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var Silver =
+/** @class */
+function (_super) {
+  __extends(Silver, _super);
+
+  function Silver() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Silver";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silver_ore__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _wood__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_forge__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    return _this;
+  }
+
+  return Silver;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Silver);
+
+/***/ }),
+
+/***/ "./src/crafts/stack-box.ts":
+/*!*********************************!*\
+  !*** ./src/crafts/stack-box.ts ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -7997,12 +13424,12 @@ var __extends = undefined && undefined.__extends || function () {
 
 
 
-var StackedBox =
+var StackBox =
 /** @class */
 function (_super) {
-  __extends(StackedBox, _super);
+  __extends(StackBox, _super);
 
-  function StackedBox() {
+  function StackBox() {
     var _this = _super !== null && _super.apply(this, arguments) || this;
 
     _this.name = "Stacked Box";
@@ -8021,10 +13448,10 @@ function (_super) {
     return _this;
   }
 
-  return StackedBox;
+  return StackBox;
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StackedBox);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StackBox);
 
 /***/ }),
 
@@ -8109,6 +13536,164 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Steel);
+
+/***/ }),
+
+/***/ "./src/crafts/sterling-silver-jump-ring.ts":
+/*!*************************************************!*\
+  !*** ./src/crafts/sterling-silver-jump-ring.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+/* harmony import */ var _buildings_foundry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/foundry */ "./src/buildings/foundry.ts");
+/* harmony import */ var _sterling_silver__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sterling-silver */ "./src/crafts/sterling-silver.ts");
+/* harmony import */ var _silica__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./silica */ "./src/crafts/silica.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var SterlingSilverJumpRing =
+/** @class */
+function (_super) {
+  __extends(SterlingSilverJumpRing, _super);
+
+  function SterlingSilverJumpRing() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Sterling Silver Jump Ring";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _sterling_silver__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silica__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_foundry__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return SterlingSilverJumpRing;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SterlingSilverJumpRing);
+
+/***/ }),
+
+/***/ "./src/crafts/sterling-silver.ts":
+/*!***************************************!*\
+  !*** ./src/crafts/sterling-silver.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+/* harmony import */ var _buildings_foundry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/foundry */ "./src/buildings/foundry.ts");
+/* harmony import */ var _copper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./copper */ "./src/crafts/copper.ts");
+/* harmony import */ var _silver__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./silver */ "./src/crafts/silver.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var SterlingSilver =
+/** @class */
+function (_super) {
+  __extends(SterlingSilver, _super);
+
+  function SterlingSilver() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Sterling Silver";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _copper__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _silver__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_foundry__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return SterlingSilver;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SterlingSilver);
 
 /***/ }),
 
@@ -8341,6 +13926,328 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/supply-box.ts":
+/*!**********************************!*\
+  !*** ./src/crafts/supply-box.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _ceramic_bowl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ceramic-bowl */ "./src/crafts/ceramic-bowl.ts");
+/* harmony import */ var _wax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./wax */ "./src/crafts/wax.ts");
+/* harmony import */ var _wooden_box__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./wooden-box */ "./src/crafts/wooden-box.ts");
+/* harmony import */ var _buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/pottery-shop */ "./src/buildings/pottery-shop.ts");
+/* harmony import */ var _buildings_warehouse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../buildings/warehouse */ "./src/buildings/warehouse.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var SupplyBox =
+/** @class */
+function (_super) {
+  __extends(SupplyBox, _super);
+
+  function SupplyBox() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Supply Box";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _ceramic_bowl__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _wax__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _wooden_box__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    _this.storage = [_buildings_warehouse__WEBPACK_IMPORTED_MODULE_6__["default"]];
+    return _this;
+  }
+
+  return SupplyBox;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SupplyBox);
+
+/***/ }),
+
+/***/ "./src/crafts/sushi-boat.ts":
+/*!**********************************!*\
+  !*** ./src/crafts/sushi-boat.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _eel_nigiri__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./eel-nigiri */ "./src/crafts/eel-nigiri.ts");
+/* harmony import */ var _rice_vinegar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./rice-vinegar */ "./src/crafts/rice-vinegar.ts");
+/* harmony import */ var _buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/sushi-restaurant */ "./src/buildings/sushi-restaurant.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _salmon_nigiri__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./salmon-nigiri */ "./src/crafts/salmon-nigiri.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+
+var SushiBoat =
+/** @class */
+function (_super) {
+  __extends(SushiBoat, _super);
+
+  function SushiBoat() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Sushi Boat";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _salmon_nigiri__WEBPACK_IMPORTED_MODULE_6__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _eel_nigiri__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _rice_vinegar__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    return _this;
+  }
+
+  return SushiBoat;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SushiBoat);
+
+/***/ }),
+
+/***/ "./src/crafts/tomato-paste.ts":
+/*!************************************!*\
+  !*** ./src/crafts/tomato-paste.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _rice_vinegar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./rice-vinegar */ "./src/crafts/rice-vinegar.ts");
+/* harmony import */ var _buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/sushi-restaurant */ "./src/buildings/sushi-restaurant.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _tomatoes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tomatoes */ "./src/crafts/tomatoes.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var TomatoPaste =
+/** @class */
+function (_super) {
+  __extends(TomatoPaste, _super);
+
+  function TomatoPaste() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Tomato Paste";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _rice_vinegar__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 1
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _tomatoes__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 3
+    })];
+    _this.generatedFrom = [_buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return TomatoPaste;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TomatoPaste);
+
+/***/ }),
+
+/***/ "./src/crafts/tomatoes.ts":
+/*!********************************!*\
+  !*** ./src/crafts/tomatoes.ts ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _crops_tomato_farm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crops/tomato-farm */ "./src/crops/tomato-farm.ts");
+/* harmony import */ var _water__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var Tomatoes =
+/** @class */
+function (_super) {
+  __extends(Tomatoes, _super);
+
+  function Tomatoes() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Tomatoes";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _water__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 3,
+      drawInline: true
+    })];
+    _this.generatedFrom = [_crops_tomato_farm__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return Tomatoes;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tomatoes);
+
+/***/ }),
+
 /***/ "./src/crafts/trick-or-treat-bag.ts":
 /*!******************************************!*\
   !*** ./src/crafts/trick-or-treat-bag.ts ***!
@@ -8506,6 +14413,81 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Uniforms);
+
+/***/ }),
+
+/***/ "./src/crafts/wasabi.ts":
+/*!******************************!*\
+  !*** ./src/crafts/wasabi.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crops_wasabi_farm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../crops/wasabi-farm */ "./src/crops/wasabi-farm.ts");
+/* harmony import */ var _buildings_silo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/silo */ "./src/buildings/silo.ts");
+/* harmony import */ var _water__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+var Wasabi =
+/** @class */
+function (_super) {
+  __extends(Wasabi, _super);
+
+  function Wasabi() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Wasabi";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _water__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 3,
+      drawInline: true
+    })];
+    _this.generatedFrom = [_crops_wasabi_farm__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    _this.storage = [_buildings_silo__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return Wasabi;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Wasabi);
 
 /***/ }),
 
@@ -8805,6 +14787,85 @@ function (_super) {
 }(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Wheat);
+
+/***/ }),
+
+/***/ "./src/crafts/white-rice.ts":
+/*!**********************************!*\
+  !*** ./src/crafts/white-rice.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _husk_rice___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./husk-rice. */ "./src/crafts/husk-rice..ts");
+/* harmony import */ var _energy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../buildings/mixing-tent */ "./src/buildings/mixing-tent.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var WhiteRice =
+/** @class */
+function (_super) {
+  __extends(WhiteRice, _super);
+
+  function WhiteRice() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "White Rice";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _husk_rice___WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _energy__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    return _this;
+  }
+
+  return WhiteRice;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WhiteRice);
 
 /***/ }),
 
@@ -9223,6 +15284,151 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crafts/worms.ts":
+/*!*****************************!*\
+  !*** ./src/crafts/worms.ts ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./craft */ "./src/crafts/craft.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _buildings_storehouse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buildings/storehouse */ "./src/buildings/storehouse.ts");
+/* harmony import */ var _buildings_worm_farm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buildings/worm-farm */ "./src/buildings/worm-farm.ts");
+/* harmony import */ var _husk_rice___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./husk-rice. */ "./src/crafts/husk-rice..ts");
+/* harmony import */ var _water__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var Worms =
+/** @class */
+function (_super) {
+  __extends(Worms, _super);
+
+  function Worms() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Worms";
+    _this.requires = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _husk_rice___WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 2
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _water__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 1
+    })];
+    _this.generatedFrom = [_buildings_worm_farm__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    _this.storage = [_buildings_storehouse__WEBPACK_IMPORTED_MODULE_2__["default"]];
+    return _this;
+  }
+
+  return Worms;
+}(_craft__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Worms);
+
+/***/ }),
+
+/***/ "./src/crops/apple-tree.ts":
+/*!*********************************!*\
+  !*** ./src/crops/apple-tree.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _crafts_apple__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/apple */ "./src/crafts/apple.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+var AppleTree =
+/** @class */
+function (_super) {
+  __extends(AppleTree, _super);
+
+  function AppleTree() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Apple Tree";
+    _this.price = 1500;
+    _this.isNFT = false;
+    _this.buildRequirements = [];
+    _this.output = [_crafts_apple__WEBPACK_IMPORTED_MODULE_1__["default"]];
+    return _this;
+  }
+
+  return AppleTree;
+}(_item__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AppleTree);
+
+/***/ }),
+
 /***/ "./src/crops/cabernet-vines.ts":
 /*!*************************************!*\
   !*** ./src/crops/cabernet-vines.ts ***!
@@ -9580,6 +15786,89 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crops/fishing-platform.ts":
+/*!***************************************!*\
+  !*** ./src/crops/fishing-platform.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+/* harmony import */ var _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/oak-wood */ "./src/crafts/oak-wood.ts");
+/* harmony import */ var _crafts_salmon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crafts/salmon */ "./src/crafts/salmon.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var FishingPlatform =
+/** @class */
+function (_super) {
+  __extends(FishingPlatform, _super);
+
+  function FishingPlatform() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Fishing Platform";
+    _this.price = 300000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 25
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 5
+    })];
+    _this.output = [_crafts_salmon__WEBPACK_IMPORTED_MODULE_4__["default"]];
+    return _this;
+  }
+
+  return FishingPlatform;
+}(_item__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FishingPlatform);
+
+/***/ }),
+
 /***/ "./src/crops/oak-tree-farm.ts":
 /*!************************************!*\
   !*** ./src/crops/oak-tree-farm.ts ***!
@@ -9864,6 +16153,79 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crops/rice-field.ts":
+/*!*********************************!*\
+  !*** ./src/crops/rice-field.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+/* harmony import */ var _crafts_husk_rice___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/husk-rice. */ "./src/crafts/husk-rice..ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+var RiceField =
+/** @class */
+function (_super) {
+  __extends(RiceField, _super);
+
+  function RiceField() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Rice Field";
+    _this.price = 1500;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 10
+    })];
+    _this.output = [_crafts_husk_rice___WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return RiceField;
+}(_item__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RiceField);
+
+/***/ }),
+
 /***/ "./src/crops/salt-field.ts":
 /*!*********************************!*\
   !*** ./src/crops/salt-field.ts ***!
@@ -9926,6 +16288,79 @@ function (_super) {
 }(_item__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SaltField);
+
+/***/ }),
+
+/***/ "./src/crops/seaweed-farm.ts":
+/*!***********************************!*\
+  !*** ./src/crops/seaweed-farm.ts ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+/* harmony import */ var _crafts_seaweed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/seaweed */ "./src/crafts/seaweed.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+var SeaweedFarm =
+/** @class */
+function (_super) {
+  __extends(SeaweedFarm, _super);
+
+  function SeaweedFarm() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Seaweed Farm";
+    _this.price = 5000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 3
+    })];
+    _this.output = [_crafts_seaweed__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return SeaweedFarm;
+}(_item__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SeaweedFarm);
 
 /***/ }),
 
@@ -10067,6 +16502,78 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crops/tomato-farm.ts":
+/*!**********************************!*\
+  !*** ./src/crops/tomato-farm.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+var TomatoFarm =
+/** @class */
+function (_super) {
+  __extends(TomatoFarm, _super);
+
+  function TomatoFarm() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Tomato Farm";
+    _this.price = 5000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 3
+    })];
+    _this.output = [//  Tomatoes,
+    ];
+    return _this;
+  }
+
+  return TomatoFarm;
+}(_item__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TomatoFarm);
+
+/***/ }),
+
 /***/ "./src/crops/tree-farm.ts":
 /*!********************************!*\
   !*** ./src/crops/tree-farm.ts ***!
@@ -10132,6 +16639,78 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/crops/wasabi-farm.ts":
+/*!**********************************!*\
+  !*** ./src/crops/wasabi-farm.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_water__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../crafts/water */ "./src/crafts/water.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+var WasabiFarm =
+/** @class */
+function (_super) {
+  __extends(WasabiFarm, _super);
+
+  function WasabiFarm() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Wasabi Farm";
+    _this.price = 250;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_1__.createRequirement)({
+      craft: _crafts_water__WEBPACK_IMPORTED_MODULE_2__["default"],
+      quantity: 3
+    })];
+    _this.output = [// Wasabi,
+    ];
+    return _this;
+  }
+
+  return WasabiFarm;
+}(_item__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WasabiFarm);
+
+/***/ }),
+
 /***/ "./src/crops/wheat-field.ts":
 /*!**********************************!*\
   !*** ./src/crops/wheat-field.ts ***!
@@ -10194,6 +16773,89 @@ function (_super) {
 }(_item__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WheatField);
+
+/***/ }),
+
+/***/ "./src/crops/wild-net-fishing.ts":
+/*!***************************************!*\
+  !*** ./src/crops/wild-net-fishing.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+/* harmony import */ var _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crafts/oak-wood */ "./src/crafts/oak-wood.ts");
+/* harmony import */ var _crafts_salmon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/salmon */ "./src/crafts/salmon.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var WildNetFishing =
+/** @class */
+function (_super) {
+  __extends(WildNetFishing, _super);
+
+  function WildNetFishing() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Wild Net Fishing";
+    _this.price = 150000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_3__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_0__["default"],
+      quantity: 10
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_2__.createRequirement)({
+      craft: _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 20
+    })];
+    _this.output = [_crafts_salmon__WEBPACK_IMPORTED_MODULE_5__["default"]];
+    return _this;
+  }
+
+  return WildNetFishing;
+}(_item__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WildNetFishing);
 
 /***/ }),
 
@@ -10340,13 +17002,102 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _workers_worker_house__WEBPACK_IMPORTED_MODULE_133__ = __webpack_require__(/*! ./workers/worker-house */ "./src/workers/worker-house.ts");
 /* harmony import */ var _ui_product_selection__WEBPACK_IMPORTED_MODULE_134__ = __webpack_require__(/*! ./ui/product-selection */ "./src/ui/product-selection.ts");
 /* harmony import */ var _crafts_petroleum__WEBPACK_IMPORTED_MODULE_135__ = __webpack_require__(/*! ./crafts/petroleum */ "./src/crafts/petroleum.ts");
-/* harmony import */ var _crafts_stacked_box__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ./crafts/stacked-box */ "./src/crafts/stacked-box.ts");
+/* harmony import */ var _crafts_stack_box__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ./crafts/stack-box */ "./src/crafts/stack-box.ts");
 /* harmony import */ var _workers_aquaculturist_house__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ./workers/aquaculturist-house */ "./src/workers/aquaculturist-house.ts");
 /* harmony import */ var _crafts_trick_or_treat_bag__WEBPACK_IMPORTED_MODULE_138__ = __webpack_require__(/*! ./crafts/trick-or-treat-bag */ "./src/crafts/trick-or-treat-bag.ts");
 /* harmony import */ var _crafts_corn__WEBPACK_IMPORTED_MODULE_139__ = __webpack_require__(/*! ./crafts/corn */ "./src/crafts/corn.ts");
 /* harmony import */ var _crafts_candy_corn__WEBPACK_IMPORTED_MODULE_140__ = __webpack_require__(/*! ./crafts/candy-corn */ "./src/crafts/candy-corn.ts");
 /* harmony import */ var _crops_corn_field__WEBPACK_IMPORTED_MODULE_141__ = __webpack_require__(/*! ./crops/corn-field */ "./src/crops/corn-field.ts");
 /* harmony import */ var _crafts_corn_starch__WEBPACK_IMPORTED_MODULE_142__ = __webpack_require__(/*! ./crafts/corn-starch */ "./src/crafts/corn-starch.ts");
+/* harmony import */ var _buildings_copper_panning_site__WEBPACK_IMPORTED_MODULE_143__ = __webpack_require__(/*! ./buildings/copper-panning-site */ "./src/buildings/copper-panning-site.ts");
+/* harmony import */ var _buildings_fish_farm__WEBPACK_IMPORTED_MODULE_144__ = __webpack_require__(/*! ./buildings/fish-farm */ "./src/buildings/fish-farm.ts");
+/* harmony import */ var _buildings_forge__WEBPACK_IMPORTED_MODULE_145__ = __webpack_require__(/*! ./buildings/forge */ "./src/buildings/forge.ts");
+/* harmony import */ var _buildings_foundry__WEBPACK_IMPORTED_MODULE_146__ = __webpack_require__(/*! ./buildings/foundry */ "./src/buildings/foundry.ts");
+/* harmony import */ var _buildings_gold_panning_site__WEBPACK_IMPORTED_MODULE_147__ = __webpack_require__(/*! ./buildings/gold-panning-site */ "./src/buildings/gold-panning-site.ts");
+/* harmony import */ var _buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_148__ = __webpack_require__(/*! ./buildings/italian-restaurant */ "./src/buildings/italian-restaurant.ts");
+/* harmony import */ var _buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_149__ = __webpack_require__(/*! ./buildings/jewelry-crafting-table */ "./src/buildings/jewelry-crafting-table.ts");
+/* harmony import */ var _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_150__ = __webpack_require__(/*! ./buildings/jewelry-store */ "./src/buildings/jewelry-store.ts");
+/* harmony import */ var _buildings_master_wizard__WEBPACK_IMPORTED_MODULE_151__ = __webpack_require__(/*! ./buildings/master-wizard */ "./src/buildings/master-wizard.ts");
+/* harmony import */ var _buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_152__ = __webpack_require__(/*! ./buildings/mixing-tent */ "./src/buildings/mixing-tent.ts");
+/* harmony import */ var _buildings_north_pole_creation_lab__WEBPACK_IMPORTED_MODULE_153__ = __webpack_require__(/*! ./buildings/north-pole-creation-lab */ "./src/buildings/north-pole-creation-lab.ts");
+/* harmony import */ var _buildings_ore_storage__WEBPACK_IMPORTED_MODULE_154__ = __webpack_require__(/*! ./buildings/ore-storage */ "./src/buildings/ore-storage.ts");
+/* harmony import */ var _buildings_santas_factory__WEBPACK_IMPORTED_MODULE_155__ = __webpack_require__(/*! ./buildings/santas-factory */ "./src/buildings/santas-factory.ts");
+/* harmony import */ var _buildings_sauce_facility__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ./buildings/sauce-facility */ "./src/buildings/sauce-facility.ts");
+/* harmony import */ var _buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ./buildings/seafood-warehouse */ "./src/buildings/seafood-warehouse.ts");
+/* harmony import */ var _buildings_shrimp_farm__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./buildings/shrimp-farm */ "./src/buildings/shrimp-farm.ts");
+/* harmony import */ var _buildings_silver_panning_site__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ./buildings/silver-panning-site */ "./src/buildings/silver-panning-site.ts");
+/* harmony import */ var _buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_160__ = __webpack_require__(/*! ./buildings/sushi-restaurant */ "./src/buildings/sushi-restaurant.ts");
+/* harmony import */ var _buildings_wire_mill__WEBPACK_IMPORTED_MODULE_161__ = __webpack_require__(/*! ./buildings/wire-mill */ "./src/buildings/wire-mill.ts");
+/* harmony import */ var _buildings_wizards_workshop__WEBPACK_IMPORTED_MODULE_162__ = __webpack_require__(/*! ./buildings/wizards-workshop */ "./src/buildings/wizards-workshop.ts");
+/* harmony import */ var _buildings_worm_farm__WEBPACK_IMPORTED_MODULE_163__ = __webpack_require__(/*! ./buildings/worm-farm */ "./src/buildings/worm-farm.ts");
+/* harmony import */ var _crops_apple_tree__WEBPACK_IMPORTED_MODULE_164__ = __webpack_require__(/*! ./crops/apple-tree */ "./src/crops/apple-tree.ts");
+/* harmony import */ var _crops_fishing_platform__WEBPACK_IMPORTED_MODULE_165__ = __webpack_require__(/*! ./crops/fishing-platform */ "./src/crops/fishing-platform.ts");
+/* harmony import */ var _crops_rice_field__WEBPACK_IMPORTED_MODULE_166__ = __webpack_require__(/*! ./crops/rice-field */ "./src/crops/rice-field.ts");
+/* harmony import */ var _crops_seaweed_farm__WEBPACK_IMPORTED_MODULE_167__ = __webpack_require__(/*! ./crops/seaweed-farm */ "./src/crops/seaweed-farm.ts");
+/* harmony import */ var _crops_tomato_farm__WEBPACK_IMPORTED_MODULE_168__ = __webpack_require__(/*! ./crops/tomato-farm */ "./src/crops/tomato-farm.ts");
+/* harmony import */ var _crops_wasabi_farm__WEBPACK_IMPORTED_MODULE_169__ = __webpack_require__(/*! ./crops/wasabi-farm */ "./src/crops/wasabi-farm.ts");
+/* harmony import */ var _crops_wild_net_fishing__WEBPACK_IMPORTED_MODULE_170__ = __webpack_require__(/*! ./crops/wild-net-fishing */ "./src/crops/wild-net-fishing.ts");
+/* harmony import */ var _workers_panner_bunk_house__WEBPACK_IMPORTED_MODULE_171__ = __webpack_require__(/*! ./workers/panner-bunk-house */ "./src/workers/panner-bunk-house.ts");
+/* harmony import */ var _workers_panner_house__WEBPACK_IMPORTED_MODULE_172__ = __webpack_require__(/*! ./workers/panner-house */ "./src/workers/panner-house.ts");
+/* harmony import */ var _workers_seaweed_farmer_house__WEBPACK_IMPORTED_MODULE_173__ = __webpack_require__(/*! ./workers/seaweed-farmer-house */ "./src/workers/seaweed-farmer-house.ts");
+/* harmony import */ var _crafts_apple__WEBPACK_IMPORTED_MODULE_174__ = __webpack_require__(/*! ./crafts/apple */ "./src/crafts/apple.ts");
+/* harmony import */ var _crafts_apple_pie__WEBPACK_IMPORTED_MODULE_175__ = __webpack_require__(/*! ./crafts/apple-pie */ "./src/crafts/apple-pie.ts");
+/* harmony import */ var _crafts_bicycle__WEBPACK_IMPORTED_MODULE_176__ = __webpack_require__(/*! ./crafts/bicycle */ "./src/crafts/bicycle.ts");
+/* harmony import */ var _crafts_boom_canes__WEBPACK_IMPORTED_MODULE_177__ = __webpack_require__(/*! ./crafts/boom-canes */ "./src/crafts/boom-canes.ts");
+/* harmony import */ var _crafts_bracelet__WEBPACK_IMPORTED_MODULE_178__ = __webpack_require__(/*! ./crafts/bracelet */ "./src/crafts/bracelet.ts");
+/* harmony import */ var _crafts_chandelier_earrings__WEBPACK_IMPORTED_MODULE_179__ = __webpack_require__(/*! ./crafts/chandelier-earrings */ "./src/crafts/chandelier-earrings.ts");
+/* harmony import */ var _crafts_cheese__WEBPACK_IMPORTED_MODULE_180__ = __webpack_require__(/*! ./crafts/cheese */ "./src/crafts/cheese.ts");
+/* harmony import */ var _crafts_copper__WEBPACK_IMPORTED_MODULE_181__ = __webpack_require__(/*! ./crafts/copper */ "./src/crafts/copper.ts");
+/* harmony import */ var _crafts_copper_jump_ring__WEBPACK_IMPORTED_MODULE_182__ = __webpack_require__(/*! ./crafts/copper-jump-ring */ "./src/crafts/copper-jump-ring.ts");
+/* harmony import */ var _crafts_copper_ore__WEBPACK_IMPORTED_MODULE_183__ = __webpack_require__(/*! ./crafts/copper-ore */ "./src/crafts/copper-ore.ts");
+/* harmony import */ var _crafts_copper_wire__WEBPACK_IMPORTED_MODULE_184__ = __webpack_require__(/*! ./crafts/copper-wire */ "./src/crafts/copper-wire.ts");
+/* harmony import */ var _crafts_eel__WEBPACK_IMPORTED_MODULE_185__ = __webpack_require__(/*! ./crafts/eel */ "./src/crafts/eel.ts");
+/* harmony import */ var _crafts_eel_nigiri__WEBPACK_IMPORTED_MODULE_186__ = __webpack_require__(/*! ./crafts/eel-nigiri */ "./src/crafts/eel-nigiri.ts");
+/* harmony import */ var _crafts_enchanted_object__WEBPACK_IMPORTED_MODULE_187__ = __webpack_require__(/*! ./crafts/enchanted-object */ "./src/crafts/enchanted-object.ts");
+/* harmony import */ var _crafts_fish_chum__WEBPACK_IMPORTED_MODULE_188__ = __webpack_require__(/*! ./crafts/fish-chum */ "./src/crafts/fish-chum.ts");
+/* harmony import */ var _crafts_food_mix__WEBPACK_IMPORTED_MODULE_189__ = __webpack_require__(/*! ./crafts/food-mix */ "./src/crafts/food-mix.ts");
+/* harmony import */ var _crafts_four_cheese_pizza__WEBPACK_IMPORTED_MODULE_190__ = __webpack_require__(/*! ./crafts/four-cheese-pizza */ "./src/crafts/four-cheese-pizza.ts");
+/* harmony import */ var _crafts_glue__WEBPACK_IMPORTED_MODULE_191__ = __webpack_require__(/*! ./crafts/glue */ "./src/crafts/glue.ts");
+/* harmony import */ var _crafts_gold__WEBPACK_IMPORTED_MODULE_192__ = __webpack_require__(/*! ./crafts/gold */ "./src/crafts/gold.ts");
+/* harmony import */ var _crafts_gold_jump_ring__WEBPACK_IMPORTED_MODULE_193__ = __webpack_require__(/*! ./crafts/gold-jump-ring */ "./src/crafts/gold-jump-ring.ts");
+/* harmony import */ var _crafts_gold_ore__WEBPACK_IMPORTED_MODULE_194__ = __webpack_require__(/*! ./crafts/gold-ore */ "./src/crafts/gold-ore.ts");
+/* harmony import */ var _crafts_gold_plated_heart_pendant__WEBPACK_IMPORTED_MODULE_195__ = __webpack_require__(/*! ./crafts/gold-plated-heart-pendant */ "./src/crafts/gold-plated-heart-pendant.ts");
+/* harmony import */ var _crafts_golden_heart_necklace__WEBPACK_IMPORTED_MODULE_196__ = __webpack_require__(/*! ./crafts/golden-heart-necklace */ "./src/crafts/golden-heart-necklace.ts");
+/* harmony import */ var _crafts_heart_shaped_print__WEBPACK_IMPORTED_MODULE_197__ = __webpack_require__(/*! ./crafts/heart-shaped-print */ "./src/crafts/heart-shaped-print.ts");
+/* harmony import */ var _crafts_husk_rice___WEBPACK_IMPORTED_MODULE_198__ = __webpack_require__(/*! ./crafts/husk-rice. */ "./src/crafts/husk-rice..ts");
+/* harmony import */ var _crafts_ice_block__WEBPACK_IMPORTED_MODULE_199__ = __webpack_require__(/*! ./crafts/ice-block */ "./src/crafts/ice-block.ts");
+/* harmony import */ var _crafts_jewelry_set__WEBPACK_IMPORTED_MODULE_200__ = __webpack_require__(/*! ./crafts/jewelry-set */ "./src/crafts/jewelry-set.ts");
+/* harmony import */ var _crafts_lasagna__WEBPACK_IMPORTED_MODULE_201__ = __webpack_require__(/*! ./crafts/lasagna */ "./src/crafts/lasagna.ts");
+/* harmony import */ var _crafts_lights__WEBPACK_IMPORTED_MODULE_202__ = __webpack_require__(/*! ./crafts/lights */ "./src/crafts/lights.ts");
+/* harmony import */ var _crafts_lobster_clasp__WEBPACK_IMPORTED_MODULE_203__ = __webpack_require__(/*! ./crafts/lobster-clasp */ "./src/crafts/lobster-clasp.ts");
+/* harmony import */ var _crafts_magic_powder__WEBPACK_IMPORTED_MODULE_204__ = __webpack_require__(/*! ./crafts/magic-powder */ "./src/crafts/magic-powder.ts");
+/* harmony import */ var _crafts_molten_glass__WEBPACK_IMPORTED_MODULE_205__ = __webpack_require__(/*! ./crafts/molten-glass */ "./src/crafts/molten-glass.ts");
+/* harmony import */ var _crafts_mystic_matter__WEBPACK_IMPORTED_MODULE_206__ = __webpack_require__(/*! ./crafts/mystic-matter */ "./src/crafts/mystic-matter.ts");
+/* harmony import */ var _crafts_pasta_sauce__WEBPACK_IMPORTED_MODULE_207__ = __webpack_require__(/*! ./crafts/pasta-sauce */ "./src/crafts/pasta-sauce.ts");
+/* harmony import */ var _crafts_pizza_base__WEBPACK_IMPORTED_MODULE_208__ = __webpack_require__(/*! ./crafts/pizza-base */ "./src/crafts/pizza-base.ts");
+/* harmony import */ var _crafts_red_steel__WEBPACK_IMPORTED_MODULE_209__ = __webpack_require__(/*! ./crafts/red-steel */ "./src/crafts/red-steel.ts");
+/* harmony import */ var _crafts_rice_vinegar__WEBPACK_IMPORTED_MODULE_210__ = __webpack_require__(/*! ./crafts/rice-vinegar */ "./src/crafts/rice-vinegar.ts");
+/* harmony import */ var _crafts_risotto__WEBPACK_IMPORTED_MODULE_211__ = __webpack_require__(/*! ./crafts/risotto */ "./src/crafts/risotto.ts");
+/* harmony import */ var _crafts_rocking_horse__WEBPACK_IMPORTED_MODULE_212__ = __webpack_require__(/*! ./crafts/rocking-horse */ "./src/crafts/rocking-horse.ts");
+/* harmony import */ var _crafts_roe__WEBPACK_IMPORTED_MODULE_213__ = __webpack_require__(/*! ./crafts/roe */ "./src/crafts/roe.ts");
+/* harmony import */ var _crafts_salmon__WEBPACK_IMPORTED_MODULE_214__ = __webpack_require__(/*! ./crafts/salmon */ "./src/crafts/salmon.ts");
+/* harmony import */ var _crafts_salmon_nigiri__WEBPACK_IMPORTED_MODULE_215__ = __webpack_require__(/*! ./crafts/salmon-nigiri */ "./src/crafts/salmon-nigiri.ts");
+/* harmony import */ var _crafts_seaweed__WEBPACK_IMPORTED_MODULE_216__ = __webpack_require__(/*! ./crafts/seaweed */ "./src/crafts/seaweed.ts");
+/* harmony import */ var _crafts_shrimp__WEBPACK_IMPORTED_MODULE_217__ = __webpack_require__(/*! ./crafts/shrimp */ "./src/crafts/shrimp.ts");
+/* harmony import */ var _crafts_shrimp_pizza__WEBPACK_IMPORTED_MODULE_218__ = __webpack_require__(/*! ./crafts/shrimp-pizza */ "./src/crafts/shrimp-pizza.ts");
+/* harmony import */ var _crafts_silver__WEBPACK_IMPORTED_MODULE_219__ = __webpack_require__(/*! ./crafts/silver */ "./src/crafts/silver.ts");
+/* harmony import */ var _crafts_silver_jump_ring__WEBPACK_IMPORTED_MODULE_220__ = __webpack_require__(/*! ./crafts/silver-jump-ring */ "./src/crafts/silver-jump-ring.ts");
+/* harmony import */ var _crafts_silver_ore__WEBPACK_IMPORTED_MODULE_221__ = __webpack_require__(/*! ./crafts/silver-ore */ "./src/crafts/silver-ore.ts");
+/* harmony import */ var _crafts_silver_wire__WEBPACK_IMPORTED_MODULE_222__ = __webpack_require__(/*! ./crafts/silver-wire */ "./src/crafts/silver-wire.ts");
+/* harmony import */ var _crafts_sterling_silver__WEBPACK_IMPORTED_MODULE_223__ = __webpack_require__(/*! ./crafts/sterling-silver */ "./src/crafts/sterling-silver.ts");
+/* harmony import */ var _crafts_sterling_silver_jump_ring__WEBPACK_IMPORTED_MODULE_224__ = __webpack_require__(/*! ./crafts/sterling-silver-jump-ring */ "./src/crafts/sterling-silver-jump-ring.ts");
+/* harmony import */ var _crafts_supply_box__WEBPACK_IMPORTED_MODULE_225__ = __webpack_require__(/*! ./crafts/supply-box */ "./src/crafts/supply-box.ts");
+/* harmony import */ var _crafts_sushi_boat__WEBPACK_IMPORTED_MODULE_226__ = __webpack_require__(/*! ./crafts/sushi-boat */ "./src/crafts/sushi-boat.ts");
+/* harmony import */ var _crafts_tomato_paste__WEBPACK_IMPORTED_MODULE_227__ = __webpack_require__(/*! ./crafts/tomato-paste */ "./src/crafts/tomato-paste.ts");
+/* harmony import */ var _crafts_tomatoes__WEBPACK_IMPORTED_MODULE_228__ = __webpack_require__(/*! ./crafts/tomatoes */ "./src/crafts/tomatoes.ts");
+/* harmony import */ var _crafts_wasabi__WEBPACK_IMPORTED_MODULE_229__ = __webpack_require__(/*! ./crafts/wasabi */ "./src/crafts/wasabi.ts");
+/* harmony import */ var _crafts_white_rice__WEBPACK_IMPORTED_MODULE_230__ = __webpack_require__(/*! ./crafts/white-rice */ "./src/crafts/white-rice.ts");
+/* harmony import */ var _crafts_worms__WEBPACK_IMPORTED_MODULE_231__ = __webpack_require__(/*! ./crafts/worms */ "./src/crafts/worms.ts");
 var _a;
 
 
@@ -10492,12 +17243,101 @@ var _a;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.products = (_a = {}, // crafts
-_a[_crafts_baguette__WEBPACK_IMPORTED_MODULE_11__["default"].name] = new _crafts_baguette__WEBPACK_IMPORTED_MODULE_11__["default"](), _a[_crafts_batter__WEBPACK_IMPORTED_MODULE_18__["default"].name] = new _crafts_batter__WEBPACK_IMPORTED_MODULE_18__["default"](), _a[_crafts_blue_steel__WEBPACK_IMPORTED_MODULE_76__["default"].name] = new _crafts_blue_steel__WEBPACK_IMPORTED_MODULE_76__["default"](), _a[_crafts_brine__WEBPACK_IMPORTED_MODULE_10__["default"].name] = new _crafts_brine__WEBPACK_IMPORTED_MODULE_10__["default"](), _a[_crafts_butter__WEBPACK_IMPORTED_MODULE_4__["default"].name] = new _crafts_butter__WEBPACK_IMPORTED_MODULE_4__["default"](), _a[_crafts_cabernet_grapes__WEBPACK_IMPORTED_MODULE_37__["default"].name] = new _crafts_cabernet_grapes__WEBPACK_IMPORTED_MODULE_37__["default"](), _a[_crafts_cabernet_sauvignon__WEBPACK_IMPORTED_MODULE_35__["default"].name] = new _crafts_cabernet_sauvignon__WEBPACK_IMPORTED_MODULE_35__["default"](), _a[_crafts_candy_corn__WEBPACK_IMPORTED_MODULE_140__["default"].name] = new _crafts_candy_corn__WEBPACK_IMPORTED_MODULE_140__["default"](), _a[_crafts_cake__WEBPACK_IMPORTED_MODULE_17__["default"].name] = new _crafts_cake__WEBPACK_IMPORTED_MODULE_17__["default"](), _a[_crafts_candy_canes__WEBPACK_IMPORTED_MODULE_28__["default"].name] = new _crafts_candy_canes__WEBPACK_IMPORTED_MODULE_28__["default"](), _a[_crafts_ceramic_bowl__WEBPACK_IMPORTED_MODULE_77__["default"].name] = new _crafts_ceramic_bowl__WEBPACK_IMPORTED_MODULE_77__["default"](), _a[_crafts_chardonnay__WEBPACK_IMPORTED_MODULE_78__["default"].name] = new _crafts_chardonnay__WEBPACK_IMPORTED_MODULE_78__["default"](), _a[_crafts_chardonnay_grapes__WEBPACK_IMPORTED_MODULE_79__["default"].name] = new _crafts_chardonnay_grapes__WEBPACK_IMPORTED_MODULE_79__["default"](), _a[_crafts_chocolate_bar__WEBPACK_IMPORTED_MODULE_25__["default"].name] = new _crafts_chocolate_bar__WEBPACK_IMPORTED_MODULE_25__["default"](), _a[_crafts_chocolate_covered_strawberries__WEBPACK_IMPORTED_MODULE_80__["default"].name] = new _crafts_chocolate_covered_strawberries__WEBPACK_IMPORTED_MODULE_80__["default"](), _a[_crafts_chromium__WEBPACK_IMPORTED_MODULE_40__["default"].name] = new _crafts_chromium__WEBPACK_IMPORTED_MODULE_40__["default"](), _a[_crafts_clay_lump__WEBPACK_IMPORTED_MODULE_81__["default"].name] = new _crafts_clay_lump__WEBPACK_IMPORTED_MODULE_81__["default"](), _a[_crafts_cocoa__WEBPACK_IMPORTED_MODULE_27__["default"].name] = new _crafts_cocoa__WEBPACK_IMPORTED_MODULE_27__["default"](), _a[_crafts_corn__WEBPACK_IMPORTED_MODULE_139__["default"].name] = new _crafts_corn__WEBPACK_IMPORTED_MODULE_139__["default"](), _a[_crafts_corn_starch__WEBPACK_IMPORTED_MODULE_142__["default"].name] = new _crafts_corn_starch__WEBPACK_IMPORTED_MODULE_142__["default"](), _a[_crafts_cotton__WEBPACK_IMPORTED_MODULE_82__["default"].name] = new _crafts_cotton__WEBPACK_IMPORTED_MODULE_82__["default"](), _a[_crafts_cotton_yarn__WEBPACK_IMPORTED_MODULE_83__["default"].name] = new _crafts_cotton_yarn__WEBPACK_IMPORTED_MODULE_83__["default"](), _a[_crafts_crude_oil__WEBPACK_IMPORTED_MODULE_12__["default"].name] = new _crafts_crude_oil__WEBPACK_IMPORTED_MODULE_12__["default"](), _a[_crafts_decorated_cake__WEBPACK_IMPORTED_MODULE_16__["default"].name] = new _crafts_decorated_cake__WEBPACK_IMPORTED_MODULE_16__["default"](), _a[_crafts_dough__WEBPACK_IMPORTED_MODULE_84__["default"].name] = new _crafts_dough__WEBPACK_IMPORTED_MODULE_84__["default"](), _a[_crafts_eggs__WEBPACK_IMPORTED_MODULE_23__["default"].name] = new _crafts_eggs__WEBPACK_IMPORTED_MODULE_23__["default"](), _a[_crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"].name] = new _crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"](), _a[_crafts_fabric_box__WEBPACK_IMPORTED_MODULE_85__["default"].name] = new _crafts_fabric_box__WEBPACK_IMPORTED_MODULE_85__["default"](), _a[_crafts_fancy_cake__WEBPACK_IMPORTED_MODULE_86__["default"].name] = new _crafts_fancy_cake__WEBPACK_IMPORTED_MODULE_86__["default"](), _a[_crafts_feed__WEBPACK_IMPORTED_MODULE_9__["default"].name] = new _crafts_feed__WEBPACK_IMPORTED_MODULE_9__["default"](), _a[_crafts_flour__WEBPACK_IMPORTED_MODULE_19__["default"].name] = new _crafts_flour__WEBPACK_IMPORTED_MODULE_19__["default"](), _a[_crafts_food_parcel__WEBPACK_IMPORTED_MODULE_87__["default"].name] = new _crafts_food_parcel__WEBPACK_IMPORTED_MODULE_87__["default"](), _a[_crafts_gasoline__WEBPACK_IMPORTED_MODULE_88__["default"].name] = new _crafts_gasoline__WEBPACK_IMPORTED_MODULE_88__["default"](), _a[_crafts_gift_parcel__WEBPACK_IMPORTED_MODULE_14__["default"].name] = new _crafts_gift_parcel__WEBPACK_IMPORTED_MODULE_14__["default"](), _a[_crafts_honey__WEBPACK_IMPORTED_MODULE_89__["default"].name] = new _crafts_honey__WEBPACK_IMPORTED_MODULE_89__["default"](), _a[_crafts_honeycomb__WEBPACK_IMPORTED_MODULE_90__["default"].name] = new _crafts_honeycomb__WEBPACK_IMPORTED_MODULE_90__["default"](), _a[_crafts_iron__WEBPACK_IMPORTED_MODULE_43__["default"].name] = new _crafts_iron__WEBPACK_IMPORTED_MODULE_43__["default"](), _a[_crafts_jack_o_lantern__WEBPACK_IMPORTED_MODULE_91__["default"].name] = new _crafts_jack_o_lantern__WEBPACK_IMPORTED_MODULE_91__["default"](), _a[_crafts_jam__WEBPACK_IMPORTED_MODULE_92__["default"].name] = new _crafts_jam__WEBPACK_IMPORTED_MODULE_92__["default"](), _a[_crafts_jet_fuel__WEBPACK_IMPORTED_MODULE_93__["default"].name] = new _crafts_jet_fuel__WEBPACK_IMPORTED_MODULE_93__["default"](), _a[_crafts_limestone__WEBPACK_IMPORTED_MODULE_39__["default"].name] = new _crafts_limestone__WEBPACK_IMPORTED_MODULE_39__["default"](), _a[_crafts_lumber__WEBPACK_IMPORTED_MODULE_1__["default"].name] = new _crafts_lumber__WEBPACK_IMPORTED_MODULE_1__["default"](), _a[_crafts_milk__WEBPACK_IMPORTED_MODULE_6__["default"].name] = new _crafts_milk__WEBPACK_IMPORTED_MODULE_6__["default"](), _a[_crafts_nectar__WEBPACK_IMPORTED_MODULE_94__["default"].name] = new _crafts_nectar__WEBPACK_IMPORTED_MODULE_94__["default"](), _a[_crafts_oak_barrel__WEBPACK_IMPORTED_MODULE_41__["default"].name] = new _crafts_oak_barrel__WEBPACK_IMPORTED_MODULE_41__["default"](), _a[_crafts_oak_wood__WEBPACK_IMPORTED_MODULE_42__["default"].name] = new _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_42__["default"](), _a[_crafts_party_box__WEBPACK_IMPORTED_MODULE_44__["default"].name] = new _crafts_party_box__WEBPACK_IMPORTED_MODULE_44__["default"](), _a[_crafts_peppermint__WEBPACK_IMPORTED_MODULE_29__["default"].name] = new _crafts_peppermint__WEBPACK_IMPORTED_MODULE_29__["default"](), _a[_crafts_petroleum__WEBPACK_IMPORTED_MODULE_135__["default"].name] = new _crafts_petroleum__WEBPACK_IMPORTED_MODULE_135__["default"](), _a[_crafts_pinot_noir__WEBPACK_IMPORTED_MODULE_95__["default"].name] = new _crafts_pinot_noir__WEBPACK_IMPORTED_MODULE_95__["default"](), _a[_crafts_pinot_noir_grapes__WEBPACK_IMPORTED_MODULE_96__["default"].name] = new _crafts_pinot_noir_grapes__WEBPACK_IMPORTED_MODULE_96__["default"](), _a[_crafts_pumpkin__WEBPACK_IMPORTED_MODULE_33__["default"].name] = new _crafts_pumpkin__WEBPACK_IMPORTED_MODULE_33__["default"](), _a[_crafts_pumpkin_pie__WEBPACK_IMPORTED_MODULE_32__["default"].name] = new _crafts_pumpkin_pie__WEBPACK_IMPORTED_MODULE_32__["default"](), _a[_crafts_salt__WEBPACK_IMPORTED_MODULE_5__["default"].name] = new _crafts_salt__WEBPACK_IMPORTED_MODULE_5__["default"](), _a[_crafts_sangria__WEBPACK_IMPORTED_MODULE_30__["default"].name] = new _crafts_sangria__WEBPACK_IMPORTED_MODULE_30__["default"](), _a[_crafts_silica__WEBPACK_IMPORTED_MODULE_38__["default"].name] = new _crafts_silica__WEBPACK_IMPORTED_MODULE_38__["default"](), _a[_crafts_stacked_box__WEBPACK_IMPORTED_MODULE_136__["default"].name] = new _crafts_stacked_box__WEBPACK_IMPORTED_MODULE_136__["default"](), _a[_crafts_steel__WEBPACK_IMPORTED_MODULE_97__["default"].name] = new _crafts_steel__WEBPACK_IMPORTED_MODULE_97__["default"](), _a[_crafts_strawberries__WEBPACK_IMPORTED_MODULE_36__["default"].name] = new _crafts_strawberries__WEBPACK_IMPORTED_MODULE_36__["default"](), _a[_crafts_sugar__WEBPACK_IMPORTED_MODULE_24__["default"].name] = new _crafts_sugar__WEBPACK_IMPORTED_MODULE_24__["default"](), _a[_crafts_sugarcane__WEBPACK_IMPORTED_MODULE_34__["default"].name] = new _crafts_sugarcane__WEBPACK_IMPORTED_MODULE_34__["default"](), _a[_crafts_trick_or_treat_bag__WEBPACK_IMPORTED_MODULE_138__["default"].name] = new _crafts_trick_or_treat_bag__WEBPACK_IMPORTED_MODULE_138__["default"](), _a[_crafts_uniforms__WEBPACK_IMPORTED_MODULE_98__["default"].name] = new _crafts_uniforms__WEBPACK_IMPORTED_MODULE_98__["default"](), _a[_crafts_water__WEBPACK_IMPORTED_MODULE_7__["default"].name] = new _crafts_water__WEBPACK_IMPORTED_MODULE_7__["default"](), _a[_crafts_water_drum__WEBPACK_IMPORTED_MODULE_13__["default"].name] = new _crafts_water_drum__WEBPACK_IMPORTED_MODULE_13__["default"](), _a[_crafts_wax__WEBPACK_IMPORTED_MODULE_99__["default"].name] = new _crafts_wax__WEBPACK_IMPORTED_MODULE_99__["default"](), _a[_crafts_wheat__WEBPACK_IMPORTED_MODULE_20__["default"].name] = new _crafts_wheat__WEBPACK_IMPORTED_MODULE_20__["default"](), _a[_crafts_wine_bottle__WEBPACK_IMPORTED_MODULE_31__["default"].name] = new _crafts_wine_bottle__WEBPACK_IMPORTED_MODULE_31__["default"](), _a[_crafts_wood__WEBPACK_IMPORTED_MODULE_2__["default"].name] = new _crafts_wood__WEBPACK_IMPORTED_MODULE_2__["default"](), _a[_crafts_wooden_box__WEBPACK_IMPORTED_MODULE_100__["default"].name] = new _crafts_wooden_box__WEBPACK_IMPORTED_MODULE_100__["default"](), _a[_crafts_wool__WEBPACK_IMPORTED_MODULE_22__["default"].name] = new _crafts_wool__WEBPACK_IMPORTED_MODULE_22__["default"](), _a[_crafts_wool_yarn__WEBPACK_IMPORTED_MODULE_21__["default"].name] = new _crafts_wool_yarn__WEBPACK_IMPORTED_MODULE_21__["default"](), // buildings
-_a[_buildings_bakery__WEBPACK_IMPORTED_MODULE_0__["default"].name] = new _buildings_bakery__WEBPACK_IMPORTED_MODULE_0__["default"](), _a[_buildings_beehive__WEBPACK_IMPORTED_MODULE_45__["default"].name] = new _buildings_beehive__WEBPACK_IMPORTED_MODULE_45__["default"](), _a[_buildings_boxing_facility__WEBPACK_IMPORTED_MODULE_15__["default"].name] = new _buildings_boxing_facility__WEBPACK_IMPORTED_MODULE_15__["default"](), _a[_buildings_cakery__WEBPACK_IMPORTED_MODULE_46__["default"].name] = new _buildings_cakery__WEBPACK_IMPORTED_MODULE_46__["default"](), _a[_buildings_candy_shop__WEBPACK_IMPORTED_MODULE_104__["default"].name] = new _buildings_candy_shop__WEBPACK_IMPORTED_MODULE_104__["default"](), _a[_buildings_chicken_coop__WEBPACK_IMPORTED_MODULE_103__["default"].name] = new _buildings_chicken_coop__WEBPACK_IMPORTED_MODULE_103__["default"](), _a[_buildings_chocolate_shop__WEBPACK_IMPORTED_MODULE_26__["default"].name] = new _buildings_chocolate_shop__WEBPACK_IMPORTED_MODULE_26__["default"](), _a[_buildings_fabric_plant__WEBPACK_IMPORTED_MODULE_47__["default"].name] = new _buildings_fabric_plant__WEBPACK_IMPORTED_MODULE_47__["default"](), _a[_buildings_feed_mill__WEBPACK_IMPORTED_MODULE_48__["default"].name] = new _buildings_feed_mill__WEBPACK_IMPORTED_MODULE_48__["default"](), _a[_buildings_fuel_storage__WEBPACK_IMPORTED_MODULE_49__["default"].name] = new _buildings_fuel_storage__WEBPACK_IMPORTED_MODULE_49__["default"](), _a[_buildings_glass_factory__WEBPACK_IMPORTED_MODULE_50__["default"].name] = new _buildings_glass_factory__WEBPACK_IMPORTED_MODULE_50__["default"](), _a[_buildings_iron_mine__WEBPACK_IMPORTED_MODULE_51__["default"].name] = new _buildings_iron_mine__WEBPACK_IMPORTED_MODULE_51__["default"](), _a[_buildings_lumber_mill__WEBPACK_IMPORTED_MODULE_52__["default"].name] = new _buildings_lumber_mill__WEBPACK_IMPORTED_MODULE_52__["default"](), _a[_buildings_lumber_yard__WEBPACK_IMPORTED_MODULE_53__["default"].name] = new _buildings_lumber_yard__WEBPACK_IMPORTED_MODULE_53__["default"](), _a[_buildings_milk_barn__WEBPACK_IMPORTED_MODULE_54__["default"].name] = new _buildings_milk_barn__WEBPACK_IMPORTED_MODULE_54__["default"](), _a[_buildings_nuclear_power__WEBPACK_IMPORTED_MODULE_55__["default"].name] = new _buildings_nuclear_power__WEBPACK_IMPORTED_MODULE_55__["default"](), _a[_buildings_oil_pump__WEBPACK_IMPORTED_MODULE_56__["default"].name] = new _buildings_oil_pump__WEBPACK_IMPORTED_MODULE_56__["default"](), _a[_buildings_pantry__WEBPACK_IMPORTED_MODULE_57__["default"].name] = new _buildings_pantry__WEBPACK_IMPORTED_MODULE_57__["default"](), _a[_buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_58__["default"].name] = new _buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_58__["default"](), _a[_buildings_power_plant__WEBPACK_IMPORTED_MODULE_59__["default"].name] = new _buildings_power_plant__WEBPACK_IMPORTED_MODULE_59__["default"](), _a[_buildings_refinery__WEBPACK_IMPORTED_MODULE_60__["default"].name] = new _buildings_refinery__WEBPACK_IMPORTED_MODULE_60__["default"](), _a[_buildings_sand_mine__WEBPACK_IMPORTED_MODULE_61__["default"].name] = new _buildings_sand_mine__WEBPACK_IMPORTED_MODULE_61__["default"](), _a[_buildings_shallow_mine__WEBPACK_IMPORTED_MODULE_62__["default"].name] = new _buildings_shallow_mine__WEBPACK_IMPORTED_MODULE_62__["default"](), _a[_buildings_sheep_pen__WEBPACK_IMPORTED_MODULE_63__["default"].name] = new _buildings_sheep_pen__WEBPACK_IMPORTED_MODULE_63__["default"](), _a[_buildings_silo__WEBPACK_IMPORTED_MODULE_64__["default"].name] = new _buildings_silo__WEBPACK_IMPORTED_MODULE_64__["default"](), _a[_buildings_steel_mill__WEBPACK_IMPORTED_MODULE_65__["default"].name] = new _buildings_steel_mill__WEBPACK_IMPORTED_MODULE_65__["default"](), _a[_buildings_storehouse__WEBPACK_IMPORTED_MODULE_66__["default"].name] = new _buildings_storehouse__WEBPACK_IMPORTED_MODULE_66__["default"](), _a[_buildings_trough__WEBPACK_IMPORTED_MODULE_67__["default"].name] = new _buildings_trough__WEBPACK_IMPORTED_MODULE_67__["default"](), _a[_buildings_warehouse__WEBPACK_IMPORTED_MODULE_68__["default"].name] = new _buildings_warehouse__WEBPACK_IMPORTED_MODULE_68__["default"](), _a[_buildings_water_facility__WEBPACK_IMPORTED_MODULE_69__["default"].name] = new _buildings_water_facility__WEBPACK_IMPORTED_MODULE_69__["default"](), _a[_buildings_water_pump__WEBPACK_IMPORTED_MODULE_70__["default"].name] = new _buildings_water_pump__WEBPACK_IMPORTED_MODULE_70__["default"](), _a[_buildings_well__WEBPACK_IMPORTED_MODULE_71__["default"].name] = new _buildings_well__WEBPACK_IMPORTED_MODULE_71__["default"](), _a[_buildings_wind_mill__WEBPACK_IMPORTED_MODULE_72__["default"].name] = new _buildings_wind_mill__WEBPACK_IMPORTED_MODULE_72__["default"](), _a[_buildings_wind_pump__WEBPACK_IMPORTED_MODULE_73__["default"].name] = new _buildings_wind_pump__WEBPACK_IMPORTED_MODULE_73__["default"](), _a[_buildings_winery__WEBPACK_IMPORTED_MODULE_74__["default"].name] = new _buildings_winery__WEBPACK_IMPORTED_MODULE_74__["default"](), _a[_buildings_wood_shed__WEBPACK_IMPORTED_MODULE_75__["default"].name] = new _buildings_wood_shed__WEBPACK_IMPORTED_MODULE_75__["default"](), // crops
-_a[_crops_cabernet_vines__WEBPACK_IMPORTED_MODULE_101__["default"].name] = new _crops_cabernet_vines__WEBPACK_IMPORTED_MODULE_101__["default"](), _a[_crops_chardonnay_vines__WEBPACK_IMPORTED_MODULE_102__["default"].name] = new _crops_chardonnay_vines__WEBPACK_IMPORTED_MODULE_102__["default"](), _a[_crops_cocoa_tree__WEBPACK_IMPORTED_MODULE_105__["default"].name] = new _crops_cocoa_tree__WEBPACK_IMPORTED_MODULE_105__["default"](), _a[_crops_corn_field__WEBPACK_IMPORTED_MODULE_141__["default"].name] = new _crops_corn_field__WEBPACK_IMPORTED_MODULE_141__["default"](), _a[_crops_cotton_field__WEBPACK_IMPORTED_MODULE_106__["default"].name] = new _crops_cotton_field__WEBPACK_IMPORTED_MODULE_106__["default"](), _a[_crops_oak_tree_farm__WEBPACK_IMPORTED_MODULE_107__["default"].name] = new _crops_oak_tree_farm__WEBPACK_IMPORTED_MODULE_107__["default"](), _a[_crops_peppermint_field__WEBPACK_IMPORTED_MODULE_108__["default"].name] = new _crops_peppermint_field__WEBPACK_IMPORTED_MODULE_108__["default"](), _a[_crops_pinot_noir_vines__WEBPACK_IMPORTED_MODULE_109__["default"].name] = new _crops_pinot_noir_vines__WEBPACK_IMPORTED_MODULE_109__["default"](), _a[_crops_pumpkin_patch__WEBPACK_IMPORTED_MODULE_110__["default"].name] = new _crops_pumpkin_patch__WEBPACK_IMPORTED_MODULE_110__["default"](), _a[_crops_salt_field__WEBPACK_IMPORTED_MODULE_111__["default"].name] = new _crops_salt_field__WEBPACK_IMPORTED_MODULE_111__["default"](), _a[_crops_strawberry_farm__WEBPACK_IMPORTED_MODULE_112__["default"].name] = new _crops_strawberry_farm__WEBPACK_IMPORTED_MODULE_112__["default"](), _a[_crops_sugercane_field__WEBPACK_IMPORTED_MODULE_113__["default"].name] = new _crops_sugercane_field__WEBPACK_IMPORTED_MODULE_113__["default"](), _a[_crops_tree_farm__WEBPACK_IMPORTED_MODULE_114__["default"].name] = new _crops_tree_farm__WEBPACK_IMPORTED_MODULE_114__["default"](), _a[_crops_wheat_field__WEBPACK_IMPORTED_MODULE_115__["default"].name] = new _crops_wheat_field__WEBPACK_IMPORTED_MODULE_115__["default"](), // terrains
+_a[_crafts_apple__WEBPACK_IMPORTED_MODULE_174__["default"].name] = new _crafts_apple__WEBPACK_IMPORTED_MODULE_174__["default"](), _a[_crafts_apple_pie__WEBPACK_IMPORTED_MODULE_175__["default"].name] = new _crafts_apple_pie__WEBPACK_IMPORTED_MODULE_175__["default"](), _a[_crafts_baguette__WEBPACK_IMPORTED_MODULE_11__["default"].name] = new _crafts_baguette__WEBPACK_IMPORTED_MODULE_11__["default"](), _a[_crafts_batter__WEBPACK_IMPORTED_MODULE_18__["default"].name] = new _crafts_batter__WEBPACK_IMPORTED_MODULE_18__["default"](), _a[_crafts_bicycle__WEBPACK_IMPORTED_MODULE_176__["default"].name] = new _crafts_bicycle__WEBPACK_IMPORTED_MODULE_176__["default"](), _a[_crafts_blue_steel__WEBPACK_IMPORTED_MODULE_76__["default"].name] = new _crafts_blue_steel__WEBPACK_IMPORTED_MODULE_76__["default"](), _a[_crafts_boom_canes__WEBPACK_IMPORTED_MODULE_177__["default"].name] = new _crafts_boom_canes__WEBPACK_IMPORTED_MODULE_177__["default"](), _a[_crafts_bracelet__WEBPACK_IMPORTED_MODULE_178__["default"].name] = new _crafts_bracelet__WEBPACK_IMPORTED_MODULE_178__["default"](), _a[_crafts_brine__WEBPACK_IMPORTED_MODULE_10__["default"].name] = new _crafts_brine__WEBPACK_IMPORTED_MODULE_10__["default"](), _a[_crafts_butter__WEBPACK_IMPORTED_MODULE_4__["default"].name] = new _crafts_butter__WEBPACK_IMPORTED_MODULE_4__["default"](), _a[_crafts_cabernet_grapes__WEBPACK_IMPORTED_MODULE_37__["default"].name] = new _crafts_cabernet_grapes__WEBPACK_IMPORTED_MODULE_37__["default"](), _a[_crafts_cabernet_sauvignon__WEBPACK_IMPORTED_MODULE_35__["default"].name] = new _crafts_cabernet_sauvignon__WEBPACK_IMPORTED_MODULE_35__["default"](), _a[_crafts_cake__WEBPACK_IMPORTED_MODULE_17__["default"].name] = new _crafts_cake__WEBPACK_IMPORTED_MODULE_17__["default"](), _a[_crafts_candy_canes__WEBPACK_IMPORTED_MODULE_28__["default"].name] = new _crafts_candy_canes__WEBPACK_IMPORTED_MODULE_28__["default"](), _a[_crafts_candy_corn__WEBPACK_IMPORTED_MODULE_140__["default"].name] = new _crafts_candy_corn__WEBPACK_IMPORTED_MODULE_140__["default"](), _a[_crafts_ceramic_bowl__WEBPACK_IMPORTED_MODULE_77__["default"].name] = new _crafts_ceramic_bowl__WEBPACK_IMPORTED_MODULE_77__["default"](), _a[_crafts_chandelier_earrings__WEBPACK_IMPORTED_MODULE_179__["default"].name] = new _crafts_chandelier_earrings__WEBPACK_IMPORTED_MODULE_179__["default"](), _a[_crafts_chardonnay__WEBPACK_IMPORTED_MODULE_78__["default"].name] = new _crafts_chardonnay__WEBPACK_IMPORTED_MODULE_78__["default"](), _a[_crafts_chardonnay_grapes__WEBPACK_IMPORTED_MODULE_79__["default"].name] = new _crafts_chardonnay_grapes__WEBPACK_IMPORTED_MODULE_79__["default"](), _a[_crafts_cheese__WEBPACK_IMPORTED_MODULE_180__["default"].name] = new _crafts_cheese__WEBPACK_IMPORTED_MODULE_180__["default"](), _a[_crafts_chocolate_bar__WEBPACK_IMPORTED_MODULE_25__["default"].name] = new _crafts_chocolate_bar__WEBPACK_IMPORTED_MODULE_25__["default"](), _a[_crafts_chocolate_covered_strawberries__WEBPACK_IMPORTED_MODULE_80__["default"].name] = new _crafts_chocolate_covered_strawberries__WEBPACK_IMPORTED_MODULE_80__["default"](), _a[_crafts_chromium__WEBPACK_IMPORTED_MODULE_40__["default"].name] = new _crafts_chromium__WEBPACK_IMPORTED_MODULE_40__["default"](), _a[_crafts_clay_lump__WEBPACK_IMPORTED_MODULE_81__["default"].name] = new _crafts_clay_lump__WEBPACK_IMPORTED_MODULE_81__["default"](), _a[_crafts_cocoa__WEBPACK_IMPORTED_MODULE_27__["default"].name] = new _crafts_cocoa__WEBPACK_IMPORTED_MODULE_27__["default"](), _a[_crafts_copper__WEBPACK_IMPORTED_MODULE_181__["default"].name] = new _crafts_copper__WEBPACK_IMPORTED_MODULE_181__["default"](), _a[_crafts_copper_jump_ring__WEBPACK_IMPORTED_MODULE_182__["default"].name] = new _crafts_copper_jump_ring__WEBPACK_IMPORTED_MODULE_182__["default"](), _a[_crafts_copper_ore__WEBPACK_IMPORTED_MODULE_183__["default"].name] = new _crafts_copper_ore__WEBPACK_IMPORTED_MODULE_183__["default"](), _a[_crafts_copper_wire__WEBPACK_IMPORTED_MODULE_184__["default"].name] = new _crafts_copper_wire__WEBPACK_IMPORTED_MODULE_184__["default"](), _a[_crafts_corn__WEBPACK_IMPORTED_MODULE_139__["default"].name] = new _crafts_corn__WEBPACK_IMPORTED_MODULE_139__["default"](), _a[_crafts_corn_starch__WEBPACK_IMPORTED_MODULE_142__["default"].name] = new _crafts_corn_starch__WEBPACK_IMPORTED_MODULE_142__["default"](), _a[_crafts_cotton__WEBPACK_IMPORTED_MODULE_82__["default"].name] = new _crafts_cotton__WEBPACK_IMPORTED_MODULE_82__["default"](), _a[_crafts_cotton_yarn__WEBPACK_IMPORTED_MODULE_83__["default"].name] = new _crafts_cotton_yarn__WEBPACK_IMPORTED_MODULE_83__["default"](), _a[_crafts_crude_oil__WEBPACK_IMPORTED_MODULE_12__["default"].name] = new _crafts_crude_oil__WEBPACK_IMPORTED_MODULE_12__["default"](), _a[_crafts_decorated_cake__WEBPACK_IMPORTED_MODULE_16__["default"].name] = new _crafts_decorated_cake__WEBPACK_IMPORTED_MODULE_16__["default"](), _a[_crafts_dough__WEBPACK_IMPORTED_MODULE_84__["default"].name] = new _crafts_dough__WEBPACK_IMPORTED_MODULE_84__["default"](), _a[_crafts_eel__WEBPACK_IMPORTED_MODULE_185__["default"].name] = new _crafts_eel__WEBPACK_IMPORTED_MODULE_185__["default"](), _a[_crafts_eel_nigiri__WEBPACK_IMPORTED_MODULE_186__["default"].name] = new _crafts_eel_nigiri__WEBPACK_IMPORTED_MODULE_186__["default"](), _a[_crafts_eggs__WEBPACK_IMPORTED_MODULE_23__["default"].name] = new _crafts_eggs__WEBPACK_IMPORTED_MODULE_23__["default"](), _a[_crafts_enchanted_object__WEBPACK_IMPORTED_MODULE_187__["default"].name] = new _crafts_enchanted_object__WEBPACK_IMPORTED_MODULE_187__["default"](), _a[_crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"].name] = new _crafts_energy__WEBPACK_IMPORTED_MODULE_3__["default"](), _a[_crafts_fabric_box__WEBPACK_IMPORTED_MODULE_85__["default"].name] = new _crafts_fabric_box__WEBPACK_IMPORTED_MODULE_85__["default"](), _a[_crafts_fancy_cake__WEBPACK_IMPORTED_MODULE_86__["default"].name] = new _crafts_fancy_cake__WEBPACK_IMPORTED_MODULE_86__["default"](), _a[_crafts_feed__WEBPACK_IMPORTED_MODULE_9__["default"].name] = new _crafts_feed__WEBPACK_IMPORTED_MODULE_9__["default"](), _a[_crafts_fish_chum__WEBPACK_IMPORTED_MODULE_188__["default"].name] = new _crafts_fish_chum__WEBPACK_IMPORTED_MODULE_188__["default"](), _a[_crafts_flour__WEBPACK_IMPORTED_MODULE_19__["default"].name] = new _crafts_flour__WEBPACK_IMPORTED_MODULE_19__["default"](), _a[_crafts_food_mix__WEBPACK_IMPORTED_MODULE_189__["default"].name] = new _crafts_food_mix__WEBPACK_IMPORTED_MODULE_189__["default"](), _a[_crafts_food_parcel__WEBPACK_IMPORTED_MODULE_87__["default"].name] = new _crafts_food_parcel__WEBPACK_IMPORTED_MODULE_87__["default"](), _a[_crafts_four_cheese_pizza__WEBPACK_IMPORTED_MODULE_190__["default"].name] = new _crafts_four_cheese_pizza__WEBPACK_IMPORTED_MODULE_190__["default"](), _a[_crafts_gasoline__WEBPACK_IMPORTED_MODULE_88__["default"].name] = new _crafts_gasoline__WEBPACK_IMPORTED_MODULE_88__["default"](), _a[_crafts_gift_parcel__WEBPACK_IMPORTED_MODULE_14__["default"].name] = new _crafts_gift_parcel__WEBPACK_IMPORTED_MODULE_14__["default"](), _a[_crafts_glue__WEBPACK_IMPORTED_MODULE_191__["default"].name] = new _crafts_glue__WEBPACK_IMPORTED_MODULE_191__["default"](), _a[_crafts_gold__WEBPACK_IMPORTED_MODULE_192__["default"].name] = new _crafts_gold__WEBPACK_IMPORTED_MODULE_192__["default"](), _a[_crafts_gold_jump_ring__WEBPACK_IMPORTED_MODULE_193__["default"].name] = new _crafts_gold_jump_ring__WEBPACK_IMPORTED_MODULE_193__["default"](), _a[_crafts_gold_ore__WEBPACK_IMPORTED_MODULE_194__["default"].name] = new _crafts_gold_ore__WEBPACK_IMPORTED_MODULE_194__["default"](), _a[_crafts_gold_plated_heart_pendant__WEBPACK_IMPORTED_MODULE_195__["default"].name] = new _crafts_gold_plated_heart_pendant__WEBPACK_IMPORTED_MODULE_195__["default"](), _a[_crafts_golden_heart_necklace__WEBPACK_IMPORTED_MODULE_196__["default"].name] = new _crafts_golden_heart_necklace__WEBPACK_IMPORTED_MODULE_196__["default"](), _a[_crafts_heart_shaped_print__WEBPACK_IMPORTED_MODULE_197__["default"].name] = new _crafts_heart_shaped_print__WEBPACK_IMPORTED_MODULE_197__["default"](), _a[_crafts_honey__WEBPACK_IMPORTED_MODULE_89__["default"].name] = new _crafts_honey__WEBPACK_IMPORTED_MODULE_89__["default"](), _a[_crafts_honeycomb__WEBPACK_IMPORTED_MODULE_90__["default"].name] = new _crafts_honeycomb__WEBPACK_IMPORTED_MODULE_90__["default"](), _a[_crafts_husk_rice___WEBPACK_IMPORTED_MODULE_198__["default"].name] = new _crafts_husk_rice___WEBPACK_IMPORTED_MODULE_198__["default"](), _a[_crafts_ice_block__WEBPACK_IMPORTED_MODULE_199__["default"].name] = new _crafts_ice_block__WEBPACK_IMPORTED_MODULE_199__["default"](), _a[_crafts_iron__WEBPACK_IMPORTED_MODULE_43__["default"].name] = new _crafts_iron__WEBPACK_IMPORTED_MODULE_43__["default"](), _a[_crafts_jack_o_lantern__WEBPACK_IMPORTED_MODULE_91__["default"].name] = new _crafts_jack_o_lantern__WEBPACK_IMPORTED_MODULE_91__["default"](), _a[_crafts_jam__WEBPACK_IMPORTED_MODULE_92__["default"].name] = new _crafts_jam__WEBPACK_IMPORTED_MODULE_92__["default"](), _a[_crafts_jet_fuel__WEBPACK_IMPORTED_MODULE_93__["default"].name] = new _crafts_jet_fuel__WEBPACK_IMPORTED_MODULE_93__["default"](), _a[_crafts_jewelry_set__WEBPACK_IMPORTED_MODULE_200__["default"].name] = new _crafts_jewelry_set__WEBPACK_IMPORTED_MODULE_200__["default"](), _a[_crafts_lasagna__WEBPACK_IMPORTED_MODULE_201__["default"].name] = new _crafts_lasagna__WEBPACK_IMPORTED_MODULE_201__["default"](), _a[_crafts_lights__WEBPACK_IMPORTED_MODULE_202__["default"].name] = new _crafts_lights__WEBPACK_IMPORTED_MODULE_202__["default"](), _a[_crafts_limestone__WEBPACK_IMPORTED_MODULE_39__["default"].name] = new _crafts_limestone__WEBPACK_IMPORTED_MODULE_39__["default"](), _a[_crafts_lobster_clasp__WEBPACK_IMPORTED_MODULE_203__["default"].name] = new _crafts_lobster_clasp__WEBPACK_IMPORTED_MODULE_203__["default"](), _a[_crafts_lumber__WEBPACK_IMPORTED_MODULE_1__["default"].name] = new _crafts_lumber__WEBPACK_IMPORTED_MODULE_1__["default"](), _a[_crafts_magic_powder__WEBPACK_IMPORTED_MODULE_204__["default"].name] = new _crafts_magic_powder__WEBPACK_IMPORTED_MODULE_204__["default"](), _a[_crafts_milk__WEBPACK_IMPORTED_MODULE_6__["default"].name] = new _crafts_milk__WEBPACK_IMPORTED_MODULE_6__["default"](), _a[_crafts_molten_glass__WEBPACK_IMPORTED_MODULE_205__["default"].name] = new _crafts_molten_glass__WEBPACK_IMPORTED_MODULE_205__["default"](), _a[_crafts_mystic_matter__WEBPACK_IMPORTED_MODULE_206__["default"].name] = new _crafts_mystic_matter__WEBPACK_IMPORTED_MODULE_206__["default"](), _a[_crafts_nectar__WEBPACK_IMPORTED_MODULE_94__["default"].name] = new _crafts_nectar__WEBPACK_IMPORTED_MODULE_94__["default"](), _a[_crafts_oak_barrel__WEBPACK_IMPORTED_MODULE_41__["default"].name] = new _crafts_oak_barrel__WEBPACK_IMPORTED_MODULE_41__["default"](), _a[_crafts_oak_wood__WEBPACK_IMPORTED_MODULE_42__["default"].name] = new _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_42__["default"](), _a[_crafts_party_box__WEBPACK_IMPORTED_MODULE_44__["default"].name] = new _crafts_party_box__WEBPACK_IMPORTED_MODULE_44__["default"](), _a[_crafts_pasta_sauce__WEBPACK_IMPORTED_MODULE_207__["default"].name] = new _crafts_pasta_sauce__WEBPACK_IMPORTED_MODULE_207__["default"](), _a[_crafts_peppermint__WEBPACK_IMPORTED_MODULE_29__["default"].name] = new _crafts_peppermint__WEBPACK_IMPORTED_MODULE_29__["default"](), _a[_crafts_petroleum__WEBPACK_IMPORTED_MODULE_135__["default"].name] = new _crafts_petroleum__WEBPACK_IMPORTED_MODULE_135__["default"](), _a[_crafts_pinot_noir__WEBPACK_IMPORTED_MODULE_95__["default"].name] = new _crafts_pinot_noir__WEBPACK_IMPORTED_MODULE_95__["default"](), _a[_crafts_pinot_noir_grapes__WEBPACK_IMPORTED_MODULE_96__["default"].name] = new _crafts_pinot_noir_grapes__WEBPACK_IMPORTED_MODULE_96__["default"](), _a[_crafts_pizza_base__WEBPACK_IMPORTED_MODULE_208__["default"].name] = new _crafts_pizza_base__WEBPACK_IMPORTED_MODULE_208__["default"](), _a[_crafts_pumpkin__WEBPACK_IMPORTED_MODULE_33__["default"].name] = new _crafts_pumpkin__WEBPACK_IMPORTED_MODULE_33__["default"](), _a[_crafts_pumpkin_pie__WEBPACK_IMPORTED_MODULE_32__["default"].name] = new _crafts_pumpkin_pie__WEBPACK_IMPORTED_MODULE_32__["default"](), _a[_crafts_red_steel__WEBPACK_IMPORTED_MODULE_209__["default"].name] = new _crafts_red_steel__WEBPACK_IMPORTED_MODULE_209__["default"](), _a[_crafts_rice_vinegar__WEBPACK_IMPORTED_MODULE_210__["default"].name] = new _crafts_rice_vinegar__WEBPACK_IMPORTED_MODULE_210__["default"](), _a[_crafts_risotto__WEBPACK_IMPORTED_MODULE_211__["default"].name] = new _crafts_risotto__WEBPACK_IMPORTED_MODULE_211__["default"](), _a[_crafts_rocking_horse__WEBPACK_IMPORTED_MODULE_212__["default"].name] = new _crafts_rocking_horse__WEBPACK_IMPORTED_MODULE_212__["default"](), _a[_crafts_roe__WEBPACK_IMPORTED_MODULE_213__["default"].name] = new _crafts_roe__WEBPACK_IMPORTED_MODULE_213__["default"](), _a[_crafts_salmon__WEBPACK_IMPORTED_MODULE_214__["default"].name] = new _crafts_salmon__WEBPACK_IMPORTED_MODULE_214__["default"](), _a[_crafts_salmon_nigiri__WEBPACK_IMPORTED_MODULE_215__["default"].name] = new _crafts_salmon_nigiri__WEBPACK_IMPORTED_MODULE_215__["default"](), _a[_crafts_salt__WEBPACK_IMPORTED_MODULE_5__["default"].name] = new _crafts_salt__WEBPACK_IMPORTED_MODULE_5__["default"](), _a[_crafts_sangria__WEBPACK_IMPORTED_MODULE_30__["default"].name] = new _crafts_sangria__WEBPACK_IMPORTED_MODULE_30__["default"](), _a[_crafts_seaweed__WEBPACK_IMPORTED_MODULE_216__["default"].name] = new _crafts_seaweed__WEBPACK_IMPORTED_MODULE_216__["default"](), _a[_crafts_shrimp__WEBPACK_IMPORTED_MODULE_217__["default"].name] = new _crafts_shrimp__WEBPACK_IMPORTED_MODULE_217__["default"](), _a[_crafts_shrimp_pizza__WEBPACK_IMPORTED_MODULE_218__["default"].name] = new _crafts_shrimp_pizza__WEBPACK_IMPORTED_MODULE_218__["default"](), _a[_crafts_silica__WEBPACK_IMPORTED_MODULE_38__["default"].name] = new _crafts_silica__WEBPACK_IMPORTED_MODULE_38__["default"](), _a[_crafts_silver__WEBPACK_IMPORTED_MODULE_219__["default"].name] = new _crafts_silver__WEBPACK_IMPORTED_MODULE_219__["default"](), _a[_crafts_silver_jump_ring__WEBPACK_IMPORTED_MODULE_220__["default"].name] = new _crafts_silver_jump_ring__WEBPACK_IMPORTED_MODULE_220__["default"](), _a[_crafts_silver_ore__WEBPACK_IMPORTED_MODULE_221__["default"].name] = new _crafts_silver_ore__WEBPACK_IMPORTED_MODULE_221__["default"](), _a[_crafts_silver_wire__WEBPACK_IMPORTED_MODULE_222__["default"].name] = new _crafts_silver_wire__WEBPACK_IMPORTED_MODULE_222__["default"](), _a[_crafts_stack_box__WEBPACK_IMPORTED_MODULE_136__["default"].name] = new _crafts_stack_box__WEBPACK_IMPORTED_MODULE_136__["default"](), _a[_crafts_steel__WEBPACK_IMPORTED_MODULE_97__["default"].name] = new _crafts_steel__WEBPACK_IMPORTED_MODULE_97__["default"](), _a[_crafts_sterling_silver__WEBPACK_IMPORTED_MODULE_223__["default"].name] = new _crafts_sterling_silver__WEBPACK_IMPORTED_MODULE_223__["default"](), _a[_crafts_sterling_silver_jump_ring__WEBPACK_IMPORTED_MODULE_224__["default"].name] = new _crafts_sterling_silver_jump_ring__WEBPACK_IMPORTED_MODULE_224__["default"](), _a[_crafts_strawberries__WEBPACK_IMPORTED_MODULE_36__["default"].name] = new _crafts_strawberries__WEBPACK_IMPORTED_MODULE_36__["default"](), _a[_crafts_sugar__WEBPACK_IMPORTED_MODULE_24__["default"].name] = new _crafts_sugar__WEBPACK_IMPORTED_MODULE_24__["default"](), _a[_crafts_sugarcane__WEBPACK_IMPORTED_MODULE_34__["default"].name] = new _crafts_sugarcane__WEBPACK_IMPORTED_MODULE_34__["default"](), _a[_crafts_supply_box__WEBPACK_IMPORTED_MODULE_225__["default"].name] = new _crafts_supply_box__WEBPACK_IMPORTED_MODULE_225__["default"](), _a[_crafts_sushi_boat__WEBPACK_IMPORTED_MODULE_226__["default"].name] = new _crafts_sushi_boat__WEBPACK_IMPORTED_MODULE_226__["default"](), _a[_crafts_tomato_paste__WEBPACK_IMPORTED_MODULE_227__["default"].name] = new _crafts_tomato_paste__WEBPACK_IMPORTED_MODULE_227__["default"](), _a[_crafts_tomatoes__WEBPACK_IMPORTED_MODULE_228__["default"].name] = new _crafts_tomatoes__WEBPACK_IMPORTED_MODULE_228__["default"](), _a[_crafts_trick_or_treat_bag__WEBPACK_IMPORTED_MODULE_138__["default"].name] = new _crafts_trick_or_treat_bag__WEBPACK_IMPORTED_MODULE_138__["default"](), _a[_crafts_uniforms__WEBPACK_IMPORTED_MODULE_98__["default"].name] = new _crafts_uniforms__WEBPACK_IMPORTED_MODULE_98__["default"](), _a[_crafts_wasabi__WEBPACK_IMPORTED_MODULE_229__["default"].name] = new _crafts_wasabi__WEBPACK_IMPORTED_MODULE_229__["default"](), _a[_crafts_water__WEBPACK_IMPORTED_MODULE_7__["default"].name] = new _crafts_water__WEBPACK_IMPORTED_MODULE_7__["default"](), _a[_crafts_water_drum__WEBPACK_IMPORTED_MODULE_13__["default"].name] = new _crafts_water_drum__WEBPACK_IMPORTED_MODULE_13__["default"](), _a[_crafts_wax__WEBPACK_IMPORTED_MODULE_99__["default"].name] = new _crafts_wax__WEBPACK_IMPORTED_MODULE_99__["default"](), _a[_crafts_wheat__WEBPACK_IMPORTED_MODULE_20__["default"].name] = new _crafts_wheat__WEBPACK_IMPORTED_MODULE_20__["default"](), _a[_crafts_white_rice__WEBPACK_IMPORTED_MODULE_230__["default"].name] = new _crafts_white_rice__WEBPACK_IMPORTED_MODULE_230__["default"](), _a[_crafts_wine_bottle__WEBPACK_IMPORTED_MODULE_31__["default"].name] = new _crafts_wine_bottle__WEBPACK_IMPORTED_MODULE_31__["default"](), _a[_crafts_wood__WEBPACK_IMPORTED_MODULE_2__["default"].name] = new _crafts_wood__WEBPACK_IMPORTED_MODULE_2__["default"](), _a[_crafts_wooden_box__WEBPACK_IMPORTED_MODULE_100__["default"].name] = new _crafts_wooden_box__WEBPACK_IMPORTED_MODULE_100__["default"](), _a[_crafts_wool__WEBPACK_IMPORTED_MODULE_22__["default"].name] = new _crafts_wool__WEBPACK_IMPORTED_MODULE_22__["default"](), _a[_crafts_wool_yarn__WEBPACK_IMPORTED_MODULE_21__["default"].name] = new _crafts_wool_yarn__WEBPACK_IMPORTED_MODULE_21__["default"](), _a[_crafts_worms__WEBPACK_IMPORTED_MODULE_231__["default"].name] = new _crafts_worms__WEBPACK_IMPORTED_MODULE_231__["default"](), // buildings
+_a[_buildings_bakery__WEBPACK_IMPORTED_MODULE_0__["default"].name] = new _buildings_bakery__WEBPACK_IMPORTED_MODULE_0__["default"](), _a[_buildings_beehive__WEBPACK_IMPORTED_MODULE_45__["default"].name] = new _buildings_beehive__WEBPACK_IMPORTED_MODULE_45__["default"](), _a[_buildings_boxing_facility__WEBPACK_IMPORTED_MODULE_15__["default"].name] = new _buildings_boxing_facility__WEBPACK_IMPORTED_MODULE_15__["default"](), _a[_buildings_cakery__WEBPACK_IMPORTED_MODULE_46__["default"].name] = new _buildings_cakery__WEBPACK_IMPORTED_MODULE_46__["default"](), _a[_buildings_candy_shop__WEBPACK_IMPORTED_MODULE_104__["default"].name] = new _buildings_candy_shop__WEBPACK_IMPORTED_MODULE_104__["default"](), _a[_buildings_chicken_coop__WEBPACK_IMPORTED_MODULE_103__["default"].name] = new _buildings_chicken_coop__WEBPACK_IMPORTED_MODULE_103__["default"](), _a[_buildings_chocolate_shop__WEBPACK_IMPORTED_MODULE_26__["default"].name] = new _buildings_chocolate_shop__WEBPACK_IMPORTED_MODULE_26__["default"](), _a[_buildings_copper_panning_site__WEBPACK_IMPORTED_MODULE_143__["default"].name] = new _buildings_copper_panning_site__WEBPACK_IMPORTED_MODULE_143__["default"](), _a[_buildings_fabric_plant__WEBPACK_IMPORTED_MODULE_47__["default"].name] = new _buildings_fabric_plant__WEBPACK_IMPORTED_MODULE_47__["default"](), _a[_buildings_feed_mill__WEBPACK_IMPORTED_MODULE_48__["default"].name] = new _buildings_feed_mill__WEBPACK_IMPORTED_MODULE_48__["default"](), _a[_buildings_fish_farm__WEBPACK_IMPORTED_MODULE_144__["default"].name] = new _buildings_fish_farm__WEBPACK_IMPORTED_MODULE_144__["default"](), _a[_buildings_forge__WEBPACK_IMPORTED_MODULE_145__["default"].name] = new _buildings_forge__WEBPACK_IMPORTED_MODULE_145__["default"](), _a[_buildings_foundry__WEBPACK_IMPORTED_MODULE_146__["default"].name] = new _buildings_foundry__WEBPACK_IMPORTED_MODULE_146__["default"](), _a[_buildings_fuel_storage__WEBPACK_IMPORTED_MODULE_49__["default"].name] = new _buildings_fuel_storage__WEBPACK_IMPORTED_MODULE_49__["default"](), _a[_buildings_glass_factory__WEBPACK_IMPORTED_MODULE_50__["default"].name] = new _buildings_glass_factory__WEBPACK_IMPORTED_MODULE_50__["default"](), _a[_buildings_gold_panning_site__WEBPACK_IMPORTED_MODULE_147__["default"].name] = new _buildings_gold_panning_site__WEBPACK_IMPORTED_MODULE_147__["default"](), _a[_buildings_iron_mine__WEBPACK_IMPORTED_MODULE_51__["default"].name] = new _buildings_iron_mine__WEBPACK_IMPORTED_MODULE_51__["default"](), _a[_buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_148__["default"].name] = new _buildings_italian_restaurant__WEBPACK_IMPORTED_MODULE_148__["default"](), _a[_buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_149__["default"].name] = new _buildings_jewelry_crafting_table__WEBPACK_IMPORTED_MODULE_149__["default"](), _a[_buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_150__["default"].name] = new _buildings_jewelry_store__WEBPACK_IMPORTED_MODULE_150__["default"](), _a[_buildings_lumber_mill__WEBPACK_IMPORTED_MODULE_52__["default"].name] = new _buildings_lumber_mill__WEBPACK_IMPORTED_MODULE_52__["default"](), _a[_buildings_lumber_yard__WEBPACK_IMPORTED_MODULE_53__["default"].name] = new _buildings_lumber_yard__WEBPACK_IMPORTED_MODULE_53__["default"](), _a[_buildings_master_wizard__WEBPACK_IMPORTED_MODULE_151__["default"].name] = new _buildings_master_wizard__WEBPACK_IMPORTED_MODULE_151__["default"](), _a[_buildings_milk_barn__WEBPACK_IMPORTED_MODULE_54__["default"].name] = new _buildings_milk_barn__WEBPACK_IMPORTED_MODULE_54__["default"](), _a[_buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_152__["default"].name] = new _buildings_mixing_tent__WEBPACK_IMPORTED_MODULE_152__["default"](), _a[_buildings_north_pole_creation_lab__WEBPACK_IMPORTED_MODULE_153__["default"].name] = new _buildings_north_pole_creation_lab__WEBPACK_IMPORTED_MODULE_153__["default"](), _a[_buildings_nuclear_power__WEBPACK_IMPORTED_MODULE_55__["default"].name] = new _buildings_nuclear_power__WEBPACK_IMPORTED_MODULE_55__["default"](), _a[_buildings_oil_pump__WEBPACK_IMPORTED_MODULE_56__["default"].name] = new _buildings_oil_pump__WEBPACK_IMPORTED_MODULE_56__["default"](), _a[_buildings_ore_storage__WEBPACK_IMPORTED_MODULE_154__["default"].name] = new _buildings_ore_storage__WEBPACK_IMPORTED_MODULE_154__["default"](), _a[_buildings_pantry__WEBPACK_IMPORTED_MODULE_57__["default"].name] = new _buildings_pantry__WEBPACK_IMPORTED_MODULE_57__["default"](), _a[_buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_58__["default"].name] = new _buildings_pottery_shop__WEBPACK_IMPORTED_MODULE_58__["default"](), _a[_buildings_power_plant__WEBPACK_IMPORTED_MODULE_59__["default"].name] = new _buildings_power_plant__WEBPACK_IMPORTED_MODULE_59__["default"](), _a[_buildings_refinery__WEBPACK_IMPORTED_MODULE_60__["default"].name] = new _buildings_refinery__WEBPACK_IMPORTED_MODULE_60__["default"](), _a[_buildings_sand_mine__WEBPACK_IMPORTED_MODULE_61__["default"].name] = new _buildings_sand_mine__WEBPACK_IMPORTED_MODULE_61__["default"](), _a[_buildings_santas_factory__WEBPACK_IMPORTED_MODULE_155__["default"].name] = new _buildings_santas_factory__WEBPACK_IMPORTED_MODULE_155__["default"](), _a[_buildings_sauce_facility__WEBPACK_IMPORTED_MODULE_156__["default"].name] = new _buildings_sauce_facility__WEBPACK_IMPORTED_MODULE_156__["default"](), _a[_buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_157__["default"].name] = new _buildings_seafood_warehouse__WEBPACK_IMPORTED_MODULE_157__["default"](), _a[_buildings_shallow_mine__WEBPACK_IMPORTED_MODULE_62__["default"].name] = new _buildings_shallow_mine__WEBPACK_IMPORTED_MODULE_62__["default"](), _a[_buildings_sheep_pen__WEBPACK_IMPORTED_MODULE_63__["default"].name] = new _buildings_sheep_pen__WEBPACK_IMPORTED_MODULE_63__["default"](), _a[_buildings_shrimp_farm__WEBPACK_IMPORTED_MODULE_158__["default"].name] = new _buildings_shrimp_farm__WEBPACK_IMPORTED_MODULE_158__["default"](), _a[_buildings_silo__WEBPACK_IMPORTED_MODULE_64__["default"].name] = new _buildings_silo__WEBPACK_IMPORTED_MODULE_64__["default"](), _a[_buildings_silver_panning_site__WEBPACK_IMPORTED_MODULE_159__["default"].name] = new _buildings_silver_panning_site__WEBPACK_IMPORTED_MODULE_159__["default"](), _a[_buildings_steel_mill__WEBPACK_IMPORTED_MODULE_65__["default"].name] = new _buildings_steel_mill__WEBPACK_IMPORTED_MODULE_65__["default"](), _a[_buildings_storehouse__WEBPACK_IMPORTED_MODULE_66__["default"].name] = new _buildings_storehouse__WEBPACK_IMPORTED_MODULE_66__["default"](), _a[_buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_160__["default"].name] = new _buildings_sushi_restaurant__WEBPACK_IMPORTED_MODULE_160__["default"](), _a[_buildings_trough__WEBPACK_IMPORTED_MODULE_67__["default"].name] = new _buildings_trough__WEBPACK_IMPORTED_MODULE_67__["default"](), _a[_buildings_warehouse__WEBPACK_IMPORTED_MODULE_68__["default"].name] = new _buildings_warehouse__WEBPACK_IMPORTED_MODULE_68__["default"](), _a[_buildings_water_facility__WEBPACK_IMPORTED_MODULE_69__["default"].name] = new _buildings_water_facility__WEBPACK_IMPORTED_MODULE_69__["default"](), _a[_buildings_water_pump__WEBPACK_IMPORTED_MODULE_70__["default"].name] = new _buildings_water_pump__WEBPACK_IMPORTED_MODULE_70__["default"](), _a[_buildings_well__WEBPACK_IMPORTED_MODULE_71__["default"].name] = new _buildings_well__WEBPACK_IMPORTED_MODULE_71__["default"](), _a[_buildings_wind_mill__WEBPACK_IMPORTED_MODULE_72__["default"].name] = new _buildings_wind_mill__WEBPACK_IMPORTED_MODULE_72__["default"](), _a[_buildings_wind_pump__WEBPACK_IMPORTED_MODULE_73__["default"].name] = new _buildings_wind_pump__WEBPACK_IMPORTED_MODULE_73__["default"](), _a[_buildings_winery__WEBPACK_IMPORTED_MODULE_74__["default"].name] = new _buildings_winery__WEBPACK_IMPORTED_MODULE_74__["default"](), _a[_buildings_wire_mill__WEBPACK_IMPORTED_MODULE_161__["default"].name] = new _buildings_wire_mill__WEBPACK_IMPORTED_MODULE_161__["default"](), _a[_buildings_wizards_workshop__WEBPACK_IMPORTED_MODULE_162__["default"].name] = new _buildings_wizards_workshop__WEBPACK_IMPORTED_MODULE_162__["default"](), _a[_buildings_wood_shed__WEBPACK_IMPORTED_MODULE_75__["default"].name] = new _buildings_wood_shed__WEBPACK_IMPORTED_MODULE_75__["default"](), _a[_buildings_worm_farm__WEBPACK_IMPORTED_MODULE_163__["default"].name] = new _buildings_worm_farm__WEBPACK_IMPORTED_MODULE_163__["default"](), // crops
+_a[_crops_apple_tree__WEBPACK_IMPORTED_MODULE_164__["default"].name] = new _crops_apple_tree__WEBPACK_IMPORTED_MODULE_164__["default"](), _a[_crops_cabernet_vines__WEBPACK_IMPORTED_MODULE_101__["default"].name] = new _crops_cabernet_vines__WEBPACK_IMPORTED_MODULE_101__["default"](), _a[_crops_chardonnay_vines__WEBPACK_IMPORTED_MODULE_102__["default"].name] = new _crops_chardonnay_vines__WEBPACK_IMPORTED_MODULE_102__["default"](), _a[_crops_cocoa_tree__WEBPACK_IMPORTED_MODULE_105__["default"].name] = new _crops_cocoa_tree__WEBPACK_IMPORTED_MODULE_105__["default"](), _a[_crops_corn_field__WEBPACK_IMPORTED_MODULE_141__["default"].name] = new _crops_corn_field__WEBPACK_IMPORTED_MODULE_141__["default"](), _a[_crops_cotton_field__WEBPACK_IMPORTED_MODULE_106__["default"].name] = new _crops_cotton_field__WEBPACK_IMPORTED_MODULE_106__["default"](), _a[_crops_fishing_platform__WEBPACK_IMPORTED_MODULE_165__["default"].name] = new _crops_fishing_platform__WEBPACK_IMPORTED_MODULE_165__["default"](), _a[_crops_oak_tree_farm__WEBPACK_IMPORTED_MODULE_107__["default"].name] = new _crops_oak_tree_farm__WEBPACK_IMPORTED_MODULE_107__["default"](), _a[_crops_peppermint_field__WEBPACK_IMPORTED_MODULE_108__["default"].name] = new _crops_peppermint_field__WEBPACK_IMPORTED_MODULE_108__["default"](), _a[_crops_pinot_noir_vines__WEBPACK_IMPORTED_MODULE_109__["default"].name] = new _crops_pinot_noir_vines__WEBPACK_IMPORTED_MODULE_109__["default"](), _a[_crops_pumpkin_patch__WEBPACK_IMPORTED_MODULE_110__["default"].name] = new _crops_pumpkin_patch__WEBPACK_IMPORTED_MODULE_110__["default"](), _a[_crops_rice_field__WEBPACK_IMPORTED_MODULE_166__["default"].name] = new _crops_rice_field__WEBPACK_IMPORTED_MODULE_166__["default"](), _a[_crops_salt_field__WEBPACK_IMPORTED_MODULE_111__["default"].name] = new _crops_salt_field__WEBPACK_IMPORTED_MODULE_111__["default"](), _a[_crops_seaweed_farm__WEBPACK_IMPORTED_MODULE_167__["default"].name] = new _crops_seaweed_farm__WEBPACK_IMPORTED_MODULE_167__["default"](), _a[_crops_strawberry_farm__WEBPACK_IMPORTED_MODULE_112__["default"].name] = new _crops_strawberry_farm__WEBPACK_IMPORTED_MODULE_112__["default"](), _a[_crops_sugercane_field__WEBPACK_IMPORTED_MODULE_113__["default"].name] = new _crops_sugercane_field__WEBPACK_IMPORTED_MODULE_113__["default"](), _a[_crops_tomato_farm__WEBPACK_IMPORTED_MODULE_168__["default"].name] = new _crops_tomato_farm__WEBPACK_IMPORTED_MODULE_168__["default"](), _a[_crops_tree_farm__WEBPACK_IMPORTED_MODULE_114__["default"].name] = new _crops_tree_farm__WEBPACK_IMPORTED_MODULE_114__["default"](), _a[_crops_wasabi_farm__WEBPACK_IMPORTED_MODULE_169__["default"].name] = new _crops_wasabi_farm__WEBPACK_IMPORTED_MODULE_169__["default"](), _a[_crops_wheat_field__WEBPACK_IMPORTED_MODULE_115__["default"].name] = new _crops_wheat_field__WEBPACK_IMPORTED_MODULE_115__["default"](), _a[_crops_wild_net_fishing__WEBPACK_IMPORTED_MODULE_170__["default"].name] = new _crops_wild_net_fishing__WEBPACK_IMPORTED_MODULE_170__["default"](), // terrains
 _a[_terrains_clay_field__WEBPACK_IMPORTED_MODULE_116__["default"].name] = new _terrains_clay_field__WEBPACK_IMPORTED_MODULE_116__["default"](), _a[_terrains_clover_field__WEBPACK_IMPORTED_MODULE_117__["default"].name] = new _terrains_clover_field__WEBPACK_IMPORTED_MODULE_117__["default"](), _a[_terrains_dirt_road__WEBPACK_IMPORTED_MODULE_118__["default"].name] = new _terrains_dirt_road__WEBPACK_IMPORTED_MODULE_118__["default"](), _a[_terrains_meadow__WEBPACK_IMPORTED_MODULE_8__["default"].name] = new _terrains_meadow__WEBPACK_IMPORTED_MODULE_8__["default"](), _a[_terrains_mountains__WEBPACK_IMPORTED_MODULE_119__["default"].name] = new _terrains_mountains__WEBPACK_IMPORTED_MODULE_119__["default"](), _a[_terrains_open_world__WEBPACK_IMPORTED_MODULE_120__["default"].name] = new _terrains_open_world__WEBPACK_IMPORTED_MODULE_120__["default"](), _a[_terrains_paved_road__WEBPACK_IMPORTED_MODULE_121__["default"].name] = new _terrains_paved_road__WEBPACK_IMPORTED_MODULE_121__["default"](), _a[_terrains_pond__WEBPACK_IMPORTED_MODULE_122__["default"].name] = new _terrains_pond__WEBPACK_IMPORTED_MODULE_122__["default"](), _a[_terrains_road__WEBPACK_IMPORTED_MODULE_123__["default"].name] = new _terrains_road__WEBPACK_IMPORTED_MODULE_123__["default"](), // workers
-_a[_workers_aquaculturist_house__WEBPACK_IMPORTED_MODULE_137__["default"].name] = new _workers_aquaculturist_house__WEBPACK_IMPORTED_MODULE_137__["default"](), _a[_workers_atv__WEBPACK_IMPORTED_MODULE_124__["default"].name] = new _workers_atv__WEBPACK_IMPORTED_MODULE_124__["default"](), _a[_workers_bee_keeper_house__WEBPACK_IMPORTED_MODULE_125__["default"].name] = new _workers_bee_keeper_house__WEBPACK_IMPORTED_MODULE_125__["default"](), _a[_workers_builder_house__WEBPACK_IMPORTED_MODULE_126__["default"].name] = new _workers_builder_house__WEBPACK_IMPORTED_MODULE_126__["default"](), _a[_workers_farm_house__WEBPACK_IMPORTED_MODULE_127__["default"].name] = new _workers_farm_house__WEBPACK_IMPORTED_MODULE_127__["default"](), _a[_workers_farm_tractor__WEBPACK_IMPORTED_MODULE_128__["default"].name] = new _workers_farm_tractor__WEBPACK_IMPORTED_MODULE_128__["default"](), _a[_workers_forklift__WEBPACK_IMPORTED_MODULE_129__["default"].name] = new _workers_forklift__WEBPACK_IMPORTED_MODULE_129__["default"](), _a[_workers_lumberjack_house__WEBPACK_IMPORTED_MODULE_130__["default"].name] = new _workers_lumberjack_house__WEBPACK_IMPORTED_MODULE_130__["default"](), _a[_workers_ranch_house__WEBPACK_IMPORTED_MODULE_131__["default"].name] = new _workers_ranch_house__WEBPACK_IMPORTED_MODULE_131__["default"](), _a[_workers_the_logger_house__WEBPACK_IMPORTED_MODULE_132__["default"].name] = new _workers_the_logger_house__WEBPACK_IMPORTED_MODULE_132__["default"](), _a[_workers_worker_house__WEBPACK_IMPORTED_MODULE_133__["default"].name] = new _workers_worker_house__WEBPACK_IMPORTED_MODULE_133__["default"](), _a);
+_a[_workers_aquaculturist_house__WEBPACK_IMPORTED_MODULE_137__["default"].name] = new _workers_aquaculturist_house__WEBPACK_IMPORTED_MODULE_137__["default"](), _a[_workers_atv__WEBPACK_IMPORTED_MODULE_124__["default"].name] = new _workers_atv__WEBPACK_IMPORTED_MODULE_124__["default"](), _a[_workers_bee_keeper_house__WEBPACK_IMPORTED_MODULE_125__["default"].name] = new _workers_bee_keeper_house__WEBPACK_IMPORTED_MODULE_125__["default"](), _a[_workers_builder_house__WEBPACK_IMPORTED_MODULE_126__["default"].name] = new _workers_builder_house__WEBPACK_IMPORTED_MODULE_126__["default"](), _a[_workers_farm_house__WEBPACK_IMPORTED_MODULE_127__["default"].name] = new _workers_farm_house__WEBPACK_IMPORTED_MODULE_127__["default"](), _a[_workers_farm_tractor__WEBPACK_IMPORTED_MODULE_128__["default"].name] = new _workers_farm_tractor__WEBPACK_IMPORTED_MODULE_128__["default"](), _a[_workers_forklift__WEBPACK_IMPORTED_MODULE_129__["default"].name] = new _workers_forklift__WEBPACK_IMPORTED_MODULE_129__["default"](), _a[_workers_lumberjack_house__WEBPACK_IMPORTED_MODULE_130__["default"].name] = new _workers_lumberjack_house__WEBPACK_IMPORTED_MODULE_130__["default"](), _a[_workers_panner_bunk_house__WEBPACK_IMPORTED_MODULE_171__["default"].name] = new _workers_panner_bunk_house__WEBPACK_IMPORTED_MODULE_171__["default"](), _a[_workers_panner_house__WEBPACK_IMPORTED_MODULE_172__["default"].name] = new _workers_panner_house__WEBPACK_IMPORTED_MODULE_172__["default"](), _a[_workers_ranch_house__WEBPACK_IMPORTED_MODULE_131__["default"].name] = new _workers_ranch_house__WEBPACK_IMPORTED_MODULE_131__["default"](), _a[_workers_seaweed_farmer_house__WEBPACK_IMPORTED_MODULE_173__["default"].name] = new _workers_seaweed_farmer_house__WEBPACK_IMPORTED_MODULE_173__["default"](), _a[_workers_the_logger_house__WEBPACK_IMPORTED_MODULE_132__["default"].name] = new _workers_the_logger_house__WEBPACK_IMPORTED_MODULE_132__["default"](), _a[_workers_worker_house__WEBPACK_IMPORTED_MODULE_133__["default"].name] = new _workers_worker_house__WEBPACK_IMPORTED_MODULE_133__["default"](), _a);
 var productSelector = new _ui_product_selection__WEBPACK_IMPORTED_MODULE_134__["default"]('product-selector', window.products);
 productSelector.populate();
 productSelector.addEvent();
@@ -11769,6 +18609,162 @@ function (_super) {
 
 /***/ }),
 
+/***/ "./src/workers/panner-bunk-house.ts":
+/*!******************************************!*\
+  !*** ./src/workers/panner-bunk-house.ts ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_lumber__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crafts/lumber */ "./src/crafts/lumber.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var PannerBunkHouse =
+/** @class */
+function (_super) {
+  __extends(PannerBunkHouse, _super);
+
+  function PannerBunkHouse() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Panner Bunk House";
+    _this.price = 75000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_lumber__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 5
+    })];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return PannerBunkHouse;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PannerBunkHouse);
+
+/***/ }),
+
+/***/ "./src/workers/panner-house.ts":
+/*!*************************************!*\
+  !*** ./src/workers/panner-house.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+var PannerHouse =
+/** @class */
+function (_super) {
+  __extends(PannerHouse, _super);
+
+  function PannerHouse() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Panner House";
+    _this.price = 1500;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 1
+    })];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return PannerHouse;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PannerHouse);
+
+/***/ }),
+
 /***/ "./src/workers/ranch-house.ts":
 /*!************************************!*\
   !*** ./src/workers/ranch-house.ts ***!
@@ -11839,6 +18835,89 @@ function (_super) {
 }(_item__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RanchHouse);
+
+/***/ }),
+
+/***/ "./src/workers/seaweed-farmer-house.ts":
+/*!*********************************************!*\
+  !*** ./src/workers/seaweed-farmer-house.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _craft_requirement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../craft-requirement */ "./src/craft-requirement.ts");
+/* harmony import */ var _crafts_wood__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crafts/wood */ "./src/crafts/wood.ts");
+/* harmony import */ var _item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item */ "./src/item.ts");
+/* harmony import */ var _terrains_road__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../terrains/road */ "./src/terrains/road.ts");
+/* harmony import */ var _crafts_energy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../crafts/energy */ "./src/crafts/energy.ts");
+/* harmony import */ var _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../crafts/oak-wood */ "./src/crafts/oak-wood.ts");
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+
+
+
+
+
+var SeaweedFarmerHouse =
+/** @class */
+function (_super) {
+  __extends(SeaweedFarmerHouse, _super);
+
+  function SeaweedFarmerHouse() {
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.name = "Seaweed Farmer House";
+    _this.price = 100000;
+    _this.isNFT = false;
+    _this.buildRequirements = [(0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_oak_wood__WEBPACK_IMPORTED_MODULE_5__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_wood__WEBPACK_IMPORTED_MODULE_1__["default"],
+      quantity: 5
+    }), (0,_craft_requirement__WEBPACK_IMPORTED_MODULE_0__.createRequirement)({
+      craft: _crafts_energy__WEBPACK_IMPORTED_MODULE_4__["default"],
+      quantity: 5
+    })];
+    _this.requirements = [_terrains_road__WEBPACK_IMPORTED_MODULE_3__["default"]];
+    return _this;
+  }
+
+  return SeaweedFarmerHouse;
+}(_item__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SeaweedFarmerHouse);
 
 /***/ }),
 

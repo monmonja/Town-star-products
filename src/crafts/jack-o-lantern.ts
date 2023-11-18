@@ -10,9 +10,9 @@ export default class JackOLantern extends Craft {
   name = "Jack O Lantern";
 
   requires = [
-    createRequirement({ craft: Pumpkin, quantity: 10 }),
-    createRequirement({ craft: Wax, quantity: 3 }),
-    createRequirement({ craft: CottonYarn, quantity: 1 }),
+    createRequirement({ craft: Pumpkin, quantity: 1 }),
+    createRequirement({ craft: Wax, quantity: 2 }),
+    createRequirement({ craft: CottonYarn, quantity: 2 }),
   ];
 
   generatedFrom = [

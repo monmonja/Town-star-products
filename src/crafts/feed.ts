@@ -8,7 +8,6 @@ import FeedMill from "../buildings/feed-mill";
 export default class Feed extends Craft {
   name = "Feed";
 
-
   requires = [
     createRequirement({ craft: Wheat, quantity: 2, building:  FeedMill, required: false, }),
   ];

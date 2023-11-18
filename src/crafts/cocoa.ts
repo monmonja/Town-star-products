@@ -9,8 +9,7 @@ export default class Cocoa extends Craft {
   name = "Cocoa";
 
   requires = [
-    createRequirement({ craft: Water, quantity: 5 }),
-    createRequirement({ craft: Wood, quantity: 1 }),
+    createRequirement({ craft: Water, quantity: 5, drawInline: true }),
   ];
 
   generatedFrom = [

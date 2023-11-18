@@ -9,6 +9,8 @@ import FoodParcel from "../crafts/food-parcel";
 import GiftParcel from "../crafts/gift-parcel";
 import Road from "../terrains/road";
 import PartyBox from "../crafts/party-box";
+import StackBox from "../crafts/stack-box";
+import JewelrySet from "../crafts/jewelry-set";
 
 export default class BoxingFacility extends Item implements Buildable, Producer {
   name = "Boxing Facility";
@@ -26,8 +28,8 @@ export default class BoxingFacility extends Item implements Buildable, Producer 
     FoodParcel,
     GiftParcel,
     PartyBox,
-    //StackBox,
-    //JewelrySet,
+    StackBox,
+    JewelrySet,
   ];
 
   requirements = [

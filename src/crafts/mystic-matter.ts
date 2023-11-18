@@ -1,22 +1,22 @@
 import Craft from "./craft";
 import { createRequirement } from "../craft-requirement";
-import MasterWizard from "../buildings/master-wizard";
 import Warehouse from "../buildings/warehouse";
-import Pumpkin from "./pumpkin";
-import Brine from "./brine";
-import Strawberries from "./strawberries";
+import CottonYarn from "./cotton-yarn";
+import Limestone from "./limestone";
+import WizardsWorkshop from "../buildings/wizards-workshop";
+import Glue from "./glue";
 
 export default class MysticMatter extends Craft {
   name = "Mystic Matter";
 
   requires = [
-    createRequirement({ craft: Pumpkin, quantity: 1 }),
-    createRequirement({ craft: Brine, quantity: 2 }),
-    createRequirement({ craft: Strawberries, quantity: 2 }),
+    createRequirement({ craft: Glue, quantity: 1 }),
+    createRequirement({ craft: CottonYarn, quantity: 2 }),
+    createRequirement({ craft: Limestone, quantity: 1 }),
   ];
 
   generatedFrom = [
-    MasterWizard,
+    WizardsWorkshop,
   ];
 
   storage = [

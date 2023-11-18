@@ -10,7 +10,7 @@ export default class Chardonnay extends Craft {
   name = "Chardonnay";
 
   requires = [
-    createRequirement({ craft: ChardonnayGrapes, quantity: 3 }),
+    createRequirement({ craft: ChardonnayGrapes, quantity: 6 }),
     createRequirement({ craft: WineBottle, quantity: 1 }),
     createRequirement({ craft: OakBarrel, quantity: 1 }),
   ];

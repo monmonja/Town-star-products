@@ -6,7 +6,7 @@ import WoodenBox from "./wooden-box";
 import BoxingFacility from "../buildings/boxing-facility";
 import Warehouse from "../buildings/warehouse";
 
-export default class StackedBox extends Craft {
+export default class StackBox extends Craft {
   name = "Stacked Box";
 
   requires = [

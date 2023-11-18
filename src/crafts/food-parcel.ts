@@ -10,9 +10,9 @@ export default class FoodParcel extends Craft {
   name = "Food Parcel";
 
   requires = [
-    createRequirement({ craft: Honey, quantity: 1 }),
-    createRequirement({ craft: Jam, quantity: 2 }),
     createRequirement({ craft: Baguette, quantity: 3 }),
+    createRequirement({ craft: Jam, quantity: 2 }),
+    createRequirement({ craft: Honey, quantity: 1 }),
   ];
 
   generatedFrom = [

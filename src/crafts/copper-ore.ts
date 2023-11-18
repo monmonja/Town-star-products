@@ -1,19 +1,14 @@
 import Craft from "./craft";
 import { createRequirement } from "../craft-requirement";
-import Steel from "./steel";
-import Energy from "./energy";
-import Uniforms from "./uniforms";
-import SteelMill from "../buildings/steel-mill";
-import Warehouse from "../buildings/warehouse";
 import CopperPanningSite from "../buildings/copper-panning-site";
+import OreStorage from "../buildings/ore-storage";
+import Water from "./water";
 
 export default class CopperOre extends Craft {
-  name = "Blue Steel";
+  name = "Copper Ore";
 
   requires = [
-    createRequirement({ craft: Steel, quantity: 5 }),
-    createRequirement({ craft: Energy, quantity: 10 }),
-    createRequirement({ craft: Uniforms, quantity: 1 }),
+    createRequirement({ craft: Water, quantity: 1, drawInline: true }),
   ];
 
   generatedFrom = [
@@ -21,6 +16,6 @@ export default class CopperOre extends Craft {
   ];
 
   storage = [
-    Warehouse,
+    OreStorage,
   ];
 }
